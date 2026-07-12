@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Tovan Tech Academy | katcode</title>
+
+    <meta name="description"
+          content="Tovan Technologies builds AI-powered solutions, software platforms, and digital products that unlock opportunities, simplify complexity, and empower future innovators.">
+
+    <meta name="keywords"
+          content="Tovan Technologies, AI solutions South Africa, software development,katcode, nova, educational technology, katcode, katnova, digital innovation, artificial intelligence, learning platform">
+
+    <meta name="author" content="Tovan Tech Academy | katcode">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <link rel="canonical" href="https://katcode.co.za/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://katcode.co.za/">
+    <meta property="og:title" content="Tovan Technologies | Software Development & Digital Innovation">
+    <meta property="og:description" content="Building intelligent software systems, AI solutions, and digital platforms that unlock human potential.">
+    <meta property="og:image" content=https://tovantech.co.za/images/full-logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tovan Technologies | Software Development & Digital Innovation">
+    <meta name="twitter:description" content="Building intelligent software systems, AI solutions, and digital platforms that unlock youth potential.">
+    <meta name="twitter:image" content="https://tovantech.co.za/images/full-logo.png">
+
+    <meta name="theme-color" content="#000000">
+
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tovan Technologies",
+    "url": "https://tovantech.co.za",
+    "logo": "https://tovantech.co.za/images/full-logo.png",
+    "description": "Tovan Technologies builds intelligent software systems, and digital platforms.",
+    "foundingLocation": {
+        "@type": "Place",
+        "name": "Bizana, Eastern Cape, South Africa"
+    },
+    "sameAs": [
+        "https://www.linkedin.com/company/tovan-technologies"
+    ],
+    "makesOffer": [
+        {
+            "@type": "SoftwareApplication",
+            "name": "katcode"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "katnova"
+        }
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tovan Technologies",
+    "alternateName": "Tovan Tech",
+    "url": "https://tovantech.co.za/"
+}
+</script>
+
+
+
+    <link href="./main.css" rel="stylesheet"/>
+    <link href="./style.css" rel="stylesheet"/>
+    <link href="./images/logo.png" type="image/png" rel="icon">
+</head>
+
+<body class="bg-zinc-950 text-zinc-300 antialiased selection:bg-white">
+
+
+
+
+<nav  class=" backdrop-blur-lg sticky top-0 z-50">
+    <div class="flex items-center justify-between px-8 py-5">
+
+        <a href="#home" class="flex-shrink-0 focus:outline-none">
+            <img src="./images/tvnw.png" alt="Tovan Logo" class="h-8 w-auto" />
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8 px-5 py-2.5 text-sm font-semibold text-zinc-200 ">
+            <a href="#home" class=" hover:text-white transition-colors duration-200 tracking-wide">Home</a>
+            <a href="#products"  class="  hover:text-white transition-colors duration-200 tracking-wide">Our Course</a>
+            <a href="#about" class=" hover:text-white transition-colors duration-200 tracking-wide">About</a>
+            <a href="#contact" class="hover:text-white transition-colors duration-200 tracking-wide">Contact Us</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden relative w-6 h-6 focus:outline-none">
+            <span id="line-1" class="absolute block w-6 h-0.5 bg-zinc-200 rounded transition-all duration-300 ease-in-out top-1"></span>
+            <span id="line-2" class="absolute block w-6 h-0.5 bg-zinc-200 rounded transition-all duration-300 ease-in-out top-2.5"></span>
+            <span id="line-3" class="absolute block w-6 h-0.5 bg-zinc-200 rounded transition-all duration-300 ease-in-out top-4"></span>
+        </button>
+        
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden backdrop-blur-lg bg-zinc-200 border-t border-zinc-800 absolute w-full">
+        <div class="flex flex-col px-8 py-4 space-y-4">
+            <a href="#home" class="text-base font-medium text-zinc-950 hover:text-white">Home</a>
+            <a href="#products"  class="text-base font-medium text-zinc-950 hover:text-white">Our Course</a>
+            <a href="#about" class="text-base font-medium text-zinc-950 hover:text-white">About</a>
+            <a href="#contact" class="text-base font-medium text-zinc-950 ">Contact Us</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const l1 = document.getElementById('line-1');
+            const l2 = document.getElementById('line-2');
+            const l3 = document.getElementById('line-3');
+
+            
+            function toggleMenu() {
+                menu.classList.toggle('hidden');
+                l1.classList.toggle('top-1');
+                l1.classList.toggle('top-2.5');
+                l1.classList.toggle('rotate-45');
+                l2.classList.toggle('opacity-0');
+                l3.classList.toggle('top-4');
+                l3.classList.toggle('top-2.5');
+                l3.classList.toggle('-rotate-45');
+            }
+
+            // Toggle when the hamburger button is clicked
+            btn.addEventListener('click', toggleMenu);
+
+            // Automatically close the menu when ANY mobile link is clicked
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        });
+    </script>
+</nav>
+
+
+
+
+<!--    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">-->
+
+<!--        <div class="bg-google-card rounded-lg border border-google-blue p-6 shadow-[0_0_15px_rgba(66,133,244,0.15)] flex flex-col relative overflow-hidden">-->
+<!--            <div class="absolute top-0 left-0 w-full h-1 bg-google-blue"></div>-->
+
+<!--            <div class="mb-4 flex justify-between items-start">-->
+<!--                <span class="bg-[#e8f0fe] text-google-blue text-xs font-bold px-2 py-1 rounded">MODULE 1</span>-->
+<!--                <span class="text-[#34a853] text-sm font-medium flex items-center gap-1">-->
+<!--                    <span class="w-2 h-2 rounded-full bg-[#34a853] animate-pulse"></span> In Progress-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <h3 class="text-xl font-bold text-white mb-2">Java Fundamentals I</h3>-->
+<!--            <p class="text-google-subtext text-sm mb-4">-->
+<!--                The absolute foundation. Master the JVM lifecycle, memory allocation, and basic logical structures before advancing.-->
+<!--            </p>-->
+
+<!--            <div class="flex flex-wrap gap-2 mb-6 flex-grow">-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">Data Types</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">Control Flow</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">Arrays & Strings</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">File I/O</span>-->
+<!--            </div>-->
+
+<!--            <button class="w-full bg-google-blue text-white py-2.5 rounded font-medium hover:bg-blue-600 transition-colors">-->
+<!--                Enter Workspace-->
+<!--            </button>-->
+<!--        </div>-->
+
+<!--        <div class="bg-google-card rounded-lg border border-[#3c4043] p-6 hover:border-google-subtext transition-colors duration-300 flex flex-col">-->
+<!--            <div class="mb-4 flex justify-between items-start">-->
+<!--                <span class="bg-[#3c4043] text-white text-xs font-bold px-2 py-1 rounded">MODULE 2</span>-->
+<!--                <span class="text-google-subtext text-sm">Up Next</span>-->
+<!--            </div>-->
+<!--            <h3 class="text-xl font-medium text-white mb-2">Java Fundamentals II</h3>-->
+<!--            <p class="text-google-subtext text-sm mb-4">-->
+<!--                Advanced mechanics. Transition from procedural scripting to robust, object-oriented architectural design.-->
+<!--            </p>-->
+
+<!--            <div class="flex flex-wrap gap-2 mb-6 flex-grow">-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">Deep OOP</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">Generics</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">Containers</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">Lambdas</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-400 px-2 py-1 rounded">GUI Construction</span>-->
+<!--            </div>-->
+
+<!--            <button class="w-full bg-transparent border border-[#3c4043] text-white py-2.5 rounded font-medium hover:bg-[#3c4043] transition-colors">-->
+<!--                View Syllabus-->
+<!--            </button>-->
+<!--        </div>-->
+
+<!--        <div class="bg-google-card rounded-lg border border-[#3c4043] p-6 flex flex-col opacity-60">-->
+<!--            <div class="mb-4 flex justify-between items-start">-->
+<!--                <span class="bg-[#202124] border border-[#3c4043] text-[#5f6368] text-xs font-bold px-2 py-1 rounded">MODULE 3</span>-->
+<!--                <span class="text-[#d93025] text-sm flex items-center gap-1">-->
+<!--                    🔒 Locked-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <h3 class="text-xl font-medium text-white mb-2">Data Structures & Algo</h3>-->
+<!--            <p class="text-google-subtext text-sm mb-4">-->
+<!--                The logic behind the code. Learn to process data efficiently and analyze algorithmic time complexity.-->
+<!--            </p>-->
+
+<!--            <div class="flex flex-wrap gap-2 mb-6 flex-grow">-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-500 px-2 py-1 rounded">Big O Notation</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-500 px-2 py-1 rounded">Linked Lists & Trees</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-500 px-2 py-1 rounded">Hash Maps</span>-->
+<!--                <span class="text-xs border border-[#3c4043] text-zinc-500 px-2 py-1 rounded">Sorting Logic</span>-->
+<!--            </div>-->
+
+<!--            <button class="w-full bg-[#202124] text-zinc-500 py-2.5 rounded font-medium cursor-not-allowed">-->
+<!--                Requires Module 2-->
+<!--            </button>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_60%)]"></div>
+
+    <div class="flex flex-col items-center relative max-w-7xl mx-auto px-8 pt-32 pb-24 text-center">
+
+        <p class="text-sm uppercase tracking-[0.35em] text-zinc-500 mb-6">
+            Building technologies that empower people.
+        </p>
+        <img src="./images/spark.svg"
+             alt="spark"
+             class="spark-animation  h-10 w-auto"
+        />
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight mb-8">
+            Sparking Potential Through Technology
+
+        </h1>
+
+        <p class="max-w-3xl mx-auto text-lg md:text-xl text-zinc-400 leading-relaxed mb-12">
+            Tovan Technologies creates intelligent software systems, AI solutions, and digital platforms that unlock opportunities, simplify complexity, and drive meaningful impact.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+            <a href="#products"
+               class="px-8 py-4 bg-white text-zinc-950 font-semibold rounded-lg hover:bg-zinc-200 transition-colors">
+                Start Learning Here
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<section id ="about" class="py-28 border-t border-zinc-800 ">
+
+    <div class="max-w-5xl mx-auto px-8 text-center">
+
+        <p class="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">
+            Our Vision
+        </p>
+
+        <h2 class="text-4xl md:text-5xl text-white mb-8">
+            Unlocking potential through technology.
+        </h2>
+
+        <p class="max-w-3xl mx-auto text-zinc-400 leading-loose mb-14">
+            We believe technology should do more than solve problems—it should create opportunities, empower people, and unlock potential.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<section id="products" class="py-28 border-t border-zinc-800">
+
+    <div class="max-w-7xl mx-auto px-8">
+
+        <div class="text-center mb-16">
+
+            <p class="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">
+                Our Ecosystem
+            </p>
+
+            <h2 class="text-4xl md:text-5xl text-white">
+                Technology built to unlock potential.
+            </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- katcode -->
+            <article class="flex flex-col items-center text-center border  border-zinc-600 rounded-2xl p-8 hover:border-zinc-300 transition-colors">
+
+                <span class="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                    Tovan Tech Academy
+                </span>
+
+                <h3 class="flex flex-col items-center gap-3 text-2xl font-semibold text-white mt-6 mb-4">
+
+                    <img src="./images/katcode-logo.png"
+                         alt="katcode logo"
+                         class="h-10 w-auto"/>
+
+                    <span class="lowercase">katcode</span>
+
+                </h3>
+
+                <p class="text-zinc-400 leading-relaxed mb-4">
+                    Helping aspiring developers learn through practical projects, guided experiences, and real-world skills.
+                </p>
+
+                <p class="text-xs font-medium text-blue-400 mb-6 px-3 py-1 bg-blue-900/20 rounded-full border border-blue-800/30">
+                    Currently, in development. Join the waitlist for early access.
+                </p>
+
+                <a href="https://katcode.co.za"
+                   target="_blank"
+                   class="mt-auto px-5 py-2.5 text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 rounded-md transition-colors duration-200">
+                    Join Waitlist
+                </a>
+
+            </article>
+
+            <!-- katnova -->
+            <article class="flex flex-col items-center text-center border border-zinc-600  rounded-2xl p-8 hover:border-zinc-300 transition-colors">
+
+                <span class="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                    Tovan Tech AI
+                </span>
+
+                <h3 class="flex flex-col items-center gap-3 text-2xl font-semibold text-white mt-6 mb-4">
+
+                    <img src="./images/katnova-logo.png"
+                         alt="katnova logo"
+                         class="h-10 w-auto"/>
+
+                    <span class="lowercase">katnova</span>
+
+                </h3>
+
+                <p class="text-zinc-400 leading-relaxed mb-4">
+                    An AI-powered learning assistant delivering personalized guidance, intelligent support, and accessible knowledge.
+                </p>
+
+                <p class="text-xs font-medium text-blue-400 mb-6 px-3 py-1 bg-blue-900/20 rounded-full border border-blue-800/30">
+                    Available exclusively through katcode.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer id = "contact" class="border-t border-zinc-900 bg-black py-20">
+
+    <div class="max-w-4xl mx-auto px-8 text-center">
+
+        <h2 class="text-3xl text-white mb-4">
+            Let's spark potential together.
+        </h2>
+        <a href="mailto:contact@tovantech.co.za"
+           class="text-zinc-300 hover:text-white transition-colors">
+            contact@tovantech.co.za
+        </a>
+      <p class="text-zinc-500 mb-2">
+            Registration Number: 2026/471228/07
+        </p>
+        <p class="text-zinc-500 mb-8">
+            Bizana, Eastern Cape, South Africa.
+        </p>
+
+
+    
+        <p class="mt-12 text-xs uppercase tracking-[0.2em] text-zinc-700">
+        
+            © 2026 Tovan Technologies (Pty) Ltd. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
