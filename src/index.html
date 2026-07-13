@@ -116,171 +116,57 @@ if ("serviceWorker" in navigator) {
 
 
 
-
-<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-white/40 border-b px-8 border-zinc-200">
-
-
-
+<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-zinc-100/80 border-b px-8 border-zinc-400">
     <div class="h-20 flex items-center justify-between">
-
-        <!-- Logo -->
-
         <a href="/" class="flex items-center gap-4 group shrink-0">
-
             <img src="/images/katcode-logo.jpeg"
                  alt="KatCode Logo"
-                 class="w-14 h-14 rounded-full border border-zinc-300 group-hover:border-black transition"/>
-
+                 class="w-14 h-14 rounded-full border border-zinc-400 group-hover:border-black transition"/>
             <div class="hidden sm:block">
-
                 <h1 class="text-xl font-black tracking-tight">
                     KATCODE
                 </h1>
-
-                <p class="text-[0.55rem] uppercase tracking-[0.25em] text-zinc-500 font-bold">
+                <p class="text-[0.55rem] uppercase tracking-[0.25em] text-zinc-600 font-bold">
                     Logic Precedes Code
                 </p>
-
             </div>
-
         </a>
 
-        <!-- Desktop Navigation -->
-
         <div class="hidden lg:flex items-center gap-10">
-
-            <a href="/"
-               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
-                Home
-            </a>
-
-            <a href="#learning-paths"
-               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
-                Learning Paths
-            </a>
-
-            <a href="/hackathons"
-               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
-                Hackathons
-            </a>
-
-            <a href="/pricing"
-               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
-                Pricing
-            </a>
-
-            <a href="#faq"
-               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
-                FAQ
-            </a>
-
-            <a href="/about"
-               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
-                About
-            </a>
-
+            <a href="/" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Home</a>
+            <a href="https://www.katcode.co.za/#learning-paths" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Learning Paths</a>
+            <a href="/hackathons" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Hackathons</a>
+            <a href="/pricing" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Pricing</a>
+            <a href="https://www.katcode.co.za/#faq" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">FAQ</a>
+            <a href="/about" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">About</a>
         </div>
-
-        <!-- Desktop Actions -->
 
         <div class="hidden md:flex items-center gap-4">
-
-            <a href="https://app.katcode.co.za/auth/login"
-               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
-
-                Sign In
-
-            </a>
-
-            <a href="https://app.katcode.co.za/auth/register"
-               class="rounded-xl bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-0.5 transition-all duration-300 shadow-lg">
-
-                Join KatCode
-
-            </a>
-
+            <a href="https://app.katcode.co.za/auth/login" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Sign In</a>
+            <a href="https://app.katcode.co.za/auth/register" class="rounded-xl bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-0.5 transition-all duration-300 shadow-lg">Join KatCode</a>
         </div>
 
-        <!-- Mobile Hamburger -->
-
-        <button id="mobile-menu-btn"
-                class="lg:hidden relative w-7 h-7 focus:outline-none">
-
-                <span id="line1"
-                      class="absolute w-7 h-0.5 bg-black rounded top-1 transition-all duration-300"></span>
-
-            <span id="line2"
-                  class="absolute w-7 h-0.5 bg-black rounded top-3 transition-all duration-300"></span>
-
-            <span id="line3"
-                  class="absolute w-7 h-0.5 bg-black rounded top-5 transition-all duration-300"></span>
-
+        <button id="mobile-menu-btn" class="lg:hidden relative w-7 h-7 focus:outline-none">
+            <span id="line1" class="absolute w-7 h-0.5 bg-black rounded top-1 transition-all duration-300"></span>
+            <span id="line2" class="absolute w-7 h-0.5 bg-black rounded top-3 transition-all duration-300"></span>
+            <span id="line3" class="absolute w-7 h-0.5 bg-black rounded top-5 transition-all duration-300"></span>
         </button>
-
     </div>
-
-    </div>
-
-    <!-- Mobile Menu -->
-
-    <div id="mobile-menu"
-         class="hidden lg:hidden bg-white border-t border-zinc-200 shadow-xl">
-
-        <div class="px-6 py-8 flex flex-col gap-6">
-
-            <a href="/"
-               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
-                Home
-            </a>
-
-            <a href="#learning-paths"
-               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
-                Learning Paths
-            </a>
-
-            <a href="/hackathons"
-               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
-                Hackathons
-            </a>
-
-            <a href="/pricing"
-               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
-                Pricing
-            </a>
-
-            <a href="#faq"
-               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
-                FAQ
-            </a>
-
-            <a href="/about"
-               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
-                About
-            </a>
-
-            <hr class="border-zinc-200">
-
-            <a href="https://app.katcode.co.za/auth/login"
-               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
-
-                Sign In
-
-            </a>
-
-            <a href="https://app.katcode.co.za/auth/register"
-               class="rounded-xl bg-black text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition">
-
-                Join KatCode
-
-            </a>
-
-        </div>
-
-
-
-
 </nav>
 
+<div id="mobile-menu" class="hidden lg:hidden bg-zinc-100 border-t border-zinc-300 shadow-xl">
+    <div class="px-6 py-8 flex flex-col gap-6">
+        <a href="/" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Home</a>
+        <a href="https://www.katcode.co.za/#learning-paths" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Learning Paths</a>
+        <a href="/hackathons" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Hackathons</a>
+        <a href="/pricing" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Pricing</a>
+        <a href="https://www.katcode.co.za/#faq" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">FAQ</a>
+        <a href="/about" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">About</a>
+        <hr class="border-zinc-300">
+        <a href="https://app.katcode.co.za/auth/login" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Sign In</a>
+        <a href="https://app.katcode.co.za/auth/register" class="rounded-xl bg-black text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition">Join KatCode</a>
+    </div>
+</div>
 
 
 
