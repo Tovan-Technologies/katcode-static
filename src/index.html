@@ -2,7 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
-<meta name="KATCODE" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <title>Home | KATCODE</title>
 
@@ -94,8 +95,18 @@
   ]
 }
 </script>
-</head>
 
+</head>
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("/sw.js")
+            .then(() => console.log("Service Worker registered"))
+            .catch(err => console.error(err));
+    });
+}
+</script>
 
 <body class="bg-zinc-300 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
 
