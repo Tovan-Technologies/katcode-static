@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /images/
+Disallow: /images/hackathon
 Sitemap: https://katcode.co.za/sitemap.xml

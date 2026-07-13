@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+
+    <title>Pricing | KATCODE</title>
+    <meta name="description" content="Learn about KatCode, our engineering philosophy, and our mission to build the next generation of developers.">
+
+    
+     <link rel="stylesheet" href="/main.css">
+    
+<link rel="icon" type="image/x-icon" href="/images/katcode-logo-icon.png">
+</head>
+
+<body class="bg-zinc-300 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
+
+
+
+
+
+
+<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-white/40 border-b px-8 border-zinc-200">
+
+
+
+    <div class="h-20 flex items-center justify-between">
+
+        <!-- Logo -->
+
+        <a href="/" class="flex items-center gap-4 group shrink-0">
+
+            <img src="/images/katcode-logo.jpeg"
+                 alt="KatCode Logo"
+                 class="w-14 h-14 rounded-full border border-zinc-300 group-hover:border-black transition"/>
+
+            <div class="hidden sm:block">
+
+                <h1 class="text-xl font-black tracking-tight">
+                    KATCODE
+                </h1>
+
+                <p class="text-[0.55rem] uppercase tracking-[0.25em] text-zinc-500 font-bold">
+                    Logic Precedes Code
+                </p>
+
+            </div>
+
+        </a>
+
+        <!-- Desktop Navigation -->
+
+        <div class="hidden lg:flex items-center gap-10">
+
+            <a href="/"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Home
+            </a>
+
+            <a href="#learning-paths"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Learning Paths
+            </a>
+
+            <a href="/hackathons"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Hackathons
+            </a>
+
+            <a href="/pricing"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Pricing
+            </a>
+
+            <a href="#faq"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                FAQ
+            </a>
+
+            <a href="/about"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                About
+            </a>
+
+        </div>
+
+        <!-- Desktop Actions -->
+
+        <div class="hidden md:flex items-center gap-4">
+
+            <a href="https://app.katcode.co.za/auth/login"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+
+                Sign In
+
+            </a>
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="rounded-xl bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-0.5 transition-all duration-300 shadow-lg">
+
+                Join KatCode
+
+            </a>
+
+        </div>
+
+        <!-- Mobile Hamburger -->
+
+        <button id="mobile-menu-btn"
+                class="lg:hidden relative w-7 h-7 focus:outline-none">
+
+                <span id="line1"
+                      class="absolute w-7 h-0.5 bg-black rounded top-1 transition-all duration-300"></span>
+
+            <span id="line2"
+                  class="absolute w-7 h-0.5 bg-black rounded top-3 transition-all duration-300"></span>
+
+            <span id="line3"
+                  class="absolute w-7 h-0.5 bg-black rounded top-5 transition-all duration-300"></span>
+
+        </button>
+
+    </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobile-menu"
+         class="hidden lg:hidden bg-white border-t border-zinc-200 shadow-xl">
+
+        <div class="px-6 py-8 flex flex-col gap-6">
+
+            <a href="/"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Home
+            </a>
+
+            <a href="#learning-paths"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Learning Paths
+            </a>
+
+            <a href="/hackathons"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Hackathons
+            </a>
+
+            <a href="/pricing"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Pricing
+            </a>
+
+            <a href="#faq"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                FAQ
+            </a>
+
+            <a href="/about"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                About
+            </a>
+
+            <hr class="border-zinc-200">
+
+            <a href="https://app.katcode.co.za/auth/login"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+
+                Sign In
+
+            </a>
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="rounded-xl bg-black text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition">
+
+                Join KatCode
+
+            </a>
+
+        </div>
+
+
+
+
+</nav>
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- Hero -->
+<!-- ========================================================= -->
+
+<section class="py-16 mt-16 ">
+
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <p class="text-sm uppercase tracking-[0.35em] text-zinc-500 mb-4">
+            Pricing
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-8">
+            Choose Your Journey.
+        </h1>
+
+        <p class="text-xl leading-8 text-zinc-600 max-w-3xl mx-auto">
+            Start free, build your programming foundation, create a portfolio,
+            and accelerate your growth with the complete KATCODE experience.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- Freemium -->
+<!-- ========================================================= -->
+
+<section class="py-24">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+        <article class="rounded-3xl bg-white text-black p-12 shadow-2xl">
+
+            <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+
+                <span class="rounded-full bg-black text-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em]">
+                    Free Forever
+                </span>
+
+                <span class="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                    No Credit Card Required
+                </span>
+
+            </div>
+
+            <h2 class="text-5xl font-black tracking-tight mb-6">
+                Start with KATCODE
+            </h2>
+
+            <p class="text-zinc-600 text-lg leading-8 max-w-3xl mb-10">
+                Discover what makes KATCODE different before committing.
+                Experience our logic-first approach, explore learning paths,
+                complete selected lessons, and join community hackathons—
+                completely free.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-10 text-sm font-medium">
+
+                <span>✓ Selected Lessons</span>
+                <span>✓ Programming Exercises</span>
+                <span>✓ Browse Learning Paths</span>
+                <span>✓ Community Hackathons</span>
+                <span>✓ Progress Tracking</span>
+                <span>✓ Upgrade Anytime</span>
+
+            </div>
+
+            <div class="border-t border-zinc-200 pt-8 mb-10">
+
+                <p class="text-zinc-800 leading-8">
+
+
+
+                    Experience how KATCODE teaches programming and decide
+                    when you're ready to unlock the complete learning journey.
+
+                </p>
+
+            </div>
+
+            <a href="/auth/register"
+               class="inline-flex rounded-xl bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition-colors">
+
+                Start Free
+
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- Paid Plans -->
+<!-- ========================================================= -->
+
+<section class="py-24 border-t border-zinc-900">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-3xl mx-auto mb-16">
+
+            <p class="text-sm uppercase tracking-[0.35em] text-zinc-500 mb-4">
+                Upgrade When You're Ready
+            </p>
+
+            <h2 class="text-5xl font-black mb-6">
+                Continue Your Journey.
+            </h2>
+
+            <p class="text-zinc-400 text-lg leading-8">
+                Every plan builds on the previous one, giving you the tools
+                you need as your programming journey evolves.
+            </p>
+
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+
+            <!-- ================================================= -->
+            <!-- Academic -->
+            <!-- ================================================= -->
+
+            <article class="rounded-3xl border border-zinc-800 p-10 flex flex-col">
+
+                <span class="text-xs uppercase tracking-[0.25em] text-zinc-500">
+                    Foundation
+                </span>
+
+                <h3 class="text-3xl font-black mt-4">
+                    Academic
+                </h3>
+
+                <div class="mt-8">
+
+                    <span class="text-5xl font-black">
+                        R99
+                    </span>
+
+                    <span class="text-zinc-500">
+                        /month
+                    </span>
+
+                </div>
+
+                <p class=" leading-8 mt-8">
+                    Master programming fundamentals through structured
+                    learning, practical exercises, and KATCODE's
+                    logic-first approach.
+                </p>
+
+                <div class="border-t border-zinc-800 my-8"></div>
+
+                <h4 class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
+                    Perfect For
+                </h4>
+
+                <p class=" mb-8">
+                    Beginners • University Students • Self-Taught Learners
+                </p>
+
+                <h4 class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
+                    Included
+                </h4>
+
+                <ul class="space-y-4 ">
+
+                    <li>✓ Everything in Free</li>
+                    <li>✓ Full Learning Paths</li>
+                    <li>✓ Guided Lessons</li>
+                    <li>✓ Coding Exercises</li>
+                    <li>✓ Quizzes & Assessments</li>
+                    <li>✓ Progress Tracking</li>
+
+                </ul>
+
+                <div class="border-t border-zinc-800 my-8"></div>
+
+                <p class="text-sm text-zinc-800 leading-7">
+                    
+
+                    Build a solid programming foundation and confidently solve
+                    programming problems independently.
+
+                </p>
+
+                <a href="/auth/register"
+                   class="mt-10 inline-flex justify-center rounded-xl border border-zinc-700 px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:border-white transition">
+
+                    Choose Academic
+
+                </a>
+
+            </article>
+
+            <!-- ================================================= -->
+            <!-- Portfolio -->
+            <!-- ================================================= -->
+
+            <article class="rounded-3xl bg-white text-black p-10 flex flex-col relative shadow-2xl scale-[1.03]">
+
+                <span class="absolute top-6 right-6 rounded-full bg-black text-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em]">
+                    Most Popular
+                </span>
+
+                <span class="text-xs uppercase tracking-[0.25em] text-zinc-500">
+                    Portfolio
+                </span>
+
+                <h3 class="text-3xl font-black mt-4">
+                    Projects
+                </h3>
+
+                <div class="mt-8">
+
+                    <span class="text-5xl font-black">
+                        R149
+                    </span>
+
+                    <span class="text-zinc-500">
+                        /month
+                    </span>
+
+                </div>
+
+                <p class="text-zinc-700 leading-8 mt-8">
+                    Transform your programming knowledge into real software
+                    while building projects that become part of your own
+                    GitHub portfolio.
+                </p>
+
+                <div class="border-t border-zinc-200 my-8"></div>
+
+                <h4 class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
+                    Perfect For
+                </h4>
+
+                <p class="text-zinc-700 mb-8">
+                    Portfolio Builders • Internship Preparation • Hackathon Participants
+                </p>
+
+                <h4 class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
+                    Included
+                </h4>
+
+                <ul class="space-y-4">
+
+                    <li>✓ Everything in Academic</li>
+                    <li>✓ Guided Project Development</li>
+                    <li>✓ Repository Handover</li>
+                    <li>✓ GitHub Portfolio Integration</li>
+                    <li>✓ Real Development Workflow</li>
+
+                </ul>
+
+                <div class="border-t border-zinc-200 my-8"></div>
+
+                <p class="text-sm text-zinc-700 leading-7">
+
+
+
+                    Leave with practical experience, production-ready
+                    repositories, and a GitHub portfolio that showcases your
+                    software development skills.
+
+                </p>
+
+                <a href="/auth/register"
+                   class="mt-10 inline-flex justify-center rounded-xl bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition">
+
+                    Choose Projects
+
+                </a>
+
+            </article>
+
+            <!-- ================================================= -->
+            <!-- Premium -->
+            <!-- ================================================= -->
+
+            <article class="rounded-3xl border border-zinc-800 p-10 flex flex-col">
+
+                <span class="text-xs uppercase tracking-[0.25em] text-zinc-500">
+                    Acceleration
+                </span>
+
+                <h3 class="text-3xl font-black mt-4">
+                    Premium
+                </h3>
+
+                <div class="mt-8">
+
+                    <span class="text-5xl font-black">
+                        R199
+                    </span>
+
+                    <span class="text-zinc-500">
+                        /month
+                    </span>
+
+                </div>
+
+                <p class=" leading-8 mt-8">
+                    Unlock the complete KATCODE experience with katnova AI,
+                    exclusive challenges, and personalized support.
+                </p>
+
+                <div class="border-t border-zinc-800 my-8"></div>
+
+                <h4 class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
+                    Perfect For
+                </h4>
+
+                <p class=" mb-8">
+                    Career-Focused Learners • Future Software Engineers • Power Users
+                </p>
+
+                <h4 class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
+                    Included
+                </h4>
+
+                <ul class="space-y-4 ">
+
+                    <li>✓ Everything in Projects</li>
+                    <li>✓ katnova AI Assistant</li>
+                    <li>✓ Exclusive Challenges</li>
+                    <li>✓ Priority Support</li>
+                    <li>✓ Early Access Features</li>
+
+                </ul>
+
+                <div class="border-t border-zinc-800 my-8"></div>
+
+                <p class="text-sm text-zinc-400 leading-7">
+
+
+
+                    Learn faster, build with confidence, and maximize your
+                    growth with every KATCODE feature working together.
+
+                </p>
+
+                <a href="/auth/register"
+                   class="mt-10 inline-flex justify-center rounded-xl border border-zinc-700 px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:border-white transition">
+
+                    Choose Premium
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================================= -->
+<!-- Feature Comparison -->
+<!-- ========================================================= -->
+
+<section class="py-32 border-t border-zinc-900">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-3xl mx-auto mb-20">
+
+            <p class="text-sm uppercase tracking-[0.35em] text-zinc-500 mb-4">
+                Compare Plans
+            </p>
+
+            <h2 class="text-5xl md:text-6xl font-black tracking-tight mb-6">
+                Everything at a Glance.
+            </h2>
+
+            <p class="text-zinc-400 text-lg leading-8">
+                Choose the learning experience that matches where you are today—and where you want to be tomorrow.
+            </p>
+
+        </div>
+
+        <div class="overflow-x-auto rounded-3xl border border-zinc-800">
+
+            <table class="min-w-full text-left">
+
+                <thead class="bg-zinc-400 text-black">
+
+                <tr>
+
+                    <th class="px-8 py-6 text-sm uppercase tracking-[0.25em] text-zinc-800">
+                        Features
+                    </th>
+
+                    <th class="px-8 py-6 text-center">
+
+                        <p class="font-black text-xl">
+                            Free
+                        </p>
+
+                        <p class=" text-sm mt-2">
+                            Forever
+                        </p>
+
+                    </th>
+
+                    <th class="px-8 py-6 text-center">
+
+                        <p class="font-black text-xl">
+                            Academic
+                        </p>
+
+                        <p class=" text-sm mt-2">
+                            R99/mo
+                        </p>
+
+                    </th>
+
+                    <th class="px-8 py-6 text-center bg-zinc-200 text-black">
+
+                        <span class="inline-block rounded-full bg-black text-white px-3 py-1 text-[0.65rem] uppercase tracking-widest mb-3">
+                            Most Popular
+                        </span>
+
+                        <p class="font-black text-xl">
+                            Projects
+                        </p>
+
+                        <p class=" text-sm mt-2">
+                            R149/mo
+                        </p>
+
+                    </th>
+
+                    <th class="px-8 py-6 text-center">
+
+                        <p class="font-black text-xl">
+                            Premium
+                        </p>
+
+                        <p class=" text-sm mt-2">
+                            R199/mo
+                        </p>
+
+                    </th>
+
+                </tr>
+
+                </thead>
+
+                <tbody class="divide-y divide-zinc-800">
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Learning Paths
+                    </td>
+
+                    <td class="text-center">Limited</td>
+                    <td class="text-center">✓</td>
+                    <td class="text-center bg-zinc-50 text-black">✓</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Lessons
+                    </td>
+
+                    <td class="text-center">Selected</td>
+                    <td class="text-center">Unlimited</td>
+                    <td class="text-center bg-zinc-50 text-black">Unlimited</td>
+                    <td class="text-center">Unlimited</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Coding Exercises
+                    </td>
+
+                    <td class="text-center">Limited</td>
+                    <td class="text-center">✓</td>
+                    <td class="text-center bg-zinc-50 text-black">✓</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Quizzes & Assessments
+                    </td>
+
+                    <td class="text-center">—</td>
+                    <td class="text-center">✓</td>
+                    <td class="text-center bg-zinc-50 text-black">✓</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Guided Projects
+                    </td>
+
+                    <td class="text-center">—</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center bg-zinc-50 text-black">✓</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Repository Handover
+                    </td>
+
+                    <td class="text-center">—</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center bg-zinc-50 text-black">✓</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        GitHub Portfolio Integration
+                    </td>
+
+                    <td class="text-center">—</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center bg-zinc-50 text-black">✓</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Community Hackathons
+                    </td>
+
+                    <td class="text-center">✓</td>
+                    <td class="text-center">✓</td>
+                    <td class="text-center bg-zinc-50 text-black">✓</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        katnova AI Assistant
+                    </td>
+
+                    <td class="text-center">—</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center bg-zinc-50 text-black">—</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Exclusive Challenges
+                    </td>
+
+                    <td class="text-center">—</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center bg-zinc-50 text-black">—</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                <tr>
+
+                    <td class="px-8 py-6 font-semibold">
+                        Priority Support
+                    </td>
+
+                    <td class="text-center">—</td>
+                    <td class="text-center">—</td>
+                    <td class="text-center bg-zinc-50 text-black">—</td>
+                    <td class="text-center">✓</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="mt-16 text-center max-w-3xl mx-auto">
+
+            <p class="text-zinc-600 text-lg leading-8">
+                <strong class="text-black">Still unsure?</strong>
+                Start with the Free plan and upgrade whenever you're ready. Your progress is saved, so you'll never lose what you've already learned.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="bg-black text-zinc-400 border-t border-zinc-900">
+
+    <div class="max-w-7xl mx-auto px-6 py-20">
+
+        <div class="grid lg:grid-cols-5 gap-16">
+
+            <!-- Brand -->
+
+            <div class="lg:col-span-2">
+
+                <div class="flex items-center gap-4 mb-8">
+
+                    <img src="/images/katcode-logo.jpeg"
+                         alt="KatCode Logo"
+                         class="w-14 h-14 rounded-full border border-zinc-700">
+
+                    <div>
+
+                        <h2 class="text-white text-2xl font-black tracking-tight">
+                            KATCODE
+                        </h2>
+
+                        <p class="text-[0.6rem] uppercase tracking-[0.25em] font-bold text-zinc-500">
+                            Logic Precedes Code
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="text-zinc-400 leading-8 max-w-md">
+
+                    KATCODE is a programming education platform built to help
+                    students develop logical thinking, practical software
+                    development skills, and a portfolio that demonstrates
+                    real ability, not just completed tutorials.
+
+                </p>
+
+            </div>
+
+            <!-- Platform -->
+
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                    Platform
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="#learning-paths" class="hover:text-white transition">
+                            Learning Paths
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/pricing" class="hover:text-white transition">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faq" class="hover:text-white transition">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://app.katcode.co.za/auth/register"
+                           class="hover:text-white transition">
+                            Join KatCode
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Community -->
+
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                    Community
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="/hackathons" class="hover:text-white transition">
+                            Hackathons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/about" class="hover:text-white transition">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:support@katcode.co.za" class="hover:text-white transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Legal -->
+
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                    Legal
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="/terms" class="hover:text-white transition">
+                            Terms of Service
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/privacy" class="hover:text-white transition">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Divider -->
+
+        <div class="border-t border-zinc-800 my-16"></div>
+
+        <!-- Bottom Footer -->
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+            <div>
+
+                <p class="text-sm">
+
+                    © 2026 <span class="text-white font-semibold">Tovan Technologies (Pty) Ltd T/A KATCODE</span>.
+                    All rights reserved.
+
+                </p>
+
+            </div>
+
+       
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

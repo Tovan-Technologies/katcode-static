@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+
+    <title>About Us | KATCODE</title>
+    <meta name="description" content="Learn about KatCode, our engineering philosophy, and our mission to build the next generation of developers.">
+
+    
+     <link rel="stylesheet" href="/main.css">
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .opacity-0-initial { opacity: 0; }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+<link rel="icon" type="image/x-icon" href="/images/katcode-logo-icon.png">
+</head>
+
+
+<body class="bg-zinc-300 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white overflow-x-hidden">
+
+<!-- Static Navigation -->
+<!-- ========================================================= -->
+
+
+
+
+
+
+<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-white/40 border-b px-8 border-zinc-200">
+
+
+
+    <div class="h-20 flex items-center justify-between">
+
+        <!-- Logo -->
+
+        <a href="/" class="flex items-center gap-4 group shrink-0">
+
+            <img src="/images/katcode-logo.jpeg"
+                 alt="KatCode Logo"
+                 class="w-14 h-14 rounded-full border border-zinc-300 group-hover:border-black transition"/>
+
+            <div class="hidden sm:block">
+
+                <h1 class="text-xl font-black tracking-tight">
+                    KATCODE
+                </h1>
+
+                <p class="text-[0.55rem] uppercase tracking-[0.25em] text-zinc-500 font-bold">
+                    Logic Precedes Code
+                </p>
+
+            </div>
+
+        </a>
+
+        <!-- Desktop Navigation -->
+
+        <div class="hidden lg:flex items-center gap-10">
+
+            <a href="/"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Home
+            </a>
+
+            <a href="#learning-paths"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Learning Paths
+            </a>
+
+            <a href="/hackathons"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Hackathons
+            </a>
+
+            <a href="/pricing"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                Pricing
+            </a>
+
+            <a href="#faq"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                FAQ
+            </a>
+
+            <a href="/about"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+                About
+            </a>
+
+        </div>
+
+        <!-- Desktop Actions -->
+
+        <div class="hidden md:flex items-center gap-4">
+
+            <a href="https://app.katcode.co.za/auth/login"
+               class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-black transition">
+
+                Sign In
+
+            </a>
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="rounded-xl bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-0.5 transition-all duration-300 shadow-lg">
+
+                Join KatCode
+
+            </a>
+
+        </div>
+
+        <!-- Mobile Hamburger -->
+
+        <button id="mobile-menu-btn"
+                class="lg:hidden relative w-7 h-7 focus:outline-none">
+
+                <span id="line1"
+                      class="absolute w-7 h-0.5 bg-black rounded top-1 transition-all duration-300"></span>
+
+            <span id="line2"
+                  class="absolute w-7 h-0.5 bg-black rounded top-3 transition-all duration-300"></span>
+
+            <span id="line3"
+                  class="absolute w-7 h-0.5 bg-black rounded top-5 transition-all duration-300"></span>
+
+        </button>
+
+    </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+
+    <div id="mobile-menu"
+         class="hidden lg:hidden bg-white border-t border-zinc-200 shadow-xl">
+
+        <div class="px-6 py-8 flex flex-col gap-6">
+
+            <a href="/"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Home
+            </a>
+
+            <a href="#learning-paths"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Learning Paths
+            </a>
+
+            <a href="/hackathons"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Hackathons
+            </a>
+
+            <a href="/pricing"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                Pricing
+            </a>
+
+            <a href="#faq"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                FAQ
+            </a>
+
+            <a href="/about"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+                About
+            </a>
+
+            <hr class="border-zinc-200">
+
+            <a href="https://app.katcode.co.za/auth/login"
+               class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-700 hover:text-black">
+
+                Sign In
+
+            </a>
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="rounded-xl bg-black text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition">
+
+                Join KatCode
+
+            </a>
+
+        </div>
+
+
+
+
+</nav>
+
+
+
+
+
+<section class="pt-48 pb-24 relative z-10">
+
+    <div class="max-w-5xl mx-auto px-6 text-center opacity-0-initial scroll-animate">
+
+        <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-6 font-bold">
+            About KatCode
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-8 text-black">
+            Teaching Developers to Think.
+        </h1>
+
+        <p class="text-xl leading-8 max-w-3xl mx-auto text-zinc-700 font-medium">
+            KatCode is a programming education platform built on one simple belief:
+            before you can write great software, you must first learn how to think.
+            We help students develop logical reasoning, practical programming skills,
+            and the confidence to build real-world software.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- The Core Philosophy -->
+<!-- ========================================================= -->
+
+
+<section class="py-24 bg-zinc-200 border-y border-zinc-400 relative z-10">
+
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+        <div class="opacity-0-initial scroll-animate">
+
+            <p class="text-sm uppercase tracking-[0.35em] text-zinc-500 mb-4 font-bold">
+                Our Philosophy
+            </p>
+
+            <h2 class="text-4xl font-black mb-8 text-black tracking-tight">
+                Logic Precedes Code.
+            </h2>
+
+            <p class="text-lg leading-8 text-zinc-700 font-medium mb-6">
+                Programming begins long before writing code.
+            </p>
+
+            <p class="text-lg leading-8 text-zinc-700 font-medium mb-6">
+                Great software is built by understanding problems, designing
+                solutions, and making sound engineering decisions—not by
+                memorising syntax or relying entirely on AI.
+            </p>
+
+            <p class="text-lg leading-8 text-zinc-700 font-medium">
+                At KatCode, every lesson is designed to help you understand
+                <strong>why</strong> code works before learning
+                <strong>how</strong> to write it, giving you skills that
+                transfer across programming languages, frameworks, and future
+                technologies.
+            </p>
+
+        </div>
+
+        <div class="bg-black text-white rounded-[2rem] p-12 shadow-2xl opacity-0-initial scroll-animate"
+             style="transition-delay:200ms;">
+
+            <p class="text-xs uppercase tracking-[0.3em] text-zinc-500 font-bold mb-6">
+                KATCODE PRINCIPLE
+            </p>
+
+            <h3 class="text-5xl font-black leading-tight mb-8">
+                LOGIC<br>
+                PRECEDES<br>
+                CODE.
+            </h3>
+
+            <p class="text-zinc-400 leading-8">
+                Technologies evolve.
+                Programming languages change.
+                AI continues to improve.
+
+                <br><br>
+
+                Logical thinking remains timeless.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================================= -->
+<!-- Built by Tovan Technologies -->
+<!-- ========================================================= -->
+
+<section class="py-32 relative z-10">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+        <div class="bg-white rounded-[2.5rem] border border-zinc-200 p-12 md:p-16 shadow-xl opacity-0-initial scroll-animate">
+
+            <p class="text-xs uppercase tracking-[0.3em] text-zinc-400 font-bold mb-4">
+                Built by Tovan Technologies
+            </p>
+
+            <h2 class="text-4xl font-black mb-8 text-black tracking-tight">
+                Creating Technology That Empowers Developers.
+            </h2>
+
+            <div class="space-y-6 text-lg leading-8 text-zinc-700 font-medium">
+
+                <p>
+                    KatCode is proudly developed by
+                    <strong>Tovan Technologies (Pty) Ltd</strong>,
+                    a Information technology company focused on building
+                    software products that empower people.
+                </p>
+
+                <p>
+                    Through KatCode, we're making software engineering
+                    education more practical, more engaging, and more aligned
+                    with the skills required in today's industry.
+                </p>
+
+                <p>
+                    From structured learning paths and guided projects to
+                    hackathons and portfolio development, every part of the
+                    platform is designed to help students grow confidence.
+                </p>
+
+            </div>
+
+            <div class="border-t border-zinc-200 mt-12 pt-10 grid md:grid-cols-3 gap-8">
+
+                <div class="text-center">
+
+                    <div class="text-4xl mb-4">🧠</div>
+
+                    <h3 class="font-bold text-lg text-black mb-3">
+                        Logic First
+                    </h3>
+
+                    <p class="text-zinc-600 text-sm leading-7">
+                        Understand why code works before writing it.
+                    </p>
+
+                </div>
+
+                <div class="text-center">
+
+                    <div class="text-4xl mb-4">💻</div>
+
+                    <h3 class="font-bold text-lg text-black mb-3">
+                        Learn by Building
+                    </h3>
+
+                    <p class="text-zinc-600 text-sm leading-7">
+                        Reinforce concepts through guided software projects.
+                    </p>
+
+                </div>
+
+                <div class="text-center">
+
+                    <div class="text-4xl mb-4">🚀</div>
+
+                    <h3 class="font-bold text-lg text-black mb-3">
+                        Build Your Future
+                    </h3>
+
+                    <p class="text-zinc-600 text-sm leading-7">
+                        Develop practical experience and a portfolio that
+                        demonstrates real ability.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================================= -->
+<!-- CTA -->
+<!-- ========================================================= -->
+
+
+<section class="py-24 bg-black text-white text-center relative z-10">
+
+    <div class="max-w-3xl mx-auto px-6 opacity-0-initial scroll-animate">
+
+        <p class="text-sm uppercase tracking-[0.35em] text-zinc-500 mb-4 font-bold">
+            Begin Your Journey
+        </p>
+
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-8">
+            Start Your Software Engineering Journey.
+        </h2>
+
+        <p class="text-lg leading-8 text-zinc-400 mb-10">
+            Explore structured learning paths designed to help you think,
+            build, and grow into a confident software engineer.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+            <a href="/learning-paths"
+               class="inline-flex justify-center rounded-xl bg-white text-black px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-200 transition-all">
+
+                Explore Learning Paths
+
+            </a>
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="inline-flex justify-center rounded-xl border border-zinc-700 px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:border-white transition-all">
+
+                Join KatCode
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<footer class="bg-black text-zinc-400 border-t border-zinc-900">
+
+    <div class="max-w-7xl mx-auto px-6 py-20">
+
+        <div class="grid lg:grid-cols-5 gap-16">
+
+            <!-- Brand -->
+
+            <div class="lg:col-span-2">
+
+                <div class="flex items-center gap-4 mb-8">
+
+                    <img src="/images/katcode-logo.jpeg"
+                         alt="KatCode Logo"
+                         class="w-14 h-14 rounded-full border border-zinc-700">
+
+                    <div>
+
+                        <h2 class="text-white text-2xl font-black tracking-tight">
+                            KATCODE
+                        </h2>
+
+                        <p class="text-[0.6rem] uppercase tracking-[0.25em] font-bold text-zinc-500">
+                            Logic Precedes Code
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="text-zinc-400 leading-8 max-w-md">
+
+                    KATCODE is a programming education platform built to help
+                    students develop logical thinking, practical software
+                    development skills, and a portfolio that demonstrates
+                    real ability, not just completed tutorials.
+
+                </p>
+
+            </div>
+
+            <!-- Platform -->
+
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                    Platform
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="#learning-paths" class="hover:text-white transition">
+                            Learning Paths
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/pricing" class="hover:text-white transition">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faq" class="hover:text-white transition">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://app.katcode.co.za/auth/register"
+                           class="hover:text-white transition">
+                            Join KatCode
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Community -->
+
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                    Community
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="/hackathons" class="hover:text-white transition">
+                            Hackathons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/about" class="hover:text-white transition">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:support@katcode.co.za" class="hover:text-white transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Legal -->
+
+            <div>
+
+                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                    Legal
+                </h3>
+
+                <ul class="space-y-4">
+
+                    <li>
+                        <a href="/terms" class="hover:text-white transition">
+                            Terms of Service
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/privacy" class="hover:text-white transition">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Divider -->
+
+        <div class="border-t border-zinc-800 my-16"></div>
+
+        <!-- Bottom Footer -->
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+            <div>
+
+                <p class="text-sm">
+
+                    © 2026 <span class="text-white font-semibold">Tovan Technologies (Pty) Ltd T/A KATCODE</span>.
+                    All rights reserved.
+
+                </p>
+
+            </div>
+
+       
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Animation Script -->
+<script src="/js/app.js">
+
+   
+</script>
+</body>
+</html>
