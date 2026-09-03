@@ -54,6 +54,21 @@
             0%    {opacity: 0; transform: translateY(-10px)}
             100%  {opacity: 1; transform: translateY(0)}
         }
+        
+        .grid-pattern {
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,0.045) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.045) 1px,
+                    transparent 1px
+                );
+
+            background-size: 40px 40px;
+        }
     </style>
 </head>
 
@@ -76,7 +91,8 @@
             <div id="nav-highlight" class="absolute inset-y-1 left-0 bg-white/60 backdrop-blur-md rounded-full transition-all duration-300 ease-out opacity-0 pointer-events-none shadow-sm"></div>
             
             <a href="/" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Home</a>
-            <a href="#learning-paths" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Learning Paths</a>
+            <a href="#learning-paths" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Learn</a>
+              <a href="/project" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Projects</a>
             <a href="/hackathons" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Hackathons</a>
             <a href="#faq" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">FAQ</a>
             <a href="/about" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">About</a>
@@ -107,101 +123,108 @@
         <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-cyan-800 text-zinc-100 py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-cyan-900 transition-colors shadow-lg">Get started</a>
     </div>
 </div>
+<section class="relative pt-40 pb-28 overflow-hidden bg-zinc-100 min-h-[90vh] flex items-center">
 
-<section class="relative min-h-screen pt-32 pb-20 px-6 overflow-hidden 0 flex items-center">
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1920" 
-             alt="Abstract logic structure" 
-             class="w-full h-full object-cover " />
-    </div>
-     <div class="absolute inset-y-0 bg-gradient-to-l from-transparent to-zinc-200"></div>
-    <div class="absolute inset-0 z-0 bg-gradient-to-r from-zinc-300/95 via-zinc-200/70 to-zinc-200/30"></div>
+    <div class="absolute inset-0 grid-pattern opacity-60"></div>
+    <div class="absolute -top-32 -right-32 w-[550px] h-[550px] rounded-full bg-[#245F73]/5 blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full animate-fade-in-up relative z-10 mt-8">
-        <div class="text-left">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tighter text-black leading-[1.1]">
-                Master software engineering, <br/><span class="text-cyan-800">starting with logic.</span>
-            </h1>
-            
-            <p class="text-zinc-600 text-lg md:text-xl leading-relaxed mb-10 font-medium max-w-lg">
-                Learn the architectural reasoning behind the syntax. We guide you from mapping out system flowcharts to deploying complete, real-world applications.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-center gap-4">
-                <a href="https://app.katcode.co.za/auth/register" class="rounded-full w-full sm:w-auto bg-cyan-800 text-zinc-100 px-8 py-3.5 text-sm font-bold tracking-[0.1em] hover:bg-cyan-900 transition-colors shadow-lg shadow-cyan-900/20 text-center">
-                    Get started
-                </a>
-                <a href="#methodology" class="rounded-full w-full sm:w-auto bg-transparent border-2 border-zinc-400 text-black px-8 py-3.5 text-sm font-bold tracking-[0.1em] hover:border-cyan-800 hover:text-cyan-800 transition-colors text-center">
-                    See how it works
-                </a>
-            </div>
-        </div>
+    <div class="relative max-w-7xl mx-auto px-6 w-full">
 
-        <div class="relative w-full h-[450px] lg:h-[550px] hidden md:block">
-            <div class="absolute top-0 right-0 w-[75%] h-[60%] rounded-3xl overflow-hidden shadow-xl border border-zinc-300">
-                <img src="/images/logic-whiteboard.jpg" alt="System planning and teaching on a whiteboard" class="w-full h-full object-cover" />
-            </div>
-            
-            <div class="absolute top-12 left-[10%] bg-zinc-100/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-zinc-300 flex items-center gap-4 z-10 animate-bounce" style="animation-duration: 4s;">
-                <div class="w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-800">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/></svg>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div class="relative z-20">
+
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md border border-zinc-300 rounded-full mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-[#245F73] animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-[0.16em] text-zinc-600">
+                        Programming education
+                    </span>
                 </div>
-                <div>
-                    <p class="text-[0.65rem] font-bold text-zinc-500 uppercase tracking-wider">Map System Logic</p>
+
+                <h1 class="text-5xl md:text-6xl lg:text-[76px] font-black tracking-[-0.055em] leading-[0.98] mb-8">
+                    Learn to <span class="text-[#245F73]">think.</span><br>
+                    Learn to <span class="text-[#245F73]">build.</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-zinc-600 max-w-xl leading-relaxed mb-10">
+                    KATCODE is a programming learning platform built around one principle:
+                    <strong class="text-black">logic precedes code.</strong>
+                    Learn the fundamentals, build practical software, and develop projects that demonstrate what you can actually do.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://app.katcode.co.za/auth/register" class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full bg-[#245F73] text-white font-bold hover:bg-[#1B4A5A] hover:-translate-y-1 transition-all shadow-lg">
+                        Start learning
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
+                        </svg>
+                    </a>
+
+                    <a href="#projects" class="inline-flex items-center justify-center px-7 py-4 rounded-full border border-zinc-400 bg-white/60 backdrop-blur-sm font-bold hover:bg-white hover:-translate-y-1 transition-all">
+                        Explore projects
+                    </a>
                 </div>
+
             </div>
 
-            <div class="absolute bottom-0 left-0 w-[70%] h-[65%] rounded-3xl overflow-hidden shadow-2xl border border-zinc-300 z-20">
-                <img src="/images/study.jpg" alt="Developer workstation setup" class="w-full h-full object-cover" />
+            <div class="relative w-full h-[550px] hidden lg:flex items-center justify-center">
+                
+                <svg class="absolute inset-0 w-full h-full z-0" pointer-events="none">
+                    <line x1="10%" y1="25%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 4" class="opacity-30" />
+                    <line x1="85%" y1="35%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 12" class="opacity-30" />
+                    <line x1="25%" y1="75%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 4" class="opacity-30" />
+                    <line x1="80%" y1="70%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 8" class="opacity-30" />
+                </svg>
+
+               
+
+                <div class="absolute top-[15%] bg-zinc-100/70 left-0 z-20  backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-4 animate-[bounce_4s_ease-in-out_infinite]">
+                    <div class="w-10 h-10 rounded-full bg-[#DCECEF] flex items-center justify-center text-[#245F73]">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/></svg>
+                    </div>
+                    <div>
+                       
+                        <p class="text-sm  font-bold ">Map Logic</p>
+                    </div>
+                </div>
+
+                <div class="absolute top-[25%] -right-4 z-20 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl  flex items-center gap-4 animate-[bounce_5s_ease-in-out_infinite_0.5s]">
+                    <div class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-800">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <div>
+                      
+                        <p class="text-sm font-black text-black">Develop Code</p>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-[20%] left-[5%] z-20 bg-[#245F73] px-5 py-3.5 rounded-2xl shadow-xl border border-[#1B4A5A] flex items-center gap-4 animate-[bounce_4.5s_ease-in-out_infinite_1s]">
+                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="2 1 1 2 0 20 1 12 2 0 0 1 2 2 4"/>
+<polyline points="1 8 12 5 67 89"/><polyline points="10 8 12 50 67 8"/>
+<polyline x1="12" y1="3" x2="12" y2="15"/></svg>
+                    </div>
+                    <div>
+                       
+                        <p class="text-sm font-black text-white">Architecture</p>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-[18%] right-0 z-20 bg-black px-5 py-3.5 rounded-2xl shadow-2xl border border-zinc-800 flex items-center gap-4 animate-[bounce_5.5s_ease-in-out_infinite_1.5s]">
+                    <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+                    </div>
+                    <div>
+                        
+                        <p class="text-sm font-black text-white">Deploy Repo</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="absolute bottom-16 -right-4 bg-zinc-100/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-zinc-300 flex items-center gap-4 z-30 animate-bounce" style="animation-duration: 5s; animation-delay: 1s;">
-                <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-100">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 11v4"/><path d="M10 13h4"/></svg>
-                </div>
-                <div>
-                    <p class="text-[0.65rem] font-bold text-zinc-500 uppercase tracking-wider">Deploy to GitHub</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent to-zinc-200"></div>
+        </div> </div>
 </section>
-
-<section id="philosophy" class="relative overflow-hidden min-h-[800px] flex items-center">
-    
-    <div class="absolute inset-0 z-0 bg-zinc-200/85"></div>
-
-    <div class="absolute top-0 left-0 w-full lg:w-[65%] h-[65%] z-0">
-        <img src="/images/logic-diadram.jpg" alt="Hand-drawn flowchart" class="w-full h-full object-cover opacity-60 mix-blend-multiply" />
-        <div class="absolute inset-y-0 right-0 w-2/3 bg-gradient-to-r from-transparent to-zinc-200"></div>
-        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-transparent to-zinc-200"></div>
-    </div>
-
-    <div class="absolute bottom-0 right-0 w-full lg:w-[65%] h-[65%] z-0">
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1920" alt="Code editor screen" class="w-full h-full object-cover opacity-60 mix-blend-multiply" />
-        <div class="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-l from-transparent to-zinc-200"></div>
-        <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-t from-transparent to-zinc-200"></div>
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex justify-start">
-        <div class="max-w-xl bg-white/40 backdrop-blur-2xl shadow-2xl p-10 md:p-12 rounded-3xl mt-10 lg:mt-0 hover:-translate-y-3 hover:scale-[1.02] hover:bg-white/60 transition-all duration-500">
-            <p class="text-xs uppercase tracking-[0.2em] mb-4 font-bold text-cyan-900 drop-shadow-sm">
-                Core Directive
-            </p>
-            <h2 class="text-4xl md:text-5xl font-black tracking-tight text-black mb-6 leading-[1.1]">
-                Logic Precedes Code.
-            </h2>
-            <p class="text-xl font-bold leading-relaxed text-zinc-900 mb-6">
-                Stop memorizing syntax. Start architecting systems.
-            </p>
-            <p class="text-base leading-relaxed text-zinc-800 font-medium">
-                We teach the structural logic behind programming so you can think critically, map out systems on paper, and build real-world projects with absolute precision.
-            </p>
-        </div>
-    </div>
-</section>
-
 <section id="methodology" class="relative pt-24 pb-32 overflow-hidden">
     
     <div class="absolute inset-0 z-0">
@@ -261,40 +284,88 @@
 
         </div>
     </div>
+    
+    
+    
+    
 </section>
-
-<section class="relative py-28 overflow-hidden">
+<section id="hackathons" class="relative py-32 overflow-hidden bg-cyan-900">
+    
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=1920" alt="Tech collaboration" class="w-full h-full object-cover" />
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1920" 
+             alt="Hackathon coding event" 
+             class="w-full h-full object-cover opacity-20 mix-blend-multiply" />
     </div>
-    <div class="absolute inset-0 z-0 bg-zinc-200/85"></div>
+    
+    <div class="absolute inset-0 z-0 bg-gradient-to-t from-cyan-900 via-transparent to-cyan-900/80"></div>
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.05]"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        <div class="order-2 lg:order-1 bg-white/40 backdrop-blur-xl p-10 rounded-3xl shadow-2xl hover:-translate-y-3 hover:scale-[1.02] hover:bg-white/60 transition-all duration-500">
-            <p class="text-xs uppercase tracking-[0.2em] text-cyan-900 mb-4 font-bold drop-shadow-sm">
-                Community Execution
-            </p>
-            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-8 text-black">
-                Learn to apply.
+        
+        <div class="text-left">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-8 border border-white/20 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-cyan-300 animate-pulse shadow-[0_0_8px_#67e8f9]"></span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-cyan-100 font-bold">
+                    Community Execution
+                </span>
+            </div>
+
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 text-white leading-[1.1]">
+                Code under <span class="text-cyan-300">pressure.</span>
             </h2>
-            <p class="text-zinc-900 font-semibold text-lg leading-relaxed mb-6">
-                Software engineering is a collaborative discipline. Watching tutorials is not enough. KATCODE Hackathons force you to architect solutions, meet deadlines, and collaborate in high-pressure environments.
+
+            <p class="text-cyan-50/90 font-medium text-lg leading-relaxed mb-10">
+                Software engineering is a collaborative discipline. Watching tutorials is not enough. KATCODE Hackathons force you to architect solutions, meet deadlines, and collaborate in high-pressure, real-world environments.
             </p>
-            <a href="/hackathons" class="inline-flex rounded-full bg-cyan-800 text-white px-8 py-4 text-sm font-bold tracking-[0.1em] hover:bg-cyan-900 hover:-translate-y-1 shadow-xl transition-all duration-300 mt-4">
+
+            <a href="/hackathons" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-cyan-900 font-bold tracking-[0.1em] hover:bg-cyan-50 hover:-translate-y-1 shadow-xl transition-all duration-300 w-full sm:w-auto">
                 View upcoming hackathons
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
             </a>
+            
         </div>
-        <div class="order-1 lg:order-2 rounded-3xl overflow-hidden shadow-2xl hover:-translate-y-3 hover:scale-[1.03] transition-all duration-500 cursor-pointer">
-            <img src="/images/students.jpg" alt="Students collaborating and coding at a KATCODE hackathon lab" class="w-full h-[450px] object-cover">
+
+        <div class="relative w-full rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl p-8 hover:-translate-y-2 hover:bg-white/15 transition-all duration-500 group cursor-default">
+            
+            <div class="flex gap-2 mb-6">
+                <div class="w-3 h-3 rounded-full bg-white/40 group-hover:bg-red-400 transition-colors duration-300"></div>
+                <div class="w-3 h-3 rounded-full bg-white/40 group-hover:bg-yellow-400 transition-colors duration-300"></div>
+                <div class="w-3 h-3 rounded-full bg-white/40 group-hover:bg-green-400 transition-colors duration-300"></div>
+            </div>
+
+            <div class="flex justify-center mb-10 relative">
+                <img src="https://unsplash.com/photos/a-table-topped-with-a-laptop-computer-next-to-a-brochure-e-RIsuP5Iyk" alt="Hackathon launch energy" class="h-56 object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 relative z-10" />
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 border-t border-white/20 pt-6">
+                
+                <div class="text-center">
+                    <p class="text-[10px] uppercase tracking-widest text-cyan-200 font-bold mb-1">Duration</p>
+                    <p class="text-2xl font-black text-white tracking-tight">X <span class="text-cyan-300 text-sm tracking-normal ml-1">HRS</span></p>
+                </div>
+                
+                <div class="text-center border-l border-white/20">
+                    <p class="text-[10px] uppercase tracking-widest text-cyan-200 font-bold mb-1">Format</p>
+                    <p class="text-lg font-black text-white mt-1">Teams</p>
+                </div>
+                
+                <div class="text-center border-l border-white/20">
+                    <p class="text-[10px] uppercase tracking-widest text-cyan-200 font-bold mb-1">Status</p>
+                    <p class="text-lg font-black text-cyan-300 mt-1 animate-pulse">UPCOMING</p>
+                </div>
+
+            </div>
         </div>
+
     </div>
 </section>
 
-<section id="learning-paths" class="relative py-28 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1920" alt="Programming desk setup" class="w-full h-full object-cover" />
-    </div>
-    <div class="absolute inset-0 z-0 bg-zinc-200/90"></div>
+<section id="learning-paths" class="relative py-28 overflow-hidden border border-white">
+    
+   
 
     <div class="relative z-20 max-w-7xl mx-auto px-6">
         
@@ -319,7 +390,7 @@
                     <img src="/images/students.jpg" alt="Students Background" class="absolute inset-0 w-full h-full object-cover filter blur-sm opacity-50 mix-blend-multiply" />
                     <!-- Centered Java Logo overlay -->
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="bg-white/90 backdrop-blur-md px-8 py-4 rounded-2xl shadow-xl border border-white/50">
+                        <div class=" backdrop-blur-md px-8 py-4 rounded-sxl shadow-xl ">
                             <img src="/images/java-logo.png" alt="Java Logo" class="h-20 object-contain" />
                         </div>
                     </div>
@@ -367,7 +438,7 @@
                             Module 2
                         </p>
                         <h3 class="text-3xl font-black mt-2 text-black">
-                            Java Architecture
+                            Java Fundamentals
                         </h3>
                     </div>
                     <p class="text-zinc-600 font-medium leading-relaxed mb-8">
@@ -384,7 +455,7 @@
                         <span>✓ Desktop GUIs</span>
                     </div>
                     
-                    <button disabled class="mt-auto inline-flex justify-center rounded-full bg-zinc-300 text-zinc-500 px-8 py-3.5 text-sm font-bold tracking-[0.1em] cursor-not-allowed border border-zinc-400">
+                    <button disabled class="mt-auto inline-flex justify-center rounded-full bg-zinc-300 text-zinc-500 px-8 py-3.5 text-sm font-bold tracking-[0.1em] cursor-not-allowed border border-zinc-200">
                         Unavailable
                     </button>
                 </div>
@@ -394,13 +465,10 @@
 </section>
 
 <section id="faq" class="relative py-28 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=1920" alt="Clean desk setup" class="w-full h-full object-cover blur opacity-10" />
-    </div>
-    <div class="absolute inset-0 z-0 bg-zinc-200/85"></div>
+    
 
     <div class="relative z-10 max-w-4xl mx-auto px-6">
-        <div class="text-center mb-16 bg-white/40 backdrop-blur-xl p-8 rounded-3xl shadow-2xl hover:bg-white/60 hover:-translate-y-2 transition-all duration-500">
+        <div class="text-center mb-16 backdrop-blur-xl p-8 rounded-3xl shadow-sm  transition-all duration-500">
             <p class="text-sm uppercase tracking-[0.2em] text-cyan-900 mb-4 font-bold drop-shadow-sm">
                 Knowledge Base
             </p>
@@ -410,7 +478,7 @@
         </div>
 
         <div class="space-y-6">
-            <details class="group bg-white/40 backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 hover:scale-[1.01] hover:bg-white/60 transition-all duration-300 cursor-pointer" open>
+            <details class="group  backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2  transition-all duration-300 cursor-pointer" open>
                 <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
                     <span class="text-lg">Who is KATCODE built for?</span>
                     <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
@@ -421,7 +489,7 @@
                 </div>
             </details>
 
-            <details class="group bg-white/40 backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 hover:scale-[1.01] hover:bg-white/60 transition-all duration-300 cursor-pointer">
+            <details class="group  backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2   transition-all duration-300 cursor-pointer">
                 <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
                     <span class="text-lg">Do I need prior programming experience?</span>
                     <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
@@ -432,7 +500,7 @@
                 </div>
             </details>
 
-            <details class="group bg-white/40 backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 hover:scale-[1.01] hover:bg-white/60 transition-all duration-300 cursor-pointer">
+            <details class="group  backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2  transition-all duration-300 cursor-pointer">
                 <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
                     <span class="text-lg">What is Repository Handover?</span>
                     <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
