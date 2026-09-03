@@ -1,149 +1,93 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Home | KATCODE</title>
 
-<title>Home | KATCODE</title>
+    <meta name="description"
+          content="KATCODE is a programming education platform that teaches logical thinking, software development, Java, guided projects, and hackathons. Learn why code works before learning how to write it.">
 
-<meta name="description"
-      content="KATCODE is a programming education platform that teaches logical thinking, software development, Java, guided projects, and hackathons. Learn why code works before learning how to write it.">
+    <meta name="keywords"
+          content="KATCODE, programming education, software development, learn programming, learn Java, computer science, COMP, Java, coding platform, guided projects, GitHub portfolio, programming fundamentals, software development, hackathons, South Africa, logic precedes code">
 
-<meta name="keywords"
-      content="KATCODE, programming education, software development, learn programming, learn Java, computer science, COMP, Java, coding platform, guided projects, GitHub portfolio, programming fundamentals, software development, hackathons, South Africa, logic precedes code">
+    <meta name="author" content="Tovan Technologies (Pty) Ltd">
+    <meta name="application-name" content="KATCODE">
+    <meta name="theme-color" content="#f4f4f5"> 
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-<meta name="author" content="Tovan Technologies (Pty) Ltd">
-<meta name="application-name" content="KATCODE">
-<meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://www.katcode.co.za/">
+    <link rel="manifest" href="/manifest.webmanifest">
 
-<meta name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KATCODE">
+    <meta property="og:url" content="https://www.katcode.co.za/">
+    <meta property="og:title" content="KATCODE | Logic Precedes Code">
+    <meta property="og:description"
+          content="Learn the logical foundations of software development through structured learning paths, guided projects, and hackathons.">
+    <meta property="og:image" content="https://www.katcode.co.za/images/katcode-logo.png">
+    <meta property="og:locale" content="en_ZA">
 
-<link rel="canonical" href="https://www.katcode.co.za/">
+    <link href="./main.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="/images/katcode-logo-icon.png">
+    <link rel="apple-touch-icon" href="/images/katcode-logo-icon.png">
 
-<link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<!-- Open Graph -->
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="KATCODE">
-<meta property="og:url" content="https://www.katcode.co.za/">
-<meta property="og:title" content="KATCODE | Logic Precedes Code">
-<meta property="og:description"
-      content="Learn the logical foundations of software development through structured learning paths, guided projects, and hackathons.">
-<meta property="og:image"
-   content="https://www.katcode.co.za/images/katcode-logo.png">
-<meta property="og:locale" content="en_ZA">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="KATCODE | Logic Precedes Code">
-<meta name="twitter:description"
-      content="Programming education built around logical thinking, practical projects, and software engineering.">
-<meta name="twitter:image"
-      content="https://www.katcode.co.za/images/katcode-logo.png">
-
-
-<link href="./main.css" rel="stylesheet">
-<!-- Icons -->
-
-<link rel="icon"
-      type="image/png"
-      href="/images/katcode-logo-icon.png">
-
-<link rel="apple-touch-icon"
-      href="/images/katcode-logo-icon.png">
-
-<!-- Fonts -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "KATCODE",
-  "legalName": "Tovan Technologies (Pty) Ltd",
-  "url": "https://www.katcode.co.za",
-  "logo": "https://www.katcode.co.za/images/katcode-logo.png",
-  "description": "KATCODE is a programming education platform teaching logical thinking, software development, Java, guided software projects, and hackathons.",
-  "slogan": "Logic Precedes Code",
-
-  "sameAs": [
-    "https://github.com/Tovan-Technologies"
-  ],
-  "knowsAbout": [
-  
-    "Programming",
-    "Computer Science",
-    "Java",
-    "Python",
-    "Git",
-    "Software Development",
-    "Hackathons"
-  ]
-}
-</script>
-
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
 </head>
-<script>
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker
-            .register("/sw.js")
-            .then(() => console.log("Service Worker registered"))
-            .catch(err => console.error(err));
-    });
-}
-</script>
 
-<body class="bg-zinc-300 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
+<body class="bg-zinc-100 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-cyan-200 selection:text-black">
 
-
-
-
-
-
-
-<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-zinc-100/80 border-b px-8 border-zinc-400">
+<!-- FLOATING GLASSMORPHISM NAVIGATION -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 rounded-full bg-zinc-100/70 backdrop-blur-md border border-zinc-200 shadow-sm px-6 lg:px-8">
     <div class="h-20 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-4 group shrink-0">
-            <img src="/images/katcode-logo.jpeg"
+        <a href="/" class="flex items-center gap-4 group shrink-0 focus:outline-none">
+            <img src="https://www.katcode.co.za/images/katcode-logo.png"
                  alt="KatCode Logo"
-                 class="w-14 h-14 rounded-full border border-zinc-400 group-hover:border-black transition"/>
+                 class="w-12 h-12 rounded-full shadow-xl transition-colors"/>
             <div class="hidden sm:block">
-                <h1 class="text-xl font-black tracking-tight">
+                <h1 class="text-xl font-black tracking-tight text-black">
                     KATCODE
                 </h1>
-                <p class="text-[0.55rem] uppercase tracking-[0.25em] text-zinc-600 font-bold">
-                    Logic Precedes Code
-                </p>
             </div>
         </a>
 
-        <div class="hidden lg:flex items-center gap-10">
-            <a href="/" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Home</a>
-            <a href="https://www.katcode.co.za/#learning-paths" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Learning Paths</a>
-            <a href="/hackathons" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Hackathons</a>
-<!--            <a href="/pricing" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Pricing</a>-->
-            <a href="https://www.katcode.co.za/#faq" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">FAQ</a>
-            <a href="/about" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">About</a>
+        <!-- NAV LINKS WITH SLIDING HIGHLIGHT -->
+        <div class="hidden lg:flex items-center relative" id="nav-container">
+            <!-- The sliding highlight pill -->
+            <div id="nav-highlight" class="absolute inset-y-2 left-0 bg-zinc-200 rounded-full transition-all duration-300 ease-out opacity-0 pointer-events-none"></div>
+            
+            <a href="/" class="nav-link relative z-10 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-cyan-800 transition-colors">Home</a>
+            <a href="#learning-paths" class="nav-link relative z-10 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-cyan-800 transition-colors">Learning Paths</a>
+            <a href="/hackathons" class="nav-link relative z-10 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-cyan-800 transition-colors">Hackathons</a>
+            <a href="#faq" class="nav-link relative z-10 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-cyan-800 transition-colors">FAQ</a>
+            <a href="/about" class="nav-link relative z-10 px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 hover:text-cyan-800 transition-colors">About</a>
         </div>
 
         <div class="hidden md:flex items-center gap-4">
-            <a href="https://app.katcode.co.za/auth/login" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Sign In</a>
-            <a href="https://app.katcode.co.za/auth/register" class="rounded-xl bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-0.5 transition-all duration-300 shadow-lg">Join KatCode</a>
+            <a href="https://app.katcode.co.za/auth/login" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-800 transition-colors px-4">Sign In</a>
+            <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-cyan-800 text-zinc-100 px-6 py-2.5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-cyan-900 shadow-md transition-all duration-300">Get started</a>
         </div>
 
         <button id="mobile-menu-btn" class="lg:hidden relative w-7 h-7 focus:outline-none">
@@ -154,832 +98,522 @@ if ("serviceWorker" in navigator) {
     </div>
 </nav>
 
-<div id="mobile-menu" class="hidden lg:hidden bg-zinc-100 border-t border-zinc-300 shadow-xl">
-    <div class="px-6 py-8 flex flex-col gap-6">
-        <a href="/" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Home</a>
-        <a href="https://www.katcode.co.za/#learning-paths" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Learning Paths</a>
-        <a href="/hackathons" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Hackathons</a>
-<!--        <a href="/pricing" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Pricing</a>-->
-        <a href="https://www.katcode.co.za/#faq" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">FAQ</a>
-        <a href="/about" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">About</a>
-        <hr class="border-zinc-300">
-        <a href="https://app.katcode.co.za/auth/login" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Sign In</a>
-        <a href="https://app.katcode.co.za/auth/register" class="rounded-xl bg-black text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition">Join KatCode</a>
+<!-- FLOATING MOBILE MENU -->
+<div id="mobile-menu" class="hidden lg:hidden fixed top-32 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl bg-zinc-100/95 backdrop-blur-md border border-zinc-200 rounded-2xl shadow-xl z-40">
+    <div class="px-8 py-8 flex flex-col gap-6">
+        <a href="/" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-cyan-800 transition-colors">Home</a>
+        <a href="#learning-paths" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-cyan-800 transition-colors">Learning Paths</a>
+        <a href="/hackathons" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-cyan-800 transition-colors">Hackathons</a>
+        <a href="#faq" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-cyan-800 transition-colors">FAQ</a>
+        <a href="/about" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-cyan-800 transition-colors">About</a>
+        <hr class="border-zinc-200">
+        <a href="https://app.katcode.co.za/auth/login" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-cyan-800 transition-colors">Sign In</a>
+        <a href="https://app.katcode.co.za/auth/register" class="rounded-r-full bg-cyan-800 text-zinc-100 py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-cyan-900 transition-colors shadow-md">Get started</a>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<section class="grow flex flex-col justify-center items-center relative z-10 py-44 px-6 text-center mt-30 md:mt-16 mb-36">
-    <div class="max-w-4xl animate-fade-in-up mt-24">
+<!-- REBUILT HERO SECTION (ZOOM-STYLE COMPOSITION) -->
+<section class="pt-48 pb-28 px-6 bg-zinc-100 overflow-hidden border-b border-zinc-200">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center animate-fade-in-up">
         
-        <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tight text-black">
-            Your Programming Journey Starts Here.
-        </h2>
-        <p class="text-zinc-700 text-base md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-            It starts with a simple <span class="font-semibold text-black">Hello, World</span>.We are dedicated in making that hello world into a meaningful project.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://app.katcode.co.za/auth/register" class="rounded-xl w-full sm:w-auto bg-black text-white px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-zinc-800 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-                Begin Your Journey
-            </a>
-            <a href="/hackathons" class="rounded-xl w-full sm:w-auto border-2 border-black text-black px-8 py-4 text-xs font-bold tracking-[0.2em] uppercase hover:bg-black hover:text-white transition-all duration-300">
-                Explore Hackathons
-            </a>
+        <!-- Left Side: Copy & CTAs -->
+        <div class="text-left relative z-20">
+            <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tighter text-black leading-[1.1]">
+                Master software engineering, <br/><span class="text-cyan-800">starting with logic.</span>
+            </h1>
+            
+            <p class="text-zinc-600 text-lg md:text-xl leading-relaxed mb-10 font-medium max-w-lg">
+                Learn the architectural reasoning behind the syntax. We guide you from mapping out system flowcharts to deploying complete, real-world applications.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <a href="https://app.katcode.co.za/auth/register" class="rounded-full w-full sm:w-auto bg-cyan-800 text-zinc-100 px-8 py-3.5 text-sm font-bold tracking-[0.1em] hover:bg-cyan-900 transition-colors shadow-lg shadow-cyan-900/20 text-center">
+                    Get started
+                </a>
+                <a href="#philosophy" class="rounded-full w-full sm:w-auto bg-transparent border-2 border-zinc-300 text-black px-8 py-3.5 text-sm font-bold tracking-[0.1em] hover:border-cyan-800 hover:text-cyan-800 transition-colors text-center">
+                    See our hackathons
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Side: Zoom-Style Image Composition -->
+        <div class="relative w-full h-[450px] lg:h-[550px] hidden md:block">
+            
+            <!-- Back Image: Whiteboarding/Planning -->
+            <div class="absolute top-0 right-0 w-[75%] h-[60%] rounded-3xl overflow-hidden shadow-xl border border-zinc-200">
+                <img src="/images/logic-whiteboard.jpg" 
+                     alt="System planning and teaching on a whiteboard" 
+                     class="w-full h-full object-cover" />
+            </div>
+            
+            <!-- Floating UI Badge 1 -->
+            <div class="absolute top-12 left-[10%] bg-zinc-200/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-zinc-200 flex items-center gap-4 z-10 animate-bounce" style="animation-duration: 4s;">
+                <div class="w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-800">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/></svg>
+                </div>
+                <div>
+                    <p class="text-[0.65rem] font-bold text-zinc-500 uppercase tracking-wider">Step 01</p>
+                    <p class="text-sm font-bold text-black">Map System Logic</p>
+                </div>
+            </div>
+
+            <!-- Front Image: Laptop/Coding Station -->
+            <div class="absolute bottom-0 left-0 w-[70%] h-[65%] rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 z-20">
+                <img src="/images/study.jpg" 
+                     alt="Developer workstation setup" 
+                     class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Floating UI Badge 2 -->
+            <div class="absolute bottom-16 -right-4 bg-zinc-200/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-zinc-200 flex items-center gap-4 z-30 animate-bounce" style="animation-duration: 5s; animation-delay: 1s;">
+                <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-100">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 11v4"/><path d="M10 13h4"/></svg>
+                </div>
+                <div>
+                    <p class="text-[0.65rem] font-bold text-zinc-500 uppercase tracking-wider">...</p>
+                    <p class="text-sm font-bold text-black">Code</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<section id="philosophy" class="py-32 text-black">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-        <p class="text-sm uppercase tracking-[0.35em] mb-6 font-semibold text-zinc-600">
-            Our Philosophy
-        </p>
-        <h1 class="text-4xl md:text-8xl font-black tracking-tight text-black mb-10 leading-none">
-            LOGIC PRECEDES CODE
-        </h1>
-        <p class="max-w-3xl mx-auto text-2xl md:text-3xl font-light leading-relaxed text-zinc-800 mb-10">
-            Don't just learn to type code.
-            <span class="font-semibold text-black">Learn to think.</span>
-        </p>
-        <div class="max-w-4xl mx-auto space-y-8">
-            <p class="text-lg leading-9 text-zinc-700">
-          Stop memorising syntax and start understanding programming.
-            We teaches the logic behind software development so you can
-            think critically, solve problems confidently, and build projects
-            with purpose.
+<!-- SECTION N: PICTURE ON THE LEFT (PHILOSOPHY) -->
+<section id="philosophy" class="py-32 bg-zinc-100 border-b border-zinc-200">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Image strictly forced to the left (order-1 on desktop) -->
+        <div class="order-2 lg:order-1 rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 bg-white">
+            <img src="/images/logic-diadram.jpg" alt="Hand-drawn flowchart and system architecture on paper" class="w-full h-[450px] object-cover mix-blend-multiply" />
+        </div>
+        <!-- Text on the right (order-2 on desktop) -->
+        <div class="order-1 lg:order-2 text-left">
+            <p class="text-xs uppercase tracking-[0.2em] mb-4 font-bold text-cyan-800">
+                Core Directive
+            </p>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight text-black mb-6 leading-none">
+                Logic Precedes Code.
+            </h2>
+            <p class="text-xl font-semibold leading-relaxed text-zinc-800 mb-6">
+                Stop memorizing syntax. Start architecting systems.
+            </p>
+            <p class="text-base leading-relaxed text-zinc-600 font-medium">
+                We teach the structural logic behind programming so you can think critically, map out systems on paper, and build real-world projects with absolute precision.
             </p>
         </div>
     </div>
 </section>
 
-<section class="py-32 text-black">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-20">
-            <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-4 font-semibold">
-                Why KatCode?
+<!-- PLATFORM SPECIFICATION -->
+<section class="relative bg-zinc-100 pt-24 pb-32 overflow-hidden border-b border-zinc-200">
+    <!-- Contextual Background Image (Blueprint Texture) -->
+    <div class="absolute inset-y-0 right-0 w-full lg:w-[60%] h-full opacity-10 lg:opacity-30 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-100 via-zinc-100/70 to-transparent z-10"></div>
+        <img src="/images/logic-diagram-1.jpg" 
+             alt="System architecture drawing" 
+             class="w-full h-full object-cover grayscale mix-blend-multiply" />
+    </div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mb-16">
+            <p class="text-xs uppercase tracking-[0.25em] text-cyan-800 mb-4 font-bold">
+                Platform Specification
             </p>
-            <h2 class="text-4xl md:text-6xl font-black tracking-tight text-black mb-6">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-black mb-6">
                 Learn Beyond the Syntax.
             </h2>
-            <p class="max-w-3xl mx-auto text-zinc-700 text-lg leading-relaxed">
-                Programming isn't just about writing code. It's about learning how to
-                think, solve problems, and create software that works. KatCode combines
-                logical thinking, practical experience, and portfolio development into
-                one learning journey.
+            <p class="text-zinc-600 text-lg font-medium leading-relaxed max-w-xl">
+                Programming isn't just about writing code. It's about learning how to think, map problems, and architect software that scales. KATCODE combines logic, practical experience, and real portfolio deployment.
             </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <article class="bg-white rounded-3xl p-10 border border-zinc-300 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                <div class="w-14 h-14 rounded-2xl bg-black text-white flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform duration-300">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform transition-transform">
-    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
-    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
-</svg>
+        <div class="grid md:grid-cols-3 gap-6 relative">
+            <article class="bg-zinc-200 rounded-xl p-8 shadow-xl border border-zinc-300 hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-12 h-12 bg-cyan-800 text-zinc-100 rounded-lg flex items-center justify-center mb-8 shadow-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
                 </div>
-                <p class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-3 font-semibold">
-                    Think
-                </p>
-                <h3 class="text-2xl font-black mb-5 text-black">Logic Precedes Code</h3>
-                <p class="text-zinc-700 leading-8">
-                    Learn the reasoning behind programming before writing code.
-                    Understand <strong class="text-black">why</strong> solutions work, not just
-                    <strong class="text-black">how</strong> to type them. Those problem-solving skills
-                    stay valuable regardless of language, framework, or AI tools.
+                <p class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-cyan-800 mb-2">Step 01: Analyse</p>
+                <h3 class="text-xl font-black mb-3 text-black">Logic Precedes Code</h3>
+                <p class="text-sm font-medium text-zinc-600 leading-relaxed">
+                    Learn the reasoning behind programming before writing code. Understand <strong class="text-black">why</strong> solutions work, not just <strong class="text-black">how</strong> to type them.
                 </p>
             </article>
 
-            <article class="bg-white rounded-3xl p-10 border border-zinc-300 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                <div class="w-14 h-14 rounded-2xl bg-black text-white flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform transition-transform">
-    <rect x="3" y="3" width="18" height="12" rx="2" ry="2"/>
-    <polyline points="10 7 7 10 10 13"/>
-    <polyline points="14 7 17 10 14 13"/>
-    <path d="M2 19h20"/>
-    <path d="M5 19l-1 2h16l-1-2"/>
-</svg>
+            <article class="bg-zinc-200 rounded-xl p-8 shadow-xl border border-zinc-300 hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-12 h-12 bg-cyan-800 text-zinc-100 rounded-lg flex items-center justify-center mb-8 shadow-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                 </div>
-                <p class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-3 font-semibold">
-                    Build
-                </p>
-                <h3 class="text-2xl font-black mb-5 text-black">Guided Project Development</h3>
-                <p class="text-zinc-700 leading-8">
-                    Apply every concept by developing complete software projects.
-                    Follow a professional development workflow while understanding
-                    each design decision instead of copying finished solutions.
+                <p class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-cyan-800 mb-2">Step 02: Build</p>
+                <h3 class="text-xl font-black mb-3 text-black">Guided Development</h3>
+                <p class="text-sm font-medium text-zinc-600 leading-relaxed">
+                    Apply concepts by developing complete software projects. Follow a professional development workflow while understanding every architectural decision.
                 </p>
             </article>
 
-            <article class="bg-white rounded-3xl p-10 border border-zinc-300 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
-                <div class="w-14 h-14 rounded-2xl bg-black text-white flex items-center justify-center text-2xl mb-8 group-hover:scale-110 transition-transform duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform transition-transform">
-    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-    <path d="M12 11v4"/>
-    <path d="M10 13h4"/>
-</svg>
+            <article class="bg-zinc-200 rounded-xl p-8 shadow-xl border border-zinc-300 hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-12 h-12 bg-cyan-800 text-zinc-100 rounded-lg flex items-center justify-center mb-8 shadow-md">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M12 11v4"/><path d="M10 13h4"/></svg>
                 </div>
-                <p class="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-3 font-semibold">
-                    Showcase
-                </p>
-                <h3 class="text-2xl font-black mb-5 text-black">A Portfolio That Matters</h3>
-                <p class="text-zinc-700 leading-8">
-                    Complete guided projects and transfer them to
-                    <strong class="text-black">your own GitHub repository</strong>. Continue developing
-                    them independently and graduate with a portfolio that reflects
-                    your skills, progress, and ownership.
+                <p class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-cyan-800 mb-2">Step 03: Showcase</p>
+                <h3 class="text-xl font-black mb-3 text-black">A Portfolio That Matters</h3>
+                <p class="text-sm font-medium text-zinc-600 leading-relaxed">
+                    Transfer completed projects to <strong class="text-black">your GitHub repository</strong>. Graduate with a portfolio that reflects real engineering skills and ownership.
                 </p>
             </article>
         </div>
     </div>
 </section>
 
-<section class="py-32 text-black">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-24">
-            <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-4 font-semibold">
-                How It Works
+<!-- METHODOLOGY SECTION (Online Quality Code Image) -->
+<section class="relative bg-zinc-200 pt-24 pb-32 overflow-hidden border-b border-zinc-300">
+    <div class="absolute inset-y-0 right-0 w-full lg:w-[60%] h-[80%] opacity-10 lg:opacity-100 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-zinc-200 via-zinc-200/80 to-transparent z-10"></div>
+        <!-- High Quality Code Image from Unsplash -->
+        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=1920" 
+             alt="Dark code editor screen" 
+             class="w-full h-full object-cover grayscale opacity-90" />
+    </div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mb-20 lg:mt-12">
+            <p class="text-xs uppercase tracking-[0.25em] text-cyan-800 mb-4 font-bold">
+                Methodology
             </p>
-            <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6 text-black">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-black mb-6">
                 Learn. Build. Own.
             </h2>
-            <p class="max-w-3xl mx-auto text-zinc-700 text-lg leading-relaxed">
-                From your first lesson to a portfolio of real projects,
-                KatCode is designed to guide you every step of the way.
+            <p class="text-zinc-600 text-lg font-medium leading-relaxed max-w-xl">
+                From drawing your first flowchart to deploying a repository of real projects, KATCODE guides your engineering process step-by-step.
             </p>
         </div>
 
-        <div class="grid lg:grid-cols-4 gap-8">
-            <article class="bg-white border border-zinc-300 rounded-3xl p-8 hover:border-zinc-500 transition-colors duration-300 shadow-lg">
-                <span class="text-5xl font-black text-zinc-300">01</span>
-                <h3 class="text-2xl font-bold mt-8 mb-4 text-black">Learn the Logic</h3>
-                <p class="text-zinc-700 leading-8">
-                    Build a strong foundation by understanding how
-                    programming works before focusing on syntax.
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+            <article class="bg-zinc-100 rounded-xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-zinc-200 relative overflow-hidden group">
+                <div class="absolute bottom-0 left-0 w-8 h-1 bg-zinc-300 group-hover:w-full group-hover:bg-cyan-800 transition-all duration-500"></div>
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-5xl font-black text-zinc-300 tracking-tighter">01</span>
+                    <svg class="w-7 h-7 text-cyan-800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+                <h3 class="text-lg font-black mb-3 text-black">Learn the Logic</h3>
+                <p class="text-sm font-medium text-zinc-600 leading-relaxed">
+                    Map system blueprints and understand architectural fundamentals before touching an IDE.
                 </p>
             </article>
-            <article class="bg-white border border-zinc-300 rounded-3xl p-8 hover:border-zinc-500 transition-colors duration-300 shadow-lg">
-                <span class="text-5xl font-black text-zinc-300">02</span>
-                <h3 class="text-2xl font-bold mt-8 mb-4 text-black">Build Projects</h3>
-                <p class="text-zinc-700 leading-8">
-                    Complete guided projects that gradually introduce
-                    real software engineering practices.
+
+            <article class="bg-zinc-100 rounded-xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-zinc-200 relative overflow-hidden group">
+                <div class="absolute bottom-0 left-0 w-8 h-1 bg-zinc-300 group-hover:w-full group-hover:bg-cyan-800 transition-all duration-500"></div>
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-5xl font-black text-zinc-300 tracking-tighter">02</span>
+                    <svg class="w-7 h-7 text-cyan-800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h3 class="text-lg font-black mb-3 text-black">Build Projects</h3>
+                <p class="text-sm font-medium text-zinc-600 leading-relaxed">
+                    Translate logic into code through guided projects utilizing real-world software practices.
                 </p>
             </article>
-            <article class="bg-white border border-zinc-300 rounded-3xl p-8 hover:border-zinc-500 transition-colors duration-300 shadow-lg">
-                <span class="text-5xl font-black text-zinc-300">03</span>
-                <h3 class="text-2xl font-bold mt-8 mb-4 text-black">Repository Handover</h3>
-                <p class="text-zinc-700 leading-8">
-                    Once you've completed the guided development,
-                    ownership is handed over to you so you can continue
-                    building independently.
+
+            <article class="bg-zinc-100 rounded-xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-zinc-200 relative overflow-hidden group">
+                <div class="absolute bottom-0 left-0 w-8 h-1 bg-zinc-300 group-hover:w-full group-hover:bg-cyan-800 transition-all duration-500"></div>
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-5xl font-black text-zinc-300 tracking-tighter">03</span>
+                    <svg class="w-7 h-7 text-cyan-800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <h3 class="text-lg font-black mb-3 text-black">Repo Handover</h3>
+                <p class="text-sm font-medium text-zinc-600 leading-relaxed">
+                    Take ownership of the codebase. Transfer the system directly into your personal repository.
                 </p>
             </article>
-            <article class="bg-white border border-zinc-300 rounded-3xl p-8 hover:border-zinc-500 transition-colors duration-300 shadow-lg">
-                <span class="text-5xl font-black text-zinc-300">04</span>
-                <h3 class="text-2xl font-bold mt-8 mb-4 text-black">Showcase Your Work</h3>
-                <p class="text-zinc-700 leading-8">
-                    Your completed projects live on your GitHub profile,
-                    helping you build a portfolio that grows throughout
-                    your learning journey.
+
+            <article class="bg-zinc-100 rounded-xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-zinc-200 relative overflow-hidden group">
+                <div class="absolute bottom-0 left-0 w-8 h-1 bg-zinc-300 group-hover:w-full group-hover:bg-cyan-800 transition-all duration-500"></div>
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-5xl font-black text-zinc-300 tracking-tighter">04</span>
+                    <svg class="w-7 h-7 text-cyan-800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3 class="text-lg font-black mb-3 text-black">Showcase Work</h3>
+                <p class="text-sm font-medium text-zinc-600 leading-relaxed">
+                    Deploy your code. Build a verifiable GitHub portfolio that proves real engineering capability.
                 </p>
             </article>
         </div>
     </div>
 </section>
 
-<section class="py-32 text-black">
+<!-- SECTION N+1: PICTURE ON THE RIGHT (HACKATHONS) -->
+<section class="py-28 bg-zinc-100 border-b border-zinc-200">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Text on the left (order-1 on desktop) -->
+        <div class="order-2 lg:order-1">
+            <p class="text-xs uppercase tracking-[0.2em] text-cyan-800 mb-4 font-bold">
+                Community Execution
+            </p>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-8 text-black">
+                Learn to apply.
+            </h2>
+            <p class="text-zinc-600 font-medium text-lg leading-relaxed mb-6">
+                Software engineering is a collaborative discipline. Watching tutorials is not enough. KATCODE Hackathons force you to architect solutions, meet deadlines, and collaborate in high-pressure environments.
+            </p>
+            <a href="/hackathons" class="inline-flex rounded-full bg-transparent border-2 border-zinc-300 text-black px-8 py-3.5 text-sm font-bold tracking-[0.1em] hover:border-cyan-800 hover:text-cyan-800 transition-colors mt-4">
+                View upcoming hackathons
+            </a>
+        </div>
+        <!-- Image strictly forced to the right (order-2 on desktop) -->
+        <div class="order-1 lg:order-2 rounded-3xl overflow-hidden shadow-2xl border border-zinc-200">
+            <img src="/images/students.jpg" alt="Students collaborating and coding at a KATCODE hackathon lab" class="w-full h-[450px] object-cover">
+        </div>
+    </div>
+</section>
+
+<!-- CURRICULUM SECTION -->
+<section id="learning-paths" class="py-28 bg-zinc-100 border-b border-zinc-200">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-                <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-4 font-semibold">
-                    Hackathons
-                </p>
-                <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-8 text-black">
-                    Learn To Apply.
-                </h2>
-                <p class="text-zinc-700 text-lg leading-8 mb-6">
-                    Programming isn't just about watching tutorials.
-                    KATCODE Hackathons give students the opportunity to
-                    collaborate, solve real programming challenges,
-                    experience teamwork, and apply what they've learned
-                    in a competitive environment.
-                </p>
-                <p class="text-zinc-700 text-lg leading-8 mb-10">
-                    Our first hackathon has already brought students
-                    together to build, compete, and learn.
-                    This is just the beginning.
-                </p>
-                <a href="/hackathons" class="inline-flex rounded-xl bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300 shadow-xl">
-                    View Hackathons
-                </a>
-            </div>
-            <div class="group overflow-hidden rounded-3xl shadow-2xl">
-                <img src="/images/hackathon/IMG-20260518-WA0060.jpg" alt="KatCode Hackathon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            </div>
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <p class="text-sm uppercase tracking-[0.2em] text-cyan-800 mb-4 font-bold">
+                Curriculum
+            </p>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight text-black mb-6">
+                Choose your learning path.
+            </h2>
+            <p class="text-lg text-zinc-600 font-medium leading-relaxed">
+                Learn programming through structured, logic-first paths. Combine guided lessons, dynamic quizzes, and practical handover projects to become an independent developer.
+            </p>
         </div>
-    </div>
-</section>
 
-<section class="pt-40 pb-20 px-6 text-black">
-    <div class="max-w-6xl mx-auto">
-        <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-4 font-semibold">
-            Learning Paths
-        </p>
-        <h1 class="text-5xl md:text-6xl font-black tracking-tight text-black mb-6">
-            Choose Your Learning Path.
-        </h1>
-        <p class="max-w-3xl text-lg text-zinc-700 leading-8">
-            Learn programming through structured, logic-first learning paths.
-            Each path combines guided lessons, quizzes, practical exercises,
-            projects, and Repository Handover to help you become an independent developer.
-        </p>
-    </div>
-</section>
-
-<section id="learning-paths" class="pb-32 px-6">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
-
-        <article class="bg-white rounded-3xl border border-zinc-300 shadow-xl overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-            <div class="h-56 overflow-hidden">
-                <img src="/images/img_6.png" alt="Java Foundations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div class="p-10 flex flex-col grow">
-                <div class="flex items-start justify-between mb-6">
-                    <div>
-                        <p class="text-sm uppercase tracking-[0.25em] text-zinc-500 font-semibold">
-                            Java Foundations
-                        </p>
-                        <h2 class="text-4xl font-black mt-2 text-black">
+        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            <article class="bg-zinc-200 rounded-3xl border border-zinc-300 shadow-sm flex flex-col hover:shadow-xl hover:-translate-y-2 hover:border-cyan-200 transition-all duration-300">
+                <div class="h-64 overflow-hidden rounded-t-3xl border-b border-zinc-200">
+                    <img src="/images/study.jpg" alt="Workstation ready for Java Foundations" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-8 md:p-10 flex flex-col grow">
+                    <div class="mb-6">
+                        <p class="text-xs uppercase tracking-[0.2em] text-zinc-500 font-bold">
                             Module 1
-                        </h2>
+                        </p>
+                        <h3 class="text-3xl font-black mt-2 text-black">
+                            Java Foundations
+                        </h3>
+                    </div>
+                    <p class="text-zinc-600 font-medium leading-relaxed mb-8">
+                        Go from mapping your first flowchart to confidently building complete console applications. Develop the logical thinking required to tackle real software projects.
+                    </p>
+                    
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Core Competencies</p>
+                    <div class="grid grid-cols-2 gap-y-3 text-sm mb-10 text-zinc-600 font-medium">
+                        <span>✓ Logic Mapping</span>
+                        <span>✓ Algorithm Design</span>
+                        <span>✓ Java Syntax</span>
+                        <span>✓ Data Handling</span>
+                        <span>✓ Structured Code</span>
+                        <span>✓ Debugging</span>
+                    </div>
+                    
+                    <a href="https://app.katcode.co.za/auth/register" class="mt-auto inline-flex justify-center rounded-full bg-cyan-800 text-zinc-100 px-8 py-3.5 text-sm font-bold tracking-[0.1em] hover:bg-cyan-900 transition-colors shadow-md">
+                        Enroll now
+                    </a>
+                </div>
+            </article>
+
+            <article class="bg-zinc-200 rounded-3xl border border-zinc-300 shadow-sm flex flex-col hover:shadow-xl hover:-translate-y-2 hover:border-cyan-200 transition-all duration-300">
+                <div class="h-64 overflow-hidden rounded-t-3xl border-b border-zinc-200 relative">
+                    <img src="/images/logic-whiteboard.jpg" alt="Teaching Java Architecture on a whiteboard" class="w-full h-full object-cover opacity-60" />
+                    <div class="absolute inset-0 flex items-center justify-center bg-zinc-100/40 backdrop-blur-sm">
+                        <span class="bg-zinc-200 text-black font-black px-6 py-2 rounded-full shadow-sm border border-zinc-300 text-xs tracking-[0.2em] uppercase">Coming Soon</span>
                     </div>
                 </div>
-                <p class="text-zinc-700 leading-8 mb-8">
-                    Go from writing your first line of Java to confidently building complete
-                    console applications. Develop the logical thinking, problem-solving skills,
-                    and programming confidence needed to tackle real software projects.
-                </p>
-                <p class="text-xs font-bold uppercase tracking-[0.25em] text-zinc-500 mb-5">
-                    By the end of Module 1, you'll be able to
-                </p>
-                <div class="grid grid-cols-2 gap-y-3 text-sm mb-10 text-zinc-800 font-medium">
-                    <span>✓ Think like a programmer</span>
-                    <span>✓ Solve programming problems</span>
-                    <span>✓ Build Java applications</span>
-                    <span>✓ Write clean, structured code</span>
-                    <span>✓ Break problems into algorithms</span>
-                    <span>✓ Debug with confidence</span>
-                    <span>✓ Work with files and data</span>
-                    <span>✓ Continue into Module 2</span>
-                </div>
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Guided Lessons</span>
-                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Hands-on Practice</span>
-                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Guided Project</span>
-                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Repository Handover</span>
-                </div>
-                <div class="border-t border-zinc-200 pt-6 mb-8">
-                    <p class="text-sm leading-7 text-zinc-700">
-                        <span class="font-bold text-black">After completing this module:</span>
-                        You'll confidently build Java console applications, solve programming
-                        problems independently, and be ready to progress to Java Foundations Module 2.
+                <div class="p-8 md:p-10 flex flex-col grow">
+                    <div class="mb-6">
+                        <p class="text-xs uppercase tracking-[0.2em] text-zinc-500 font-bold">
+                            Module 2
+                        </p>
+                        <h3 class="text-3xl font-black mt-2 text-black">
+                            Java Architecture
+                        </h3>
+                    </div>
+                    <p class="text-zinc-600 font-medium leading-relaxed mb-8">
+                        Move beyond the fundamentals. Learn how modern Java applications are designed. Build maintainable software while developing the mindset of an engineer.
                     </p>
-                </div>
-                <a href="https://app.katcode.co.za/auth/register" class="mt-auto inline-flex justify-center rounded-xl bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition-colors">
-                    Enroll
-                </a>
-            </div>
-        </article>
-
-<!--        <article class="bg-white rounded-3xl border border-zinc-300 shadow-xl overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">-->
-<!--            <div class="h-56 overflow-hidden">-->
-<!--                <img src="/images/img_7.png" alt="Python Foundations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />-->
-<!--            </div>-->
-<!--            <div class="p-10 flex flex-col grow">-->
-<!--                <div class="flex items-start justify-between mb-6">-->
-<!--                    <div>-->
-<!--                        <p class="text-sm uppercase tracking-[0.25em] text-zinc-500 font-semibold">-->
-<!--                            Python Foundations-->
-<!--                        </p>-->
-<!--                        <h2 class="text-4xl font-black mt-2 text-black">-->
-<!--                            Module 1-->
-<!--                        </h2>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <p class="text-zinc-700 leading-8 mb-8">-->
-<!--                    Go from writing your first Python script to confidently building practical-->
-<!--                    applications. Develop the logical thinking, problem-solving skills, and-->
-<!--                    programming confidence needed to automate tasks and create software that solves real-world problems.-->
-<!--                </p>-->
-<!--                <p class="text-xs font-bold uppercase tracking-[0.25em] text-zinc-500 mb-5">-->
-<!--                    By the end of Module 1, you'll be able to-->
-<!--                </p>-->
-<!--                <div class="grid grid-cols-2 gap-y-3 text-sm mb-10 text-zinc-800 font-medium">-->
-<!--                    <span>✓ Think like a programmer</span>-->
-<!--                    <span>✓ Solve programming problems</span>-->
-<!--                    <span>✓ Build Python applications</span>-->
-<!--                    <span>✓ Write clean, readable code</span>-->
-<!--                    <span>✓ Work with Python data structures</span>-->
-<!--                    <span>✓ Create reusable functions</span>-->
-<!--                    <span>✓ Debug with confidence</span>-->
-<!--                    <span>✓ Continue into Module 2</span>-->
-<!--                </div>-->
-<!--                <div class="flex flex-wrap gap-2 mb-8">-->
-<!--                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Guided Lessons</span>-->
-<!--                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Hands-on Practice</span>-->
-<!--                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Guided Project</span>-->
-<!--                    <span class="border border-zinc-300 rounded-full px-4 py-2 text-[0.65rem] font-bold uppercase text-zinc-700">Repository Handover</span>-->
-<!--                </div>-->
-<!--                <div class="border-t border-zinc-200 pt-6 mb-8">-->
-<!--                    <p class="text-sm leading-7 text-zinc-700">-->
-<!--                        <span class="font-bold text-black">After completing this module:</span>-->
-<!--                        You'll confidently build practical Python applications, approach programming-->
-<!--                        problems with a logical mindset, and have the foundation to continue into-->
-<!--                        Python Foundations Module 2.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--                <a href="/pricing" class="mt-auto inline-flex justify-center rounded-xl bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition-colors">-->
-<!--                   Enrol-->
-<!--                </a>-->
-<!--            </div>-->
-<!--        </article>-->
-
-    </div>
-</section>
-
-<section class="py-28 border-t border-zinc-400 text-black">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="max-w-3xl mb-16">
-            <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-4 font-semibold">
-                Continue Learning
-            </p>
-            <h2 class="text-5xl font-black tracking-tight mb-6 text-black">
-                Continue Your Journey.
-            </h2>
-            <p class="text-zinc-700 text-lg leading-8">
-                Module 1 teaches you how to program. Module 2 teaches you how to
-                build software. Explore advanced programming concepts, design
-                scalable applications, and prepare for real-world software
-                development.
-            </p>
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-8">
-            <article class="bg-white rounded-3xl border border-zinc-300 shadow-xl p-10 hover:border-zinc-500 transition-colors duration-300">
-                <div class="mb-8">
-                        <span class="text-xs uppercase tracking-[0.25em] text-zinc-500 font-semibold">
-                            Coming Soon
-                        </span>
-                    <h3 class="text-3xl font-black mt-3 text-black">
-                        Java Foundations
-                    </h3>
-                    <p class="uppercase tracking-[0.25em] text-zinc-600 text-sm mt-2 font-semibold">
-                        Module 2
-                    </p>
-                </div>
-                <p class="text-zinc-700 leading-8 mb-8">
-                    Move beyond the fundamentals and learn how modern Java
-                    applications are designed. Build larger, more maintainable
-                    software while developing the mindset of a software engineer.
-                </p>
-                <p class="text-xs font-bold uppercase tracking-[0.25em] text-zinc-500 mb-5">
-                    You'll Learn To
-                </p>
-                <div class="grid sm:grid-cols-2 gap-y-3 text-zinc-800 font-medium mb-8">
-                    <span>✓ Design scalable applications</span>
-                    <span>✓ Master Advanced OOP</span>
-                    <span>✓ Work with Collections</span>
-                    <span>✓ Use Generics effectively</span>
-                    <span>✓ Write Lambda Expressions</span>
-                    <span>✓ Process data with Streams</span>
-                    <span>✓ Build concurrent applications</span>
-                    <span>✓ Create desktop GUIs</span>
-                </div>
-                <div class="border-t border-zinc-200 pt-6">
-                    <p class="text-sm leading-7 text-zinc-700">
-                        <span class="font-bold text-black">After completing this module:</span>
-                        You'll confidently design structured Java applications,
-                        understand modern Java features, and be ready to tackle
-                        larger software engineering projects.
-                    </p>
+                    
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-black mb-4">Upcoming Topics</p>
+                    <div class="grid sm:grid-cols-2 gap-y-3 text-sm mb-10 text-zinc-600 font-medium">
+                        <span>✓ Scalable Design</span>
+                        <span>✓ Advanced OOP</span>
+                        <span>✓ Java Collections</span>
+                        <span>✓ Generic Types</span>
+                        <span>✓ Streams</span>
+                        <span>✓ Desktop GUIs</span>
+                    </div>
+                    
+                    <button disabled class="mt-auto inline-flex justify-center rounded-full bg-zinc-300 text-zinc-500 px-8 py-3.5 text-sm font-bold tracking-[0.1em] cursor-not-allowed border border-zinc-400">
+                        Unavailable
+                    </button>
                 </div>
             </article>
-
-<!--            <article class="bg-white rounded-3xl border border-zinc-300 shadow-xl p-10 hover:border-zinc-500 transition-colors duration-300">-->
-<!--                <div class="mb-8">-->
-<!--                        <span class="text-xs uppercase tracking-[0.25em] text-zinc-500 font-semibold">-->
-<!--                            Coming Soon-->
-<!--                        </span>-->
-<!--                    <h3 class="text-3xl font-black mt-3 text-black">-->
-<!--                        Python Foundations-->
-<!--                    </h3>-->
-<!--                    <p class="uppercase tracking-[0.25em] text-zinc-600 text-sm mt-2 font-semibold">-->
-<!--                        Module 2-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--                <p class="text-zinc-700 leading-8 mb-8">-->
-<!--                    Take your Python skills to the next level by writing cleaner,-->
-<!--                    reusable, and more maintainable applications while exploring-->
-<!--                    advanced programming techniques.-->
-<!--                </p>-->
-<!--                <p class="text-xs font-bold uppercase tracking-[0.25em] text-zinc-500 mb-5">-->
-<!--                    You'll Learn To-->
-<!--                </p>-->
-<!--                <div class="grid sm:grid-cols-2 gap-y-3 text-zinc-800 font-medium mb-8">-->
-<!--                    <span>✓ Design reusable software</span>-->
-<!--                    <span>✓ Apply Object-Oriented Programming</span>-->
-<!--                    <span>✓ Organize projects with packages</span>-->
-<!--                    <span>✓ Handle errors effectively</span>-->
-<!--                    <span>✓ Work with files confidently</span>-->
-<!--                    <span>✓ Build custom generators</span>-->
-<!--                    <span>✓ Write decorators</span>-->
-<!--                    <span>✓ Create maintainable applications</span>-->
-<!--                </div>-->
-<!--                <div class="border-t border-zinc-200 pt-6">-->
-<!--                    <p class="text-sm leading-7 text-zinc-700">-->
-<!--                        <span class="font-bold text-black">After completing this module:</span>-->
-<!--                        You'll build larger Python applications with confidence,-->
-<!--                        write cleaner code, and be prepared for more advanced-->
-<!--                        software development projects.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </article>-->
-
         </div>
-
     </div>
 </section>
 
-<!--<section class="py-32 text-black">-->
-<!--    <div class="max-w-7xl mx-auto px-6">-->
-<!--        <div class="text-center max-w-4xl mx-auto mb-20">-->
-<!--            <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-4 font-semibold">-->
-<!--                Pricing-->
-<!--            </p>-->
-<!--            <h2 class="text-5xl md:text-6xl font-black tracking-tight mb-6 text-black">-->
-<!--                Choose How You Learn.-->
-<!--            </h2>-->
-<!--            <p class="text-lg leading-8 text-zinc-700">-->
-<!--                Every learner has a different goal. Whether you're mastering the-->
-<!--                fundamentals, building your portfolio, or accelerating your growth,-->
-<!--                there's a KatCode plan designed for your journey.-->
-<!--            </p>-->
-<!--        </div>-->
-
-<!--        <div class="grid lg:grid-cols-3 gap-8 items-stretch">-->
-<!--            <article class="bg-white rounded-3xl border border-zinc-300 shadow-xl p-10 flex flex-col hover:border-zinc-500 transition-colors duration-300">-->
-<!--                    <span class="text-xs uppercase tracking-[0.25em] text-zinc-500 font-semibold">-->
-<!--                        Foundation-->
-<!--                    </span>-->
-<!--                <h3 class="text-4xl font-black mt-5 text-black">-->
-<!--                    Academic-->
-<!--                </h3>-->
-<!--                <p class="text-zinc-700 mt-6 leading-8 h-24">-->
-<!--                    Build a strong programming foundation through structured-->
-<!--                    learning designed to help you think like a developer.-->
-<!--                </p>-->
-<!--                <div class="border-t border-zinc-200 my-8"></div>-->
-<!--                <p class="text-xs uppercase tracking-widest text-zinc-600 mb-5 font-semibold">-->
-<!--                    Included-->
-<!--                </p>-->
-<!--                <ul class="space-y-4 text-zinc-800 font-medium">-->
-<!--                    <li><span class="text-black mr-2">✓</span> Structured Learning Paths</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Guided Lessons</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Practical Coding Exercises</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Quizzes & Assessments</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Progress Tracking</li>-->
-<!--                </ul>-->
-<!--            </article>-->
-
-<!--            <article class="rounded-3xl border-2 border-black bg-white text-black p-10 flex flex-col relative shadow-2xl transform md:-translate-y-4">-->
-<!--                    <span class="absolute top-6 right-6 rounded-full bg-black text-white px-4 py-2 text-[0.65rem] font-bold uppercase tracking-widest shadow-lg">-->
-<!--                        Most Popular-->
-<!--                    </span>-->
-<!--                <span class="text-xs uppercase tracking-[0.25em] text-zinc-500 font-semibold">-->
-<!--                        Portfolio-->
-<!--                    </span>-->
-<!--                <h3 class="text-4xl font-black mt-5 text-black">-->
-<!--                    Builder-->
-<!--                </h3>-->
-<!--                <p class="text-zinc-700 mt-6 leading-8 h-24">-->
-<!--                    Transform your programming knowledge into real software-->
-<!--                    while building a GitHub portfolio that showcases your skills.-->
-<!--                </p>-->
-<!--                <div class="border-t border-zinc-200 my-8"></div>-->
-<!--                <p class="text-xs uppercase tracking-widest text-zinc-600 mb-5 font-semibold">-->
-<!--                    Included-->
-<!--                </p>-->
-<!--                <ul class="space-y-4 font-medium text-zinc-800">-->
-<!--                    <li><span class="text-black mr-2">✓</span> Everything in Academic</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Guided Project Development</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Repository Handover</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> GitHub Portfolio Integration</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Real Development Workflow</li>-->
-<!--                </ul>-->
-<!--            </article>-->
-
-<!--            <article class="bg-white rounded-3xl border border-zinc-300 shadow-xl p-10 flex flex-col hover:border-zinc-500 transition-colors duration-300">-->
-<!--                    <span class="text-xs uppercase tracking-[0.25em] text-zinc-500 font-semibold">-->
-<!--                        Acceleration-->
-<!--                    </span>-->
-<!--                <h3 class="text-4xl font-black mt-5 text-black">-->
-<!--                    Premium-->
-<!--                </h3>-->
-<!--                <p class="text-zinc-700 mt-6 leading-8 h-24">-->
-<!--                    Unlock the complete KatCode experience with AI assistance,-->
-<!--                    exclusive learning experiences, and priority support.-->
-<!--                </p>-->
-<!--                <div class="border-t border-zinc-200 my-8"></div>-->
-<!--                <p class="text-xs uppercase tracking-widest text-zinc-600 mb-5 font-semibold">-->
-<!--                    Included-->
-<!--                </p>-->
-<!--                <ul class="space-y-4 text-zinc-800 font-medium">-->
-<!--                    <li><span class="text-black mr-2">✓</span> Everything in Builder</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> katnova AI Assistant</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Exclusive Challenges</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Priority Support</li>-->
-<!--                    <li><span class="text-black mr-2">✓</span> Early Access Features</li>-->
-<!--                </ul>-->
-<!--            </article>-->
-<!--        </div>-->
-
-<!--        <div class="text-center mt-20">-->
-<!--            <a href="/pricing" class="inline-flex items-center rounded-xl bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-1 transition-all duration-300 shadow-xl">-->
-<!--                Explore All Plans →-->
-<!--            </a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-<section id="faq"class="py-32 text-black">
+<!-- FAQ SECTION -->
+<section id="faq" class="py-28 bg-zinc-100 border-b border-zinc-200">
     <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-20">
-            <p class="text-sm uppercase tracking-[0.35em] text-zinc-600 mb-4 font-semibold">
+        <div class="text-center mb-16">
+            <p class="text-sm uppercase tracking-[0.2em] text-cyan-800 mb-4 font-bold">
+                Knowledge Base
+            </p>
+            <h2 class="text-4xl font-black tracking-tight mb-6 text-black">
                 Frequently Asked Questions
-            </p>
-            <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6 text-black">
-                Questions? We've Got Answers.
             </h2>
-            <p class="text-zinc-700 text-lg leading-relaxed">
-                Everything you need to know before joining KatCode.
-            </p>
         </div>
 
         <div class="space-y-4">
-            <details class="group bg-white rounded-2xl border border-zinc-300 p-6 shadow-md cursor-pointer hover:border-zinc-500 transition-colors">
-                <summary class="flex justify-between items-center text-lg font-semibold list-none select-none text-black">
-                    Who is KatCode for?
-                    <span class="transition-transform duration-300 group-open:rotate-45 text-2xl text-zinc-500">+</span>
+            <details class="group bg-zinc-200 border border-zinc-300 rounded-2xl shadow-sm overflow-hidden" open>
+                <summary class="flex justify-between items-center font-black cursor-pointer list-none p-6 text-black hover:bg-zinc-100 transition-colors">
+                    <span>Who is KATCODE built for?</span>
+                    <span class="transition group-open:rotate-180 text-2xl text-zinc-500 font-light">+</span>
                 </summary>
-                <p class="mt-6 text-zinc-700 leading-8 animate-fade-in-up">
-                    KatCode is designed for aspiring software developers,
-                    university students, and anyone who wants to learn
-                    programming through logic, practical projects, and
-                    real-world experience.
-                </p>
+                <div class="p-6 pt-0 text-zinc-600 font-medium leading-relaxed border-t border-zinc-300 mt-2 bg-zinc-200">
+                    KATCODE is designed for aspiring software developers, university students, and anyone who wants to learn programming through logic mapping, practical projects, and real-world experience rather than copy-pasting tutorials.
+                </div>
             </details>
 
-            <details class="group bg-white rounded-2xl border border-zinc-300 p-6 shadow-md cursor-pointer hover:border-zinc-500 transition-colors">
-                <summary class="flex justify-between items-center text-lg font-semibold list-none select-none text-black">
-                    Do I need programming experience?
-                    <span class="transition-transform duration-300 group-open:rotate-45 text-2xl text-zinc-500">+</span>
+            <details class="group bg-zinc-200 border border-zinc-300 rounded-2xl shadow-sm overflow-hidden">
+                <summary class="flex justify-between items-center font-black cursor-pointer list-none p-6 text-black hover:bg-zinc-100 transition-colors">
+                    <span>Do I need prior programming experience?</span>
+                    <span class="transition group-open:rotate-180 text-2xl text-zinc-500 font-light">+</span>
                 </summary>
-                <p class="mt-6 text-zinc-700 leading-8 animate-fade-in-up">
-                    No. KatCode starts with programming fundamentals and
-                    gradually guides you towards building complete software projects.
-                </p>
+                <div class="p-6 pt-0 text-zinc-600 font-medium leading-relaxed border-t border-zinc-300 mt-2 bg-zinc-200">
+                    No. KATCODE fundamentally teaches you *how to think*. We start with logic foundations and flowcharts, gradually guiding you toward building complete, syntax-heavy software projects.
+                </div>
             </details>
 
-            <details class="group bg-white rounded-2xl border border-zinc-300 p-6 shadow-md cursor-pointer hover:border-zinc-500 transition-colors">
-                <summary class="flex justify-between items-center text-lg font-semibold list-none select-none text-black">
-                    What is Repository Handover?
-                    <span class="transition-transform duration-300 group-open:rotate-45 text-2xl text-zinc-500">+</span>
+            <details class="group bg-zinc-200 border border-zinc-300 rounded-2xl shadow-sm overflow-hidden">
+                <summary class="flex justify-between items-center font-black cursor-pointer list-none p-6 text-black hover:bg-zinc-100 transition-colors">
+                    <span>What is Repository Handover?</span>
+                    <span class="transition group-open:rotate-180 text-2xl text-zinc-500 font-light">+</span>
                 </summary>
-                <p class="mt-6 text-zinc-700 leading-8 animate-fade-in-up">
-                    During guided project development, KatCode helps you
-                    build software step by step. Once you've completed the
-                    learning experience, the repository is handed over to
-                    your GitHub account so you can continue developing it independently.
-                </p>
+                <div class="p-6 pt-0 text-zinc-600 font-medium leading-relaxed border-t border-zinc-300 mt-2 bg-zinc-200">
+                    During guided project development, KATCODE helps you build software step by step. Once you've completed the learning module, the codebase is handed over to your personal GitHub account so you can continue developing it independently as portfolio evidence.
+                </div>
             </details>
 
-            <details class="group bg-white rounded-2xl border border-zinc-300 p-6 shadow-md cursor-pointer hover:border-zinc-500 transition-colors">
-                <summary class="flex justify-between items-center text-lg font-semibold list-none select-none text-black">
-                    Will the projects appear on my GitHub profile?
-                    <span class="transition-transform duration-300 group-open:rotate-45 text-2xl text-zinc-500">+</span>
+            <details class="group bg-zinc-200 border border-zinc-300 rounded-2xl shadow-sm overflow-hidden">
+                <summary class="flex justify-between items-center font-black cursor-pointer list-none p-6 text-black hover:bg-zinc-100 transition-colors">
+                    <span>Does KATCODE utilize AI?</span>
+                    <span class="transition group-open:rotate-180 text-2xl text-zinc-500 font-light">+</span>
                 </summary>
-                <p class="mt-6 text-zinc-700 leading-8 animate-fade-in-up">
-                    Yes. Completed projects are committed to your GitHub
-                    account, allowing you to build a portfolio that reflects
-                    your own learning journey and contributions.
-                </p>
-            </details>
-
-            <details class="group bg-white rounded-2xl border border-zinc-300 p-6 shadow-md cursor-pointer hover:border-zinc-500 transition-colors">
-                <summary class="flex justify-between items-center text-lg font-semibold list-none select-none text-black">
-                    Does KatCode use AI?
-                    <span class="transition-transform duration-300 group-open:rotate-45 text-2xl text-zinc-500">+</span>
-                </summary>
-                <p class="mt-6 text-zinc-700 leading-8 animate-fade-in-up">
-                    Yes. KatCode uses AI as a learning assistant to provide
-                    guidance and explanations. However, our philosophy remains
-                    the same: <strong class="text-black">Logic Precedes Code.</strong>
-                    AI is a tool—not a replacement for understanding.
-                </p>
-            </details>
-
-            <details class="group bg-white rounded-2xl border border-zinc-300 p-6 shadow-md cursor-pointer hover:border-zinc-500 transition-colors">
-                <summary class="flex justify-between items-center text-lg font-semibold list-none select-none text-black">
-                    Do you host programming hackathons?
-                    <span class="transition-transform duration-300 group-open:rotate-45 text-2xl text-zinc-500">+</span>
-                </summary>
-                <p class="mt-6 text-zinc-700 leading-8 animate-fade-in-up">
-                    Yes. KatCode regularly hosts hackathons where students
-                    collaborate, solve programming challenges, and gain
-                    practical experience beyond traditional coursework.
-                </p>
+                <div class="p-6 pt-0 text-zinc-600 font-medium leading-relaxed border-t border-zinc-300 mt-2 bg-zinc-200">
+                    Yes. KATCODE integrates AI as an assistant to provide logical guidance and technical explanations. However, our philosophy remains absolute: <strong class="text-black">Logic Precedes Code.</strong> AI is an architectural tool—not a replacement for foundational understanding.
+                </div>
             </details>
         </div>
     </div>
 </section>
 
-<footer class="bg-black text-zinc-400 border-t border-zinc-900">
-
-    <div class="max-w-7xl mx-auto px-6 py-20">
-
-        <div class="grid lg:grid-cols-5 gap-16">
-
-            <!-- Brand -->
-
+<!-- FOOTER -->
+<footer class="bg-zinc-200 text-zinc-600 border-t border-zinc-300">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid lg:grid-cols-5 gap-12">
+            
             <div class="lg:col-span-2">
-
-                <div class="flex items-center gap-4 mb-8">
-
-                    <img src="/images/katcode-logo.jpeg"
-                         alt="KatCode Logo"
-                         class="w-14 h-14 rounded-full border border-zinc-700">
-
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="/images/katcode-logo.jpeg" alt="KATCODE Logo" class="w-10 h-10 rounded-md border border-zinc-300 shadow-sm">
                     <div>
-
-                        <h2 class="text-white text-2xl font-black tracking-tight">
+                        <h2 class="text-black text-lg font-black tracking-tight">
                             KATCODE
                         </h2>
-
-                        <p class="text-[0.6rem] uppercase tracking-[0.25em] font-bold text-zinc-500">
+                        <p class="text-[0.6rem] uppercase tracking-[0.2em] font-bold text-cyan-800">
                             Logic Precedes Code
                         </p>
-
                     </div>
-
                 </div>
-
-                <p class="text-zinc-400 leading-8 max-w-md">
-
-                    KATCODE is a programming education platform built to help
-                    students develop logical thinking, practical software
-                    development skills, and a portfolio that demonstrates
-                    real ability, not just completed tutorials.
-
+                <p class="text-zinc-500 font-medium leading-relaxed max-w-sm text-sm">
+                    A programming education platform built to help you develop logical thinking, practical development skills, and a verifiable engineering portfolio.
                 </p>
-
             </div>
 
-            <!-- Platform -->
-
             <div>
-
-                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                <h3 class="text-black font-bold uppercase tracking-[0.1em] text-xs mb-4">
                     Platform
                 </h3>
-
-                <ul class="space-y-4">
-
-                    <li>
-                        <a href="#learning-paths" class="hover:text-white transition">
-                            Learning Paths
-                        </a>
-                    </li>
-
-<!--                    <li>-->
-<!--                        <a href="/pricing" class="hover:text-white transition">-->
-<!--                            Pricing-->
-<!--                        </a>-->
-<!--                    </li>-->
-
-                    <li>
-                        <a href="#faq" class="hover:text-white transition">
-                            FAQ
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://app.katcode.co.za/auth/register"
-                           class="hover:text-white transition">
-                            Join KatCode
-                        </a>
-                    </li>
-
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="#learning-paths" class="hover:text-cyan-800 transition-colors">Learning Paths</a></li>
+                    <li><a href="#faq" class="hover:text-cyan-800 transition-colors">FAQ</a></li>
+                    <li><a href="https://app.katcode.co.za/auth/register" class="text-cyan-800 hover:text-black transition-colors font-bold">Get started</a></li>
                 </ul>
-
             </div>
 
-            <!-- Community -->
-
             <div>
-
-                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                <h3 class="text-black font-bold uppercase tracking-[0.1em] text-xs mb-4">
                     Community
                 </h3>
-
-                <ul class="space-y-4">
-
-                    <li>
-                        <a href="/hackathons" class="hover:text-white transition">
-                            Hackathons
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/about" class="hover:text-white transition">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mailto:support@katcode.co.za" class="hover:text-white transition">
-                            Contact
-                        </a>
-                    </li>
-
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="/hackathons" class="hover:text-cyan-800 transition-colors">Hackathons</a></li>
+                    <li><a href="/about" class="hover:text-cyan-800 transition-colors">About Us</a></li>
+                    <li><a href="mailto:support@katcode.co.za" class="hover:text-cyan-800 transition-colors">Contact Support</a></li>
                 </ul>
-
             </div>
 
-            <!-- Legal -->
-
             <div>
-
-                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                <h3 class="text-black font-bold uppercase tracking-[0.1em] text-xs mb-4">
                     Legal
                 </h3>
-
-                <ul class="space-y-4">
-
-                    <li>
-                        <a href="/terms" class="hover:text-white transition">
-                            Terms of Service
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/privacy" class="hover:text-white transition">
-                            Privacy Policy
-                        </a>
-                    </li>
-
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="/terms" class="hover:text-cyan-800 transition-colors">Terms of Service</a></li>
+                    <li><a href="/privacy" class="hover:text-cyan-800 transition-colors">Privacy Policy</a></li>
                 </ul>
-
             </div>
 
         </div>
 
-        <!-- Divider -->
+        <div class="border-t border-zinc-300 my-10"></div>
 
-        <div class="border-t border-zinc-800 my-16"></div>
-
-        <!-- Bottom Footer -->
-
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
-
-            <div>
-
-                <p class="text-sm">
-
-                    © 2026 <span class="text-white font-semibold">Tovan Technologies (Pty) Ltd T/A KATCODE</span>.
-                    All rights reserved.
-
-                </p>
-
-            </div>
-
-       
-
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <p class="text-xs font-medium text-zinc-500">
+                © 2026 <span class="text-black font-bold">KATCODE</span>. All rights reserved.
+            </p>
         </div>
-
     </div>
-
 </footer>
-<script src="/js/app.js"></script>
 
+<script>
+    // MOBILE MENU LOGIC
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const l1 = document.getElementById('line1');
+    const l2 = document.getElementById('line2');
+    const l3 = document.getElementById('line3');
+    
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        l1.classList.toggle('top-3'); l1.classList.toggle('rotate-45');
+        l2.classList.toggle('opacity-0');
+        l3.classList.toggle('top-3'); l3.classList.toggle('-rotate-45');
+    });
+
+    // DESKTOP NAVBAR SLIDING HIGHLIGHT LOGIC
+    document.addEventListener("DOMContentLoaded", () => {
+        const navContainer = document.getElementById('nav-container');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const highlight = document.getElementById('nav-highlight');
+
+        if (navContainer && navLinks.length > 0 && highlight) {
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', (e) => {
+                    const linkRect = e.target.getBoundingClientRect();
+                    const containerRect = navContainer.getBoundingClientRect();
+                    
+                    highlight.style.width = `${linkRect.width}px`;
+                    highlight.style.transform = `translateX(${linkRect.left - containerRect.left}px)`;
+                    highlight.style.opacity = '1';
+                });
+            });
+
+            navContainer.addEventListener('mouseleave', () => {
+                highlight.style.opacity = '0';
+            });
+        }
+    });
+</script>
+<script src="/js/app.js"></script>
 </body>
 </html>
