@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | KATCODE</title>
+
+    <meta name="description"
+          content="Build real software projects with KATCODE. Work through structured milestones, develop engineering habits, use GitHub, and build a portfolio you can explain.">
+
+    <meta name="keywords"
+          content="KATCODE projects, programming projects, software engineering projects, GitHub portfolio, student projects, coding projects, Java projects, programming education">
+
+    <meta name="author" content="Tovan Technologies (Pty) Ltd">
+    <meta name="application-name" content="KATCODE">
+    <meta name="theme-color" content="#245F73">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://www.katcode.co.za/project">
+    <link rel="manifest" href="/manifest.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KATCODE">
+    <meta property="og:url" content="https://www.katcode.co.za/project">
+    <meta property="og:title" content="Projects | KATCODE">
+    <meta property="og:description"
+          content="Don't just learn software development. Build it.">
+    <meta property="og:image" content="https://www.katcode.co.za/images/katcode-logo.png">
+    <meta property="og:locale" content="en_ZA">
+
+    <link href="./main.css" rel="stylesheet">
+
+    <link rel="icon"
+          type="image/png"
+          href="/images/katcode-logo-icon.png">
+
+    <link rel="apple-touch-icon"
+          href="/images/katcode-logo-icon.png">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           KATCODE PROJECT PAGE
+        ===================================================== */
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseLine {
+            0%,
+            100% {
+                opacity: .35;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp .7s ease-out both;
+        }
+
+        .animate-delay-100 {
+            animation-delay: .1s;
+        }
+
+        .animate-delay-200 {
+            animation-delay: .2s;
+        }
+
+        .animate-delay-300 {
+            animation-delay: .3s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: .4s;
+        }
+
+        .grid-pattern {
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, .045) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, .045) 1px,
+                    transparent 1px
+                );
+
+            background-size: 40px 40px;
+        }
+
+        .project-card {
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #245F73;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
+        }
+
+        .project-arrow {
+            transition: transform .3s ease;
+        }
+
+        .project-card:hover .project-arrow {
+            transform: translateX(5px);
+        }
+
+        .step-line {
+            animation: pulseLine 2.5s ease-in-out infinite;
+        }
+
+        details > summary {
+            list-style: none;
+        }
+
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary ~ * {
+            animation: sweep .25s ease-out;
+        }
+
+        @keyframes sweep {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="bg-zinc-200 text-black font-sans antialiased">
+
+<input type="checkbox"
+       id="mobile-menu-toggle"
+       class="peer/menu hidden">
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="fixed top-6 left-1/2 -translate-x-1/2
+           w-[95%] max-w-7xl
+           z-50
+           rounded-full
+           bg-zinc-200/60
+           backdrop-blur-xl
+           shadow-lg
+           px-6 lg:px-8">
+
+    <div class="h-20 flex items-center justify-between">
+
+        <!-- LOGO -->
+
+        <a href="/"
+           class="flex items-center gap-4 group shrink-0
+                  focus:outline-none">
+
+            <img src="/images/katcode-logo.png"
+                 alt="KATCODE Logo"
+                 class="w-12 h-12 rounded-full shadow-xl
+                        transition-transform duration-300
+                        group-hover:scale-105">
+
+            <div class="hidden sm:block">
+
+                <h1 class="text-xl font-black tracking-tight">
+                    KATCODE
+                </h1>
+
+            </div>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <div class="hidden lg:flex items-center relative"
+             id="nav-container">
+
+            <div id="nav-highlight"
+                 class="absolute inset-y-1 left-0
+                        bg-white/70
+                        backdrop-blur-md
+                        rounded-full
+                        transition-all duration-300
+                        ease-out
+                        opacity-0
+                        pointer-events-none
+                        shadow-sm">
+            </div>
+
+
+            <a href="/"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                Home
+
+            </a>
+
+
+            <a href="/#learning-paths"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                Learn
+
+            </a>
+
+
+            <a href="/project"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-[#245F73]
+                      transition-colors">
+
+                Projects
+
+            </a>
+
+
+            <a href="/hackathons"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                Hackathons
+
+            </a>
+
+
+            <a href="/#faq"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                FAQ
+
+            </a>
+
+
+            <a href="/about"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                About
+
+            </a>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div class="hidden md:flex items-center gap-4">
+
+            <a href="https://app.katcode.co.za/auth/login"
+               class="text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-900
+                      hover:text-[#245F73]
+                      transition-colors
+                      px-4">
+
+                Sign In
+
+            </a>
+
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="rounded-full
+                      bg-[#245F73]
+                      text-white
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      shadow-xl
+                      hover:bg-[#1B4A5A]
+                      hover:-translate-y-1
+                      transition-all duration-300">
+
+                Get started
+
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <label for="mobile-menu-toggle"
+               class="lg:hidden
+                      relative
+                      w-7 h-7
+                      cursor-pointer
+                      mr-2
+                      select-none
+                      z-50">
+
+            <span class="absolute left-0.5
+                         w-6 h-0.5
+                         bg-black rounded
+                         top-1
+                         transition-all duration-300
+                         origin-center
+                         peer-checked/menu:top-3
+                         peer-checked/menu:rotate-45">
+            </span>
+
+            <span class="absolute left-0.5
+                         w-6 h-0.5
+                         bg-black rounded
+                         top-3
+                         transition-all duration-300
+                         origin-center
+                         peer-checked/menu:opacity-0">
+            </span>
+
+            <span class="absolute left-0.5
+                         w-6 h-0.5
+                         bg-black rounded
+                         top-5
+                         transition-all duration-300
+                         origin-center
+                         peer-checked/menu:top-3
+                         peer-checked/menu:-rotate-45">
+            </span>
+
+        </label>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div id="mobile-menu"
+     class="hidden
+            peer-checked/menu:block
+            lg:hidden
+            fixed
+            top-32
+            left-1/2
+            -translate-x-1/2
+            w-[95%]
+            max-w-7xl
+            bg-zinc-100/95
+            backdrop-blur-2xl
+            rounded-3xl
+            shadow-2xl
+            z-40">
+
+    <div class="px-8 py-8 flex flex-col gap-6">
+
+        <a href="/"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Home
+
+        </a>
+
+
+        <a href="/#learning-paths"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Learn
+
+        </a>
+
+
+        <a href="/project"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-[#245F73]">
+
+            Projects
+
+        </a>
+
+
+        <a href="/hackathons"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Hackathons
+
+        </a>
+
+
+        <a href="/#faq"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            FAQ
+
+        </a>
+
+
+        <a href="/about"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            About
+
+        </a>
+
+
+        <div class="h-px w-full bg-zinc-300"></div>
+
+
+        <a href="https://app.katcode.co.za/auth/login"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Sign In
+
+        </a>
+
+
+        <a href="https://app.katcode.co.za/auth/register"
+           class="rounded-full
+                  bg-[#245F73]
+                  text-white
+                  py-4
+                  text-center
+                  text-xs
+                  font-bold uppercase
+                  tracking-[0.2em]
+                  shadow-lg">
+
+            Get started
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="relative
+                overflow-hidden
+                bg-zinc-100
+                border-b border-zinc-300">
+
+    <div class="absolute inset-0 grid-pattern"></div>
+
+
+    <div class="relative
+                max-w-7xl
+                mx-auto
+                px-6
+                pt-40
+                pb-28
+                lg:pt-48
+                lg:pb-36">
+
+        <div class="max-w-4xl">
+
+            <!-- EYEBROW -->
+
+            <div class="animate-fade-in-up
+                        inline-flex
+                        items-center
+                        gap-3
+                        mb-8
+                        px-4 py-2
+                        border border-zinc-300
+                        bg-white/80
+                        backdrop-blur-sm
+                        text-xs
+                        font-bold
+                        uppercase
+                        tracking-[0.2em]
+                        text-[#245F73]">
+
+                <span class="w-2 h-2 bg-[#245F73]"></span>
+
+                Project Workspace
+
+            </div>
+
+
+            <!-- HEADLINE -->
+
+            <h1 class="animate-fade-in-up
+                       animate-delay-100
+                       text-5xl
+                       sm:text-6xl
+                       lg:text-8xl
+                       font-black
+                       tracking-tight
+                       leading-[.95]">
+
+                Don't just
+                <span class="text-[#245F73]">
+                    learn.
+                </span>
+
+                <br>
+
+                Build.
+
+            </h1>
+
+
+            <p class="animate-fade-in-up
+                      animate-delay-200
+                      mt-8
+                      max-w-2xl
+                      text-lg
+                      md:text-xl
+                      leading-relaxed
+                      text-zinc-600">
+
+                Turn what you learn into software you can explain,
+                version, improve, and put in your portfolio.
+
+                KATCODE Projects gives you a structured path from
+                an idea to a working repository.
+
+            </p>
+
+
+            <!-- CTA -->
+
+            <div class="animate-fade-in-up
+                        animate-delay-300
+                        mt-10
+                        flex flex-col
+                        sm:flex-row
+                        gap-4">
+
+                <a href="#project-catalogue"
+                   class="inline-flex
+                          items-center
+                          justify-center
+                          rounded-full
+                          bg-[#245F73]
+                          text-white
+                          px-7 py-4
+                          text-sm
+                          font-bold
+                          hover:bg-[#1B4A5A]
+                          hover:-translate-y-1
+                          transition-all duration-300">
+
+                    Explore projects
+
+                    <svg class="ml-3 w-5 h-5"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         viewBox="0 0 24 24">
+
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M5 12h14M13 6l6 6-6 6"/>
+
+                    </svg>
+
+                </a>
+
+
+                <a href="#workflow"
+                   class="inline-flex
+                          items-center
+                          justify-center
+                          rounded-full
+                          border border-zinc-400
+                          bg-white/70
+                          px-7 py-4
+                          text-sm
+                          font-bold
+                          hover:border-black
+                          hover:bg-white
+                          transition-all duration-300">
+
+                    See how it works
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM STATEMENT -->
+
+        <div class="mt-24
+                    pt-8
+                    border-t border-zinc-300
+                    flex flex-col
+                    md:flex-row
+                    md:items-center
+                    md:justify-between
+                    gap-5">
+
+            <p class="text-xs
+                      font-black
+                      uppercase
+                      tracking-[0.25em]">
+
+                LOGIC PRECEDES CODE.
+
+            </p>
+
+
+            <p class="max-w-lg
+                      text-sm
+                      text-zinc-500">
+
+                The objective isn't to complete another exercise.
+                It is to become capable of building without one.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROBLEM / PHILOSOPHY
+========================================================= -->
+
+<section class="bg-white
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="grid
+                    lg:grid-cols-2
+                    gap-16
+                    items-start">
+
+            <div>
+
+                <p class="text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#245F73]">
+
+                    The problem
+
+                </p>
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight
+                           leading-tight">
+
+                    Completing code
+                    isn't the same as
+                    building software.
+
+                </h2>
+
+            </div>
+
+
+            <div class="space-y-6
+                        text-zinc-600
+                        leading-relaxed">
+
+                <p>
+                    Tutorials are useful for learning concepts.
+                    But real development starts when there is no
+                    tutorial telling you exactly what to type next.
+                </p>
+
+                <p>
+                    You have to understand the problem,
+                    decide how the system should behave,
+                    break it into components, make trade-offs,
+                    debug it, and maintain it.
+                </p>
+
+                <p class="font-semibold text-black">
+
+                    That's the gap KATCODE Projects is designed to address.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WORKFLOW
+========================================================= -->
+
+<section id="workflow"
+         class="bg-zinc-100
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="max-w-3xl mb-16">
+
+            <p class="text-xs
+                      font-black
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#245F73]">
+
+                The workflow
+
+            </p>
+
+
+            <h2 class="mt-5
+                       text-4xl
+                       md:text-5xl
+                       font-black
+                       tracking-tight">
+
+                Think first.
+                Build incrementally.
+
+            </h2>
+
+
+            <p class="mt-6
+                      text-lg
+                      text-zinc-600
+                      leading-relaxed">
+
+                A large project becomes manageable when you stop
+                treating it as one large problem.
+
+            </p>
+
+        </div>
+
+
+        <!-- WORKFLOW -->
+
+        <div class="grid
+                    md:grid-cols-2
+                    lg:grid-cols-5
+                    border border-zinc-300
+                    bg-white">
+
+
+            <!-- DEFINE -->
+
+            <article class="relative
+                            p-7
+                            border-b
+                            md:border-r
+                            lg:border-b-0
+                            border-zinc-300">
+
+                <div class="flex items-center
+                            justify-between">
+
+                    <span class="text-xs
+                                 font-black
+                                 tracking-[0.2em]
+                                 text-[#245F73]">
+
+                        01
+
+                    </span>
+
+                    <span class="text-zinc-300">
+                        →
+                    </span>
+
+                </div>
+
+
+                <h3 class="mt-10
+                           text-xl
+                           font-black">
+
+                    Define
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Understand the problem,
+                    requirements and expected behaviour.
+
+                </p>
+
+            </article>
+
+
+            <!-- PLAN -->
+
+            <article class="relative
+                            p-7
+                            border-b
+                            lg:border-b-0
+                            md:border-r
+                            border-zinc-300">
+
+                <div class="flex items-center
+                            justify-between">
+
+                    <span class="text-xs
+                                 font-black
+                                 tracking-[0.2em]
+                                 text-[#245F73]">
+
+                        02
+
+                    </span>
+
+                    <span class="text-zinc-300">
+                        →
+                    </span>
+
+                </div>
+
+
+                <h3 class="mt-10
+                           text-xl
+                           font-black">
+
+                    Plan
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Map the system,
+                    break down the requirements
+                    and establish milestones.
+
+                </p>
+
+            </article>
+
+
+            <!-- BUILD -->
+
+            <article class="relative
+                            p-7
+                            border-b
+                            lg:border-b-0
+                            lg:border-r
+                            border-zinc-300">
+
+                <div class="flex items-center
+                            justify-between">
+
+                    <span class="text-xs
+                                 font-black
+                                 tracking-[0.2em]
+                                 text-[#245F73]">
+
+                        03
+
+                    </span>
+
+                    <span class="text-zinc-300">
+                        →
+                    </span>
+
+                </div>
+
+
+                <h3 class="mt-10
+                           text-xl
+                           font-black">
+
+                    Build
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Implement one milestone at a time
+                    while solving real engineering problems.
+
+                </p>
+
+            </article>
+
+
+            <!-- VERSION -->
+
+            <article class="relative
+                            p-7
+                            border-b
+                            lg:border-b-0
+                            lg:border-r
+                            border-zinc-300">
+
+                <div class="flex items-center
+                            justify-between">
+
+                    <span class="text-xs
+                                 font-black
+                                 tracking-[0.2em]
+                                 text-[#245F73]">
+
+                        04
+
+                    </span>
+
+                    <span class="text-zinc-300">
+                        →
+                    </span>
+
+                </div>
+
+
+                <h3 class="mt-10
+                           text-xl
+                           font-black">
+
+                    Version
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Use Git and GitHub to track
+                    your development and decisions.
+
+                </p>
+
+            </article>
+
+
+            <!-- SHIP -->
+
+            <article class="relative
+                            p-7">
+
+                <span class="text-xs
+                             font-black
+                             tracking-[0.2em]
+                             text-[#245F73]">
+
+                    05
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-xl
+                           font-black">
+
+                    Ship
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Finish with software you understand
+                    and can confidently present.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECT CATALOGUE
+========================================================= -->
+
+<section id="project-catalogue"
+         class="bg-white
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="flex flex-col
+                    lg:flex-row
+                    lg:items-end
+                    lg:justify-between
+                    gap-8
+                    mb-14">
+
+            <div class="max-w-3xl">
+
+                <p class="text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#245F73]">
+
+                    Project catalogue
+
+                </p>
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight">
+
+                    Projects with a purpose.
+
+                </h2>
+
+
+                <p class="mt-5
+                          text-lg
+                          text-zinc-600
+                          leading-relaxed">
+
+                    Choose a project based on what you want
+                    to learn, then build it through structured milestones.
+
+                </p>
+
+            </div>
+
+
+            <div class="text-sm
+                        font-semibold
+                        text-zinc-500">
+
+                More projects are being developed.
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT GRID -->
+
+        <div class="grid
+                    md:grid-cols-2
+                    lg:grid-cols-3
+                    gap-6">
+
+
+            <!-- PROJECT 01 -->
+
+            <article class="project-card
+                            group
+                            border
+                            border-zinc-300
+                            bg-white">
+
+                <div class="relative
+                            aspect-[16/10]
+                            bg-[#DCECEF]
+                            border-b border-zinc-300
+                            overflow-hidden">
+
+                    <div class="absolute inset-0 grid-pattern"></div>
+
+
+                    <div class="relative
+                                h-full
+                                flex flex-col
+                                justify-between
+                                p-7">
+
+                        <div class="flex items-center
+                                    justify-between">
+
+                            <span class="text-xs
+                                         font-black
+                                         uppercase
+                                         tracking-[0.2em]
+                                         text-[#245F73]">
+
+                                JAVA
+
+                            </span>
+
+
+                            <span class="text-xs
+                                         font-bold
+                                         text-zinc-500">
+
+                                BEGINNER
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-4xl
+                                        font-black
+                                        tracking-tight">
+
+                                01
+
+                            </div>
+
+                            <div class="mt-1
+                                        text-sm
+                                        font-semibold
+                                        text-zinc-600">
+
+                                Foundations
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <h3 class="text-2xl
+                               font-black
+                               tracking-tight">
+
+                        Build your first system
+
+                    </h3>
+
+
+                    <p class="mt-4
+                              text-sm
+                              leading-relaxed
+                              text-zinc-600">
+
+                        Apply programming fundamentals to build
+                        a complete console application instead
+                        of solving disconnected exercises.
+
+                    </p>
+
+
+                    <div class="mt-7
+                                flex items-center
+                                justify-between
+                                border-t border-zinc-200
+                                pt-5">
+
+                        <span class="text-xs
+                                     font-bold
+                                     uppercase
+                                     tracking-wider
+                                     text-zinc-500">
+
+                            Java Foundations
+
+                        </span>
+
+
+                        <span class="project-arrow
+                                     text-[#245F73]
+                                     font-bold">
+
+                            →
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project-card
+                            group
+                            border
+                            border-zinc-300
+                            bg-white">
+
+                <div class="relative
+                            aspect-[16/10]
+                            bg-zinc-100
+                            border-b border-zinc-300
+                            overflow-hidden">
+
+                    <div class="absolute inset-0 grid-pattern"></div>
+
+
+                    <div class="relative
+                                h-full
+                                flex flex-col
+                                justify-between
+                                p-7">
+
+                        <div class="flex items-center
+                                    justify-between">
+
+                            <span class="text-xs
+                                         font-black
+                                         uppercase
+                                         tracking-[0.2em]
+                                         text-[#245F73]">
+
+                                JAVA
+
+                            </span>
+
+
+                            <span class="text-xs
+                                         font-bold
+                                         text-zinc-500">
+
+                                INTERMEDIATE
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-4xl
+                                        font-black
+                                        tracking-tight">
+
+                                02
+
+                            </div>
+
+                            <div class="mt-1
+                                        text-sm
+                                        font-semibold
+                                        text-zinc-600">
+
+                                Architecture
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <h3 class="text-2xl
+                               font-black
+                               tracking-tight">
+
+                        Design before implementation
+
+                    </h3>
+
+
+                    <p class="mt-4
+                              text-sm
+                              leading-relaxed
+                              text-zinc-600">
+
+                        Move beyond isolated programming concepts
+                        and start thinking about components,
+                        responsibilities and system flow.
+
+                    </p>
+
+
+                    <div class="mt-7
+                                flex items-center
+                                justify-between
+                                border-t border-zinc-200
+                                pt-5">
+
+                        <span class="text-xs
+                                     font-bold
+                                     uppercase
+                                     tracking-wider
+                                     text-zinc-500">
+
+                            Coming soon
+
+                        </span>
+
+
+                        <span class="text-zinc-300
+                                     font-bold">
+
+                            →
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project-card
+                            group
+                            border
+                            border-zinc-300
+                            bg-white">
+
+                <div class="relative
+                            aspect-[16/10]
+                            bg-black
+                            border-b border-black
+                            overflow-hidden">
+
+                    <div class="absolute inset-0
+                                opacity-20
+                                grid-pattern">
+                    </div>
+
+
+                    <div class="relative
+                                h-full
+                                flex flex-col
+                                justify-between
+                                p-7
+                                text-white">
+
+                        <div class="flex items-center
+                                    justify-between">
+
+                            <span class="text-xs
+                                         font-black
+                                         uppercase
+                                         tracking-[0.2em]
+                                         text-[#DCECEF]">
+
+                                PORTFOLIO
+
+                            </span>
+
+
+                            <span class="text-xs
+                                         font-bold
+                                         text-zinc-400">
+
+                                ADVANCED
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-4xl
+                                        font-black
+                                        tracking-tight">
+
+                                03
+
+                            </div>
+
+                            <div class="mt-1
+                                        text-sm
+                                        font-semibold
+                                        text-zinc-400">
+
+                                Capstone
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-7">
+
+                    <h3 class="text-2xl
+                               font-black
+                               tracking-tight">
+
+                        Build something worth showing
+
+                    </h3>
+
+
+                    <p class="mt-4
+                              text-sm
+                              leading-relaxed
+                              text-zinc-600">
+
+                        Take an idea from requirements through
+                        architecture, implementation, version
+                        control and final presentation.
+
+                    </p>
+
+
+                    <div class="mt-7
+                                flex items-center
+                                justify-between
+                                border-t border-zinc-200
+                                pt-5">
+
+                        <span class="text-xs
+                                     font-bold
+                                     uppercase
+                                     tracking-wider
+                                     text-zinc-500">
+
+                            Coming soon
+
+                        </span>
+
+
+                        <span class="text-zinc-300
+                                     font-bold">
+
+                            →
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PORTFOLIO
+========================================================= -->
+
+<section class="bg-[#245F73]
+                text-white
+                border-b border-[#1B4A5A]">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="grid
+                    lg:grid-cols-2
+                    gap-16
+                    items-center">
+
+
+            <div>
+
+                <p class="text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#DCECEF]">
+
+                    Portfolio building
+
+                </p>
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight
+                           leading-tight">
+
+                    Your portfolio
+                    should show more
+                    than screenshots.
+
+                </h2>
+
+
+                <p class="mt-6
+                          max-w-xl
+                          text-white/75
+                          leading-relaxed">
+
+                    A strong project gives someone evidence that
+                    you can understand a problem, reason about a
+                    solution, write software and work through the
+                    development process.
+
+                </p>
+
+            </div>
+
+
+            <!-- PORTFOLIO EVIDENCE -->
+
+            <div class="border border-white/20
+                        bg-white/10
+                        backdrop-blur-sm">
+
+                <div class="p-6
+                            border-b border-white/20">
+
+                    <p class="text-xs
+                              uppercase
+                              tracking-[0.2em]
+                              font-bold
+                              text-white/60">
+
+                        Project evidence
+
+                    </p>
+
+                </div>
+
+
+                <div class="divide-y divide-white/20">
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <div>
+
+                            <p class="font-bold">
+                                Problem definition
+                            </p>
+
+                            <p class="mt-1
+                                      text-sm
+                                      text-white/60">
+                                What are you solving?
+                            </p>
+
+                        </div>
+
+                        <span class="text-xl">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <div>
+
+                            <p class="font-bold">
+                                System design
+                            </p>
+
+                            <p class="mt-1
+                                      text-sm
+                                      text-white/60">
+                                How did you reason about it?
+                            </p>
+
+                        </div>
+
+                        <span class="text-xl">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <div>
+
+                            <p class="font-bold">
+                                Source code
+                            </p>
+
+                            <p class="mt-1
+                                      text-sm
+                                      text-white/60">
+                                What did you actually build?
+                            </p>
+
+                        </div>
+
+                        <span class="text-xl">
+                            03
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <div>
+
+                            <p class="font-bold">
+                                Development history
+                            </p>
+
+                            <p class="mt-1
+                                      text-sm
+                                      text-white/60">
+                                How did the system evolve?
+                            </p>
+
+                        </div>
+
+                        <span class="text-xl">
+                            04
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GITHUB
+========================================================= -->
+
+<section class="bg-zinc-100
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="grid
+                    lg:grid-cols-[1fr_1.1fr]
+                    gap-16
+                    items-center">
+
+
+            <div>
+
+                <div class="w-14 h-14
+                            bg-black
+                            text-white
+                            flex items-center
+                            justify-center">
+
+                    <svg class="w-7 h-7"
+                         fill="currentColor"
+                         viewBox="0 0 24 24">
+
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.35-3.86-1.35-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.04.78 2.1v3.11c0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+
+                    </svg>
+
+                </div>
+
+
+                <p class="mt-8
+                          text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#245F73]">
+
+                    GitHub is part of building
+
+                </p>
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight">
+
+                    Your repository
+                    is part of the project.
+
+                </h2>
+
+
+                <p class="mt-6
+                          max-w-xl
+                          text-zinc-600
+                          leading-relaxed">
+
+                    KATCODE treats version control as part of
+                    software development rather than a final
+                    step before submission.
+
+                </p>
+
+            </div>
+
+
+            <!-- REPOSITORY VISUAL -->
+
+            <div class="bg-white
+                        border border-zinc-300
+                        shadow-sm">
+
+                <div class="px-6 py-5
+                            border-b border-zinc-200
+                            flex items-center
+                            justify-between">
+
+                    <div>
+
+                        <p class="text-xs
+                                  uppercase
+                                  tracking-wider
+                                  font-bold
+                                  text-zinc-400">
+
+                            Repository
+
+                        </p>
+
+                        <p class="mt-1
+                                  font-bold">
+
+                            my-project
+
+                        </p>
+
+                    </div>
+
+
+                    <span class="w-3 h-3
+                                 rounded-full
+                                 bg-[#245F73]">
+                    </span>
+
+                </div>
+
+
+                <div class="p-6">
+
+                    <div class="space-y-5">
+
+
+                        <div class="flex gap-4">
+
+                            <div class="w-8 h-8
+                                        shrink-0
+                                        bg-[#DCECEF]
+                                        text-[#245F73]
+                                        flex items-center
+                                        justify-center
+                                        text-xs
+                                        font-black">
+
+                                01
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="font-bold">
+                                    Project setup
+                                </p>
+
+                                <p class="mt-1
+                                          text-sm
+                                          text-zinc-500">
+
+                                    Establish the repository
+                                    and project structure.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="w-px h-5
+                                    bg-zinc-300
+                                    ml-4">
+                        </div>
+
+
+                        <div class="flex gap-4">
+
+                            <div class="w-8 h-8
+                                        shrink-0
+                                        bg-[#DCECEF]
+                                        text-[#245F73]
+                                        flex items-center
+                                        justify-center
+                                        text-xs
+                                        font-black">
+
+                                02
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="font-bold">
+                                    Milestone commits
+                                </p>
+
+                                <p class="mt-1
+                                          text-sm
+                                          text-zinc-500">
+
+                                    Build a meaningful history
+                                    of your development.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="w-px h-5
+                                    bg-zinc-300
+                                    ml-4">
+                        </div>
+
+
+                        <div class="flex gap-4">
+
+                            <div class="w-8 h-8
+                                        shrink-0
+                                        bg-[#DCECEF]
+                                        text-[#245F73]
+                                        flex items-center
+                                        justify-center
+                                        text-xs
+                                        font-black">
+
+                                03
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="font-bold">
+                                    Review & improve
+                                </p>
+
+                                <p class="mt-1
+                                          text-sm
+                                          text-zinc-500">
+
+                                    Refine your implementation
+                                    as the system grows.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="w-px h-5
+                                    bg-zinc-300
+                                    ml-4">
+                        </div>
+
+
+                        <div class="flex gap-4">
+
+                            <div class="w-8 h-8
+                                        shrink-0
+                                        bg-black
+                                        text-white
+                                        flex items-center
+                                        justify-center
+                                        text-xs
+                                        font-black">
+
+                                ✓
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="font-bold">
+                                    Portfolio ready
+                                </p>
+
+                                <p class="mt-1
+                                          text-sm
+                                          text-zinc-500">
+
+                                    A repository you can
+                                    confidently discuss.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOR WHO
+========================================================= -->
+
+<section class="bg-white
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="max-w-3xl mb-14">
+
+            <p class="text-xs
+                      font-black
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#245F73]">
+
+                Who is this for?
+
+            </p>
+
+
+            <h2 class="mt-5
+                       text-4xl
+                       md:text-5xl
+                       font-black
+                       tracking-tight">
+
+                Wherever you are
+                in your development journey.
+
+            </h2>
+
+        </div>
+
+
+        <div class="grid
+                    md:grid-cols-3
+                    gap-6">
+
+
+            <!-- STUDENT -->
+
+            <article class="border
+                            border-zinc-300
+                            p-8
+                            hover:border-[#245F73]
+                            transition-colors">
+
+                <span class="text-xs
+                             font-black
+                             text-[#245F73]
+                             tracking-[0.2em]">
+
+                    01
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-2xl
+                           font-black">
+
+                    Students
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          text-zinc-600
+                          leading-relaxed">
+
+                    Turn concepts from your coursework
+                    into projects that demonstrate
+                    practical development ability.
+
+                </p>
+
+            </article>
+
+
+            <!-- FINAL YEAR -->
+
+            <article class="border
+                            border-zinc-300
+                            p-8
+                            hover:border-[#245F73]
+                            transition-colors">
+
+                <span class="text-xs
+                             font-black
+                             text-[#245F73]
+                             tracking-[0.2em]">
+
+                    02
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-2xl
+                           font-black">
+
+                    Final-year developers
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          text-zinc-600
+                          leading-relaxed">
+
+                    Build substantial software while developing
+                    the engineering habits needed beyond university.
+
+                </p>
+
+            </article>
+
+
+            <!-- PORTFOLIO -->
+
+            <article class="border
+                            border-zinc-300
+                            p-8
+                            hover:border-[#245F73]
+                            transition-colors">
+
+                <span class="text-xs
+                             font-black
+                             text-[#245F73]
+                             tracking-[0.2em]">
+
+                    03
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-2xl
+                           font-black">
+
+                    Portfolio builders
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          text-zinc-600
+                          leading-relaxed">
+
+                    Create projects that give recruiters,
+                    collaborators and employers something
+                    meaningful to evaluate.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GITHUB BASICS
+========================================================= -->
+
+<section class="bg-black
+                text-white
+                border-b border-black">
+
+    <div class="max-w-7xl mx-auto px-6 py-20">
+
+        <div class="flex flex-col
+                    lg:flex-row
+                    lg:items-center
+                    lg:justify-between
+                    gap-10">
+
+            <div class="max-w-2xl">
+
+                <p class="text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-zinc-500">
+
+                    New to GitHub?
+
+                </p>
+
+
+                <h2 class="mt-4
+                           text-3xl
+                           md:text-4xl
+                           font-black">
+
+                    Learn the workflow.
+                    Then use it.
+
+                </h2>
+
+
+                <p class="mt-4
+                          text-zinc-400
+                          leading-relaxed">
+
+                    You don't need to know everything about GitHub.
+                    KATCODE focuses on the Git and GitHub concepts
+                    you actually need to manage your projects.
+
+                </p>
+
+            </div>
+
+
+            <a href="/#learning-paths"
+               class="shrink-0
+                      inline-flex
+                      items-center
+                      justify-center
+                      rounded-full
+                      border border-zinc-700
+                      px-7 py-4
+                      text-sm
+                      font-bold
+                      hover:bg-white
+                      hover:text-black
+                      transition-all duration-300">
+
+                Learn the basics
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="bg-zinc-100
+                border-b border-zinc-300">
+
+    <div class="max-w-5xl
+                mx-auto
+                px-6
+                py-28
+                text-center">
+
+        <p class="text-xs
+                  font-black
+                  uppercase
+                  tracking-[0.25em]
+                  text-[#245F73]">
+
+            Start building
+
+        </p>
+
+
+        <h2 class="mt-5
+                   text-4xl
+                   md:text-6xl
+                   font-black
+                   tracking-tight">
+
+            Your next project
+            starts with a problem.
+
+        </h2>
+
+
+        <p class="mt-6
+                  max-w-2xl
+                  mx-auto
+                  text-lg
+                  text-zinc-600
+                  leading-relaxed">
+
+            Understand it.
+            Design the solution.
+            Build the system.
+            Own the repository.
+
+        </p>
+
+
+        <div class="mt-10">
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="inline-flex
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-[#245F73]
+                      text-white
+                      px-8 py-4
+                      text-sm
+                      font-bold
+                      hover:bg-[#1B4A5A]
+                      hover:-translate-y-1
+                      transition-all duration-300">
+
+                Start building
+
+                <svg class="ml-3 w-5 h-5"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     viewBox="0 0 24 24">
+
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 12h14M13 6l6 6-6 6"/>
+
+                </svg>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="pt-20 pb-10 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="grid
+                    lg:grid-cols-5
+                    gap-12
+                    mb-16">
+
+
+            <!-- BRAND -->
+
+            <div class="lg:col-span-2">
+
+                <div class="flex items-center
+                            gap-4
+                            mb-6">
+
+                    <img src="/images/katcode-logo.png"
+                         alt="KATCODE Logo"
+                         class="w-12 h-12 rounded-full
+                                shadow-sm
+                                bg-zinc-200
+                                p-0.5">
+
+
+                    <div>
+
+                        <h2 class="text-xl
+                                   font-black
+                                   tracking-tight">
+
+                            KATCODE
+
+                        </h2>
+
+
+                        <p class="text-[0.6rem]
+                                  uppercase
+                                  tracking-[0.2em]
+                                  font-bold
+                                  text-[#245F73]">
+
+                            Logic Precedes Code
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p class="font-medium
+                          leading-relaxed
+                          max-w-sm
+                          text-sm">
+
+                    A programming education platform built to
+                    develop logical thinking, practical development
+                    skills, and a verifiable engineering portfolio.
+
+                </p>
+
+
+                <p class="mt-5
+                          text-xs
+                          text-zinc-500
+                          leading-relaxed
+                          max-w-sm">
+
+                    KATCODE is a product of
+                    <span class="font-bold text-zinc-700">
+                        Tovan Technologies (Pty) Ltd
+                    </span>.
+
+                </p>
+
+            </div>
+
+
+            <!-- PLATFORM -->
+
+            <div>
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
+                    Platform
+
+                </h3>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+                    <li>
+                        <a href="/#learning-paths"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Learning Paths
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/project"
+                           class="text-[#245F73]
+                                  font-bold">
+
+                            Projects
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/hackathons"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Hackathons
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://app.katcode.co.za/auth/register"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Get started
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- COMMUNITY -->
+
+            <div>
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
+                    Community
+
+                </h3>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+                    <li>
+                        <a href="/hackathons"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Hackathons
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/about"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            About Us
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="mailto:support@katcode.co.za"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Contact Support
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- LEGAL -->
+
+            <div>
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
+                    Legal
+
+                </h3>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+                    <li>
+                        <a href="/terms"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Terms of Service
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/privacy"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Privacy Policy
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="pt-8
+                    border-t border-zinc-300
+                    flex flex-col
+                    md:flex-row
+                    md:items-center
+                    md:justify-between
+                    gap-4">
+
+            <p class="text-xs
+                      font-medium
+                      text-zinc-500">
+
+                © 2026
+                <span class="font-bold text-zinc-700">
+                    KATCODE
+                </span>.
+                All rights reserved.
+
+            </p>
+
+
+            <p class="text-xs
+                      font-black
+                      tracking-[0.2em]">
+
+                LOGIC PRECEDES CODE.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     DESKTOP NAV HIGHLIGHT
+     
+     Only JavaScript on this page.
+     This is optional and can be removed completely.
+========================================================= -->
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const navContainer =
+            document.getElementById("nav-container");
+
+        const navLinks =
+            document.querySelectorAll(".nav-link");
+
+        const highlight =
+            document.getElementById("nav-highlight");
+
+
+        if (!navContainer || !navLinks.length || !highlight) {
+            return;
+        }
+
+
+        navLinks.forEach(link => {
+
+            link.addEventListener("mouseenter", event => {
+
+                const linkRect =
+                    event.currentTarget.getBoundingClientRect();
+
+                const containerRect =
+                    navContainer.getBoundingClientRect();
+
+
+                highlight.style.width =
+                    `${linkRect.width}px`;
+
+
+                highlight.style.transform =
+                    `translateX(${linkRect.left - containerRect.left}px)`;
+
+
+                highlight.style.opacity = "1";
+
+            });
+
+        });
+
+
+        navContainer.addEventListener("mouseleave", () => {
+
+            highlight.style.opacity = "0";
+
+        });
+
+    });
+
+</script>
+
+
+<script src="/js/app.js"></script>
+
+</body>
+</html>

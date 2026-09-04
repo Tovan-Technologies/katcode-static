@@ -1,547 +1,2326 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Hackathons | KATCODE</title>
 
-    <meta name="description" content="Join KATCODE Hackathons. Learn programming, collaborate in teams, and build real software beyond the classroom. Beginner-friendly coding events in South Africa.">
-    <meta name="keywords" content="KATCODE hackathons, coding events, learn programming, software development, hackathon South Africa, beginner hackathon, build software, student developer">
+    <meta name="description"
+          content="KATCODE hackathons challenge students to think, build, collaborate and solve real problems under pressure.">
+
+    <meta name="keywords"
+          content="KATCODE hackathons, coding hackathons, student hackathons, programming hackathons, software development hackathon, South Africa">
+
     <meta name="author" content="Tovan Technologies (Pty) Ltd">
     <meta name="application-name" content="KATCODE">
-    <meta name="theme-color" content="#e4e4e7"> 
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    
+    <meta name="theme-color" content="#245F73">
+    <meta name="robots" content="index, follow">
+
     <link rel="canonical" href="https://www.katcode.co.za/hackathons">
+    <link rel="manifest" href="/manifest.webmanifest">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="KATCODE">
     <meta property="og:url" content="https://www.katcode.co.za/hackathons">
     <meta property="og:title" content="Hackathons | KATCODE">
-    <meta property="og:description" content="Move beyond tutorials. Build real software, collaborate with peers, and grow your portfolio at a KATCODE Hackathon.">
+    <meta property="og:description"
+          content="Think. Build. Compete. KATCODE hackathons put software development into practice.">
     <meta property="og:image" content="https://www.katcode.co.za/images/katcode-logo.png">
     <meta property="og:locale" content="en_ZA">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hackathons | KATCODE">
-    <meta name="twitter:description" content="Move beyond tutorials. Build real software, collaborate with peers, and grow your portfolio at a KATCODE Hackathon.">
-    <meta name="twitter:image" content="https://www.katcode.co.za/images/katcode-logo.png">
+    <link href="./main.css" rel="stylesheet">
 
-    <link href="/main.css" rel="stylesheet">
+    <link rel="icon"
+          type="image/png"
+          href="/images/katcode-logo-icon.png">
 
-    <link rel="icon" type="image/png" href="/images/katcode-logo-icon.png">
-    <link rel="apple-touch-icon" href="/images/katcode-logo-icon.png">
+    <link rel="apple-touch-icon"
+          href="/images/katcode-logo-icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
-            "name": "KATCODE Hackathons",
-            "legalName": "Tovan Technologies (Pty) Ltd",
-            "url": "https://www.katcode.co.za/hackathons",
-            "logo": "https://www.katcode.co.za/images/katcode-logo.png",
-            "description": "Collaborative programming events designed to bridge the gap between theory and practical software development.",
-            "slogan": "Logic Precedes Code",
-            "sameAs": [
-                "https://github.com/Tovan-Technologies"
-            ]
-        }
-    </script>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
 
     <style>
+
+        /* =====================================================
+           KATCODE HACKATHONS
+        ===================================================== */
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
         }
+
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: .35;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+        }
+
+
+        @keyframes scan {
+
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(100%);
+            }
+
+        }
+
+
         .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
+            animation: fadeInUp .7s ease-out both;
         }
-        
-        details > summary { list-style: none; }
-        details > summary::-webkit-details-marker { display: none; }
-        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
-        @keyframes sweep {
-            0%    {opacity: 0; transform: translateY(-10px)}
-            100%  {opacity: 1; transform: translateY(0)}
+
+
+        .animate-delay-100 {
+            animation-delay: .1s;
         }
+
+
+        .animate-delay-200 {
+            animation-delay: .2s;
+        }
+
+
+        .animate-delay-300 {
+            animation-delay: .3s;
+        }
+
+
+        .grid-pattern {
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,.055) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.055) 1px,
+                    transparent 1px
+                );
+
+            background-size: 40px 40px;
+
+        }
+
+
+        .light-grid {
+
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,.045) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.045) 1px,
+                    transparent 1px
+                );
+
+            background-size: 40px 40px;
+
+        }
+
+
+        .hackathon-card {
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+
+        }
+
+
+        .hackathon-card:hover {
+
+            transform: translateY(-5px);
+            border-color: #245F73;
+            box-shadow: 0 18px 45px rgba(0,0,0,.08);
+
+        }
+
+
+        .arrow {
+
+            transition:
+                transform .3s ease;
+
+        }
+
+
+        .hackathon-card:hover .arrow {
+
+            transform: translateX(5px);
+
+        }
+
+
+        .pulse-dot {
+
+            animation:
+                pulse 2s ease-in-out infinite;
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+
+            }
+
+        }
+
     </style>
+
 </head>
 
-<body class="bg-zinc-200 text-black font-sans antialiased flex flex-col selection:bg-cyan-600 selection:text-black min-h-screen">
 
-<!-- CSS-ONLY MOBILE MENU TOGGLE -->
-<input type="checkbox" id="mobile-menu-toggle" class="peer/menu hidden" />
+<body class="bg-zinc-200 text-black font-sans antialiased">
 
-<!-- NAVBAR -->
-<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 rounded-full bg-zinc-200/50 backdrop-blur-xl shadow-lg px-6 lg:px-8 transition-all duration-300">
+
+<input type="checkbox"
+       id="mobile-menu-toggle"
+       class="peer/menu hidden">
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="fixed top-6 left-1/2 -translate-x-1/2
+           w-[95%] max-w-7xl
+           z-50
+           rounded-full
+           bg-zinc-200/60
+           backdrop-blur-xl
+           shadow-lg
+           px-6 lg:px-8">
+
     <div class="h-20 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-4 group shrink-0 focus:outline-none">
+
+
+        <!-- LOGO -->
+
+        <a href="/"
+           class="flex items-center gap-4 group shrink-0
+                  focus:outline-none">
+
             <img src="/images/katcode-logo.png"
                  alt="KATCODE Logo"
-                 class="w-12 h-12 rounded-full shadow-xl transition-transform duration-300 group-hover:scale-105"/>
+                 class="w-12 h-12 rounded-full
+                        shadow-xl
+                        transition-transform duration-300
+                        group-hover:scale-105">
+
             <div class="hidden sm:block">
-                <h1 class="text-xl font-black tracking-tight text-black drop-shadow-sm">
+
+                <h1 class="text-xl font-black tracking-tight">
                     KATCODE
                 </h1>
+
             </div>
+
         </a>
 
-        <div class="hidden lg:flex items-center relative" id="nav-container">
-            <div id="nav-highlight" class="absolute inset-y-1 left-0 bg-white/60 backdrop-blur-md rounded-full transition-all duration-300 ease-out opacity-0 pointer-events-none shadow-sm"></div>
-            
-            <a href="/" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Home</a>
-            <a href="/#learning-paths" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Learn</a>
-            <a href="/project" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Projects</a>
-            <a href="/hackathons" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-cyan-900 transition-colors">Hackathons</a>
-            <a href="/#faq" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">FAQ</a>
-            <a href="/about" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">About</a>
+
+        <!-- DESKTOP NAV -->
+
+        <div class="hidden lg:flex items-center relative"
+             id="nav-container">
+
+            <div id="nav-highlight"
+                 class="absolute inset-y-1 left-0
+                        bg-white/70
+                        backdrop-blur-md
+                        rounded-full
+                        transition-all duration-300
+                        ease-out
+                        opacity-0
+                        pointer-events-none
+                        shadow-sm">
+            </div>
+
+
+            <a href="/"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                Home
+
+            </a>
+
+
+            <a href="/#learning-paths"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                Learn
+
+            </a>
+
+
+            <a href="/project"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                Projects
+
+            </a>
+
+
+            <a href="/hackathons"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-[#245F73]">
+
+                Hackathons
+
+            </a>
+
+
+            <a href="/#faq"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                FAQ
+
+            </a>
+
+
+            <a href="/about"
+               class="nav-link relative z-10
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors">
+
+                About
+
+            </a>
+
         </div>
+
+
+        <!-- ACTIONS -->
 
         <div class="hidden md:flex items-center gap-4">
-            <a href="https://app.katcode.co.za/auth/login" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-900 hover:text-cyan-800 transition-colors px-4">Sign In</a>
-            <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-[#245F73] text-white px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#1B4A5A] shadow-xl hover:-translate-y-1 transition-all duration-300">Get started</a>
+
+            <a href="https://app.katcode.co.za/auth/login"
+               class="text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      text-zinc-900
+                      hover:text-[#245F73]
+                      transition-colors
+                      px-4">
+
+                Sign In
+
+            </a>
+
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="rounded-full
+                      bg-[#245F73]
+                      text-white
+                      px-6 py-3
+                      text-xs font-bold uppercase
+                      tracking-[0.2em]
+                      shadow-xl
+                      hover:bg-[#1B4A5A]
+                      hover:-translate-y-1
+                      transition-all duration-300">
+
+                Get started
+
+            </a>
+
         </div>
 
-        <!-- CSS HAMBURGER -->
-        <label for="mobile-menu-toggle" class="lg:hidden relative w-7 h-7 cursor-pointer mr-2 select-none z-50">
-            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-1 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:rotate-45"></span>
-            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-3 transition-all duration-300 origin-center peer-checked/menu:opacity-0"></span>
-            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-5 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:-rotate-45"></span>
+
+        <!-- MOBILE BUTTON -->
+
+        <label for="mobile-menu-toggle"
+               class="lg:hidden
+                      relative
+                      w-7 h-7
+                      cursor-pointer
+                      mr-2
+                      select-none
+                      z-50">
+
+            <span class="absolute left-0.5
+                         w-6 h-0.5
+                         bg-black rounded
+                         top-1
+                         transition-all duration-300
+                         origin-center
+                         peer-checked/menu:top-3
+                         peer-checked/menu:rotate-45">
+            </span>
+
+            <span class="absolute left-0.5
+                         w-6 h-0.5
+                         bg-black rounded
+                         top-3
+                         transition-all duration-300
+                         origin-center
+                         peer-checked/menu:opacity-0">
+            </span>
+
+            <span class="absolute left-0.5
+                         w-6 h-0.5
+                         bg-black rounded
+                         top-5
+                         transition-all duration-300
+                         origin-center
+                         peer-checked/menu:top-3
+                         peer-checked/menu:-rotate-45">
+            </span>
+
         </label>
+
     </div>
+
 </nav>
 
-<!-- CSS-DRIVEN MOBILE MENU -->
-<div id="mobile-menu" class="hidden peer-checked/menu:block lg:hidden fixed top-32 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl bg-zinc-200/90 backdrop-blur-2xl rounded-3xl shadow-2xl z-40">
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div id="mobile-menu"
+     class="hidden
+            peer-checked/menu:block
+            lg:hidden
+            fixed
+            top-32
+            left-1/2
+            -translate-x-1/2
+            w-[95%]
+            max-w-7xl
+            bg-zinc-100/95
+            backdrop-blur-2xl
+            rounded-3xl
+            shadow-2xl
+            z-40">
+
     <div class="px-8 py-8 flex flex-col gap-6">
-        <a href="/" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Home</a>
-        <a href="/#learning-paths" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Learn</a>
-        <a href="/project" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Projects</a>
-        <a href="/hackathons" class="font-bold uppercase tracking-[0.2em] text-sm text-[#245F73]">Hackathons</a>
-        <a href="/#faq" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">FAQ</a>
-        <a href="/about" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">About</a>
-        <div class="h-px w-full bg-zinc-400/30"></div>
-        <a href="https://app.katcode.co.za/auth/login" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Sign In</a>
-        <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-[#245F73] text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] shadow-lg">Get started</a>
+
+
+        <a href="/"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Home
+
+        </a>
+
+
+        <a href="/#learning-paths"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Learn
+
+        </a>
+
+
+        <a href="/project"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Projects
+
+        </a>
+
+
+        <a href="/hackathons"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-[#245F73]">
+
+            Hackathons
+
+        </a>
+
+
+        <a href="/#faq"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            FAQ
+
+        </a>
+
+
+        <a href="/about"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            About
+
+        </a>
+
+
+        <div class="h-px w-full bg-zinc-300"></div>
+
+
+        <a href="https://app.katcode.co.za/auth/login"
+           class="font-bold uppercase
+                  tracking-[0.2em]
+                  text-sm text-zinc-800">
+
+            Sign In
+
+        </a>
+
+
+        <a href="https://app.katcode.co.za/auth/register"
+           class="rounded-full
+                  bg-[#245F73]
+                  text-white
+                  py-4
+                  text-center
+                  text-xs
+                  font-bold uppercase
+                  tracking-[0.2em]">
+
+            Get started
+
+        </a>
+
     </div>
+
 </div>
 
-<!-- HERO SECTION (Grid removed) -->
-<section class="relative pt-48 pb-28 overflow-hidden flex items-center min-h-[80vh]">
-    <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#245F73]/10 blur-3xl pointer-events-none z-0"></div>
-    
-    <div class="absolute bottom-0 right-0 w-[50%] h-[100%] z-0 hidden lg:block">
-        <img src="/images/hackathon/IMG-20260518-WA0060.jpg" alt="KATCODE Hackathon Event" class="w-full h-full object-cover filter blur-[2px] opacity-25 mix-blend-multiply rounded-tl-[100px]" />
-        <div class="absolute inset-0 bg-gradient-to-r from-zinc-200 via-zinc-200/80 to-transparent"></div>
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<!-- HACKATHONS HERO -->
+<section class="relative pt-44 pb-28 lg:pt-52 lg:pb-36 bg-zinc-100 border-b border-zinc-300 overflow-hidden">
+
+    <!-- Structural background -->
+    <div class="absolute inset-0 opacity-60 pointer-events-none">
+        <div class="absolute inset-0 grid-pattern"></div>
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        <div class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md border border-zinc-300 rounded-full mb-8 shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#245F73] animate-pulse"></span>
-                <span class="text-xs font-bold uppercase tracking-[0.16em] text-zinc-600">
-                    Community Execution
-                </span>
-            </div>
+    <!-- Accent geometry -->
+    <div class="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full
+                border border-[#245F73]/10"></div>
 
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-[-0.055em] leading-none mb-8 drop-shadow-sm">
-                Learn.<br>
-                <span class="text-[#245F73]">Build.</span><br>
-                Compete.
+    <div class="absolute top-24 -right-12 w-[320px] h-[320px] rounded-full
+                border border-[#245F73]/10"></div>
+
+    <div class="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full
+                bg-[#245F73]/5 blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 mt-16">
+
+        <div class="max-w-4xl mt-16">
+
+            <!-- Eyebrow -->
+      
+
+            <!-- Heading -->
+            <h1 class="text-5xl sm:text-6xl lg:text-8xl
+                       font-black tracking-[-0.05em]
+                       leading-[0.92] text-black mt-16">
+
+                Build under
+                <span class="text-[#245F73]">pressure.</span>
+
             </h1>
-            
-            <p class="text-lg md:text-xl text-zinc-600 max-w-2xl leading-relaxed mb-12 font-medium">
-                Programming isn't mastered by watching videos. It's mastered by solving real problems.
-                KATCODE Hackathons bring students together to collaborate, build software, learn from one another,
-                and experience software engineering beyond the classroom.
+
+            <!-- Description -->
+            <p class="mt-8 max-w-2xl text-lg lg:text-xl
+                      leading-relaxed text-zinc-600">
+
+                Hackathons turn what you learn into something you can actually
+                build. Solve problems, make decisions, work with others,
+                and ship software within a limited time.
+
             </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#upcoming" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#245F73] text-white font-bold tracking-[0.1em] hover:bg-[#1B4A5A] hover:-translate-y-1 transition-all shadow-lg text-sm">
-                    Upcoming Hackathon
+
+            <!-- Actions -->
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+
+                <a href="#upcoming"
+                   class="inline-flex items-center justify-center
+                          rounded-full bg-[#245F73] px-7 py-4
+                          text-sm font-bold uppercase
+                          tracking-[0.16em] text-white
+                          shadow-lg shadow-[#245F73]/15
+                          transition-all duration-300
+                          hover:bg-[#1B4A5A]
+                          hover:-translate-y-0.5">
+
+                    View hackathons
+
+                    <svg class="ml-3 w-4 h-4"
+                         fill="none"
+                         stroke="currentColor"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+
                 </a>
-                <a href="#gallery" class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-zinc-400 bg-white/60 backdrop-blur-sm font-bold tracking-[0.1em] text-zinc-800 hover:bg-white hover:-translate-y-1 transition-all text-sm">
-                    View Gallery
+
+                <a href="/project"
+                   class="inline-flex items-center justify-center
+                          rounded-full border border-zinc-300
+                          bg-white px-7 py-4
+                          text-sm font-bold uppercase
+                          tracking-[0.16em] text-black
+                          transition-all duration-300
+                          hover:border-[#245F73]
+                          hover:text-[#245F73]">
+
+                    Explore projects
+
                 </a>
+
             </div>
+
         </div>
+
+        <!-- Bottom statement -->
+        <div class="mt-20 lg:mt-28
+                    border-t border-zinc-300 pt-6
+                    flex flex-col sm:flex-row
+                    sm:items-center sm:justify-between gap-4">
+
+            <p class="text-xs font-bold uppercase
+                      tracking-[0.2em] text-zinc-500">
+                Learn → Think → Build → Present
+            </p>
+
+            <p class="text-sm text-zinc-500">
+                Your next build starts with a problem.
+            </p>
+
+        </div>
+
     </div>
 </section>
 
-<!-- WHY HACKATHONS SECTION -->
-<section class="py-28 relative z-10">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+<!-- =========================================================
+     FEATURED HACKATHON
+========================================================= -->
+
+<section id="featured"
+         class="bg-zinc-100
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+
+        <div class="flex flex-col
+                    lg:flex-row
+                    lg:items-end
+                    lg:justify-between
+                    gap-8
+                    mb-14">
+
+
             <div>
-                <p class="text-sm uppercase tracking-[0.2em] text-[#245F73] mb-4 font-bold drop-shadow-sm">
-                    Why Hackathons?
+
+                <p class="text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#245F73]">
+
+                    Featured event
+
                 </p>
-                <h2 class="text-4xl md:text-5xl font-black tracking-tight text-black mb-6">
-                    Learning Happens By Building.
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight">
+
+                    Igotywa Isencani
+
                 </h2>
-            </div>
-            <div class="space-y-6">
-                <p class="text-lg text-zinc-600 font-medium leading-relaxed">
-                    KATCODE Hackathons are designed to bridge the gap between theory and practice. Instead of simply
-                    learning programming concepts, participants work together to design, build, and present working
-                    software within a limited time.
-                </p>
-                <p class="text-lg text-zinc-600 font-medium leading-relaxed">
-                    Whether you're writing your very first Java program or preparing for larger software projects, every
-                    hackathon is an opportunity to improve your technical skills, collaborate with other developers, and gain
-                    practical experience.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- UPCOMING EVENT -->
-<section id="upcoming" class="relative py-24 overflow-hidden bg-[#1B4A5A] mt-16 rounded-[3rem] mx-4 lg:mx-10 shadow-2xl">
-    <div class="absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#133744] via-transparent to-[#1B4A5A]/80"></div>
-    </div>
+            </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16">
-            <p class="text-sm uppercase tracking-[0.2em] mb-4 text-cyan-300 font-bold drop-shadow-sm">
-                Upcoming Event
-            </p>
-            <h2 class="text-4xl md:text-6xl font-black tracking-tight text-white">
-                Next KATCODE Hackathon
-            </h2>
+
+            <span class="inline-flex
+                         items-center
+                         gap-2
+                         self-start
+                         lg:self-auto
+                         px-4 py-2
+                         border border-[#245F73]
+                         text-[#245F73]
+                         text-xs
+                         font-black
+                         uppercase
+                         tracking-[0.2em]">
+
+                KATCODE Hackathon
+
+            </span>
+
         </div>
-        
-        <article class="rounded-3xl border border-white/20 overflow-hidden bg-white/10 backdrop-blur-xl shadow-2xl text-white">
-            <div class="grid lg:grid-cols-2">
-                <div class="p-10 lg:p-14">
-                    <span class="inline-flex rounded-full bg-cyan-300 text-[#133744] px-4 py-1.5 text-xs font-black uppercase tracking-[0.2em] mb-8 shadow-sm">
-                        Registration Opening Soon
-                    </span>
-                    <h3 class="text-4xl font-black leading-tight mb-6">
-                        Java Fundamentals<br>Challenge 2026
+
+
+        <!-- EVENT CARD -->
+
+        <div class="grid
+                    lg:grid-cols-[1.25fr_.75fr]
+                    border border-zinc-300
+                    bg-white">
+
+
+            <!-- LEFT -->
+
+            <div class="relative
+                        overflow-hidden
+                        bg-[#245F73]
+                        text-white
+                        p-8
+                        md:p-12
+                        min-h-[420px]
+                        flex
+                        flex-col
+                        justify-between">
+
+                <div class="absolute inset-0
+                            opacity-20
+                            grid-pattern">
+                </div>
+
+
+                <div class="relative">
+
+
+                    <p class="text-xs
+                              font-bold
+                              uppercase
+                              tracking-[0.2em]
+                              text-[#DCECEF]">
+
+                        First-year challenge
+
+                    </p>
+
+
+                    <h3 class="mt-6
+                               text-4xl
+                               md:text-6xl
+                               font-black
+                               tracking-tight
+                               leading-none">
+
+                        Igotywa
+                        <br>
+                        Isencani.
+
                     </h3>
-                    <p class="leading-relaxed mb-10 text-cyan-50/90 font-medium text-lg">
-                        Join students for a beginner-friendly software development challenge focused on learning, teamwork, and building practical programming skills under pressure.
+
+
+                    <p class="mt-6
+                              max-w-lg
+                              text-white/75
+                              leading-relaxed">
+
+                        A practical challenge designed to take
+                        students beyond studying concepts and
+                        into actually solving problems with code.
+
                     </p>
-                    
-                    <div class="grid sm:grid-cols-2 gap-6 text-cyan-50">
-                        <div>
-                            <p class="uppercase text-[10px] font-bold tracking-[0.2em] text-cyan-300 mb-2">Date</p>
-                            <p class="font-black text-white text-lg">TBC</p>
-                        </div>
-                        <div>
-                            <p class="uppercase text-[10px] font-bold tracking-[0.2em] text-cyan-300 mb-2">Difficulty</p>
-                            <p class="font-black text-white text-lg">Beginner Friendly</p>
-                        </div>
-                        <div>
-                            <p class="uppercase text-[10px] font-bold tracking-[0.2em] text-cyan-300 mb-2">Format</p>
-                            <p class="font-black text-white text-lg">Team Challenge</p>
-                        </div>
-                        <div>
-                            <p class="uppercase text-[10px] font-bold tracking-[0.2em] text-cyan-300 mb-2">Registration</p>
-                            <p class="font-black text-white text-lg">Opens Soon</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Terminal Graphic -->
-                <div class="bg-black/40 flex items-center justify-center p-8 lg:p-12 border-l border-white/10">
-                    <div class="bg-[#1e1e1e] rounded-2xl p-6 w-full max-w-md shadow-2xl shadow-black/50 font-mono text-left border border-zinc-700">
-                        <div class="flex gap-2 mb-6 border-b border-zinc-700 pb-4">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div class="space-y-3 font-medium">
-                            <p class="text-zinc-400 text-xs sm:text-sm">$ ./katcode-hackathon --init</p>
-                            <p class="text-cyan-200 text-xs sm:text-sm">> Loading logic engines... <span class="text-green-400 font-bold">[OK]</span></p>
-                            <p class="text-cyan-200 text-xs sm:text-sm">> Assembling teams... <span class="text-green-400 font-bold">[OK]</span></p>
-                            <p class="text-cyan-200 text-xs sm:text-sm">> Deploying repos... <span class="text-green-400 font-bold">[OK]</span></p>
-                            <p class="text-white text-xs sm:text-sm font-bold mt-4 animate-pulse">_ Ready to build.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </div>
-</section>
 
-<!-- WHY PARTICIPATE -->
-<section class="py-32 relative z-10">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-20">
-            <p class="text-sm uppercase tracking-[0.2em] text-[#245F73] mb-4 font-bold drop-shadow-sm">
-                Why Participate?
-            </p>
-            <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">
-                More Than Just A Competition.
-            </h2>
-            <p class="max-w-3xl mx-auto text-zinc-600 font-medium text-lg leading-relaxed">
-                Every KATCODE Hackathon is designed to help you become a better software developer through practical experience, collaboration, and problem-solving.
-            </p>
-        </div>
-        
-        <div class="grid lg:grid-cols-3 gap-8">
-            <article class="p-10 rounded-3xl bg-white/60 backdrop-blur-md shadow-sm border border-zinc-300 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div class="w-14 h-14 bg-[#245F73] text-white rounded-2xl flex items-center justify-center mb-8 shadow-md">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                 </div>
-                <h3 class="text-2xl font-black mb-4 text-black">Build Real Software</h3>
-                <p class="text-zinc-600 font-medium leading-relaxed">
-                    Move beyond tutorials and apply your programming knowledge by building software that solves real-world challenges.
-                </p>
-            </article>
-            
-            <article class="p-10 rounded-3xl bg-white/60 backdrop-blur-md shadow-sm border border-zinc-300 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div class="w-14 h-14 bg-[#245F73] text-white rounded-2xl flex items-center justify-center mb-8 shadow-md">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-                </div>
-                <h3 class="text-2xl font-black mb-4 text-black">Collaborate</h3>
-                <p class="text-zinc-600 font-medium leading-relaxed">
-                    Experience teamwork, communication, version control, and software development as part of a real team environment.
-                </p>
-            </article>
-            
-            <article class="p-10 rounded-3xl bg-white/60 backdrop-blur-md shadow-sm border border-zinc-300 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div class="w-14 h-14 bg-[#245F73] text-white rounded-2xl flex items-center justify-center mb-8 shadow-md">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
-                </div>
-                <h3 class="text-2xl font-black mb-4 text-black">Grow Portfolio</h3>
-                <p class="text-zinc-600 font-medium leading-relaxed">
-                    Demonstrate initiative, practical experience, and teamwork while building projects you can proudly push to GitHub.
-                </p>
-            </article>
-        </div>
-    </div>
-</section>
 
-<!-- PREVIOUS EVENTS & COMMUNITY -->
-<section class="py-24 relative z-10">
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
-            <div class="rounded-3xl border border-zinc-300 overflow-hidden bg-white/60 backdrop-blur-md shadow-lg p-8 md:p-12">
-                <span class="inline-flex rounded-full bg-zinc-200 text-black px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-                    Completed
-                </span>
-                <h3 class="text-3xl font-black mb-6 text-black">
-                    Python Fundamentals Hackathon
-                </h3>
-                <p class="text-zinc-600 font-medium leading-relaxed mb-8">
-                    Our inaugural KATCODE Hackathon brought first-year students together to solve programming challenges, collaborate in teams, and gain practical software development experience.
-                </p>
-                
-                <div class="grid grid-cols-2 gap-6 text-zinc-600 font-medium text-sm border-t border-zinc-300 pt-8">
+
+                <div class="relative
+                            mt-12
+                            grid
+                            grid-cols-2
+                            sm:grid-cols-3
+                            gap-6
+                            pt-6
+                            border-t border-white/20">
+
+
                     <div>
-                        <p class="uppercase text-xs tracking-[0.2em] text-zinc-500 font-bold mb-1">Date</p>
-                        <p class="text-black font-black">16 May 2026</p>
-                    </div>
-                    <div>
-                        <p class="uppercase text-xs tracking-[0.2em] text-zinc-500 font-bold mb-1">Participants</p>
-                        <p class="text-black font-black">12 Students</p>
-                    </div>
-                </div>
-            </div>
 
-            <div>
-                <p class="text-sm uppercase tracking-[0.2em] text-[#245F73] mb-4 font-bold drop-shadow-sm">
-                    Growing Community
-                </p>
-                <h2 class="text-4xl md:text-5xl font-black tracking-tight mb-6">
-                    Every Event Builds Momentum.
-                </h2>
-                <p class="text-zinc-600 text-lg font-medium leading-relaxed mb-10">
-                    KATCODE Hackathons are just getting started. Every challenge, every participant, and every project contributes to a growing community of future software engineers.
-                </p>
+                        <p class="text-2xl
+                                  font-black">
 
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="rounded-3xl bg-white/60 backdrop-blur-md border border-zinc-300 p-8 text-center shadow-sm hover:-translate-y-1 transition-all duration-300">
-                        <h3 class="text-5xl font-black mb-2 text-[#245F73]">1</h3>
-                        <p class="uppercase tracking-[0.2em] text-zinc-600 font-bold text-[10px]">Hackathon Hosted</p>
-                    </div>
-                    <div class="rounded-3xl bg-white/60 backdrop-blur-md border border-zinc-300 p-8 text-center shadow-sm hover:-translate-y-1 transition-all duration-300">
-                        <h3 class="text-5xl font-black mb-2 text-[#245F73]">100%</h3>
-                        <p class="uppercase tracking-[0.2em] text-zinc-600 font-bold text-[10px]">Beginner Friendly</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            01
 
-        <!-- GALLERY -->
-        <div id="gallery" class="pt-16 border-t border-zinc-300">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                <div>
-                    <p class="text-sm uppercase tracking-[0.2em] text-[#245F73] mb-4 font-bold drop-shadow-sm">
-                        Gallery
-                    </p>
-                    <h2 class="text-4xl font-black tracking-tight text-black">
-                        Moments From Our Events.
-                    </h2>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-300 shadow-md">
-                    <img src="/images/hackathon/IMG-20260518-WA0060.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-700" alt="KATCODE Hackathon Event 1">
-                </div>
-                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-300 shadow-md">
-                    <img src="/images/hackathon/IMG-20260518-WA0070.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-700" alt="KATCODE Hackathon Event 2">
-                </div>
-                <div class="aspect-square rounded-3xl overflow-hidden bg-zinc-300 shadow-md">
-                    <img src="/images/hackathon/IMG-20260518-WA0073.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-700" alt="KATCODE Hackathon Event 3">
-                </div>
-                <div class="aspect-square rounded-3xl overflow-hidden shadow-md flex items-center justify-center bg-[#1B4A5A] group cursor-pointer">
-                    <p class="text-white font-bold uppercase tracking-[0.2em] text-xs group-hover:scale-110 transition-transform">More coming...</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section id="faq" class="relative py-28 overflow-hidden z-10 border-t border-zinc-300">
-    <div class="relative z-10 max-w-4xl mx-auto px-6">
-        <div class="text-center mb-16 backdrop-blur-xl p-8 rounded-3xl transition-all duration-500">
-            <p class="text-sm uppercase tracking-[0.2em] text-[#245F73] mb-4 font-bold drop-shadow-sm">
-                Event Details
-            </p>
-            <h2 class="text-4xl font-black tracking-tight text-black">
-                Hackathon FAQ
-            </h2>
-        </div>
-
-        <div class="space-y-4">
-            <details class="group bg-white/60 backdrop-blur-xl border border-zinc-300 rounded-3xl shadow-sm overflow-hidden hover:-translate-y-1 transition-all duration-300 cursor-pointer" open>
-                <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
-                    <span class="text-lg">Who can participate?</span>
-                    <span class="transition group-open:rotate-180 text-2xl text-[#245F73] font-light">+</span>
-                </summary>
-                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
-                    <div class="h-px w-full bg-zinc-400/30 mb-6"></div>
-                    Most KATCODE Hackathons are beginner-friendly and designed for students who want to improve their programming skills. Specific eligibility requirements are announced with each event.
-                </div>
-            </details>
-
-            <details class="group bg-white/60 backdrop-blur-xl border border-zinc-300 rounded-3xl shadow-sm overflow-hidden hover:-translate-y-1 transition-all duration-300 cursor-pointer">
-                <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
-                    <span class="text-lg">Do I need a team?</span>
-                    <span class="transition group-open:rotate-180 text-2xl text-[#245F73] font-light">+</span>
-                </summary>
-                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
-                    <div class="h-px w-full bg-zinc-400/30 mb-6"></div>
-                    Some hackathons allow individual registrations while others encourage teamwork. Event details will clearly explain the format when registration opens.
-                </div>
-            </details>
-
-            <details class="group bg-white/60 backdrop-blur-xl border border-zinc-300 rounded-3xl shadow-sm overflow-hidden hover:-translate-y-1 transition-all duration-300 cursor-pointer">
-                <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
-                    <span class="text-lg">How do I register?</span>
-                    <span class="transition group-open:rotate-180 text-2xl text-[#245F73] font-light">+</span>
-                </summary>
-                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
-                    <div class="h-px w-full bg-zinc-400/30 mb-6"></div>
-                    Registration, team management, submissions, and event updates are all handled through the dedicated KATCODE platform once an event is officially announced.
-                </div>
-            </details>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="pt-20 pb-10 px-6 my-16 border-t border-zinc-300 relative z-10">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-5 gap-12 mb-16">
-            
-            <div class="lg:col-span-2">
-                <div class="flex items-center gap-4 mb-6">
-                    <img src="/images/katcode-logo.png" alt="KATCODE Logo" class="w-12 h-12 rounded-full shadow-sm bg-zinc-200 p-0.5">
-                    <div>
-                        <h2 class="text-xl font-black tracking-tight">
-                            KATCODE
-                        </h2>
-                        <p class="text-[0.6rem] uppercase tracking-[0.2em] font-bold text-cyan-500">
-                            Logic Precedes Code
                         </p>
+
+                        <p class="mt-1
+                                  text-xs
+                                  uppercase
+                                  tracking-wider
+                                  text-white/60">
+
+                            Challenge
+
+                        </p>
+
                     </div>
+
+
+                    <div>
+
+                        <p class="text-2xl
+                                  font-black">
+
+                            TEAM
+
+                        </p>
+
+                        <p class="mt-1
+                                  text-xs
+                                  uppercase
+                                  tracking-wider
+                                  text-white/60">
+
+                            Collaboration
+
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="text-2xl
+                                  font-black">
+
+                            BUILD
+
+                        </p>
+
+                        <p class="mt-1
+                                  text-xs
+                                  uppercase
+                                  tracking-wider
+                                  text-white/60">
+
+                            Solution
+
+                        </p>
+
+                    </div>
+
                 </div>
-                <p class="font-medium leading-relaxed max-w-sm text-sm text-zinc-600">
-                    A programming education platform built to help you develop logical thinking, practical development skills, and a verifiable engineering portfolio.
-                </p>
+
             </div>
 
-            <div>
-                <h3 class="font-bold uppercase tracking-[0.1em] text-xs mb-6 text-black">
-                    Platform
-                </h3>
-                <ul class="space-y-4 text-sm font-medium text-zinc-600">
-                    <li><a href="/#learning-paths" class="hover:text-[#245F73] transition-colors">Learning Paths</a></li>
-                    <li><a href="/#faq" class="hover:text-[#245F73] transition-colors">FAQ</a></li>
-                    <li><a href="https://app.katcode.co.za/auth/register" class="text-[#245F73] hover:text-[#1B4A5A] transition-colors font-bold">Get started</a></li>
-                </ul>
-            </div>
 
-            <div>
-                <h3 class="font-bold uppercase tracking-[0.1em] text-xs mb-6 text-black">
-                    Community
-                </h3>
-                <ul class="space-y-4 text-sm font-medium text-zinc-600">
-                    <li><a href="/hackathons" class="hover:text-[#245F73] transition-colors">Hackathons</a></li>
-                    <li><a href="/about" class="hover:text-[#245F73] transition-colors">About Us</a></li>
-                    <li><a href="mailto:support@katcode.co.za" class="hover:text-[#245F73] transition-colors">Contact Support</a></li>
-                </ul>
-            </div>
+            <!-- RIGHT -->
 
-            <div>
-                <h3 class="font-bold uppercase tracking-[0.1em] text-xs mb-6 text-black">
-                    Legal
-                </h3>
-                <ul class="space-y-4 text-sm font-medium text-zinc-600">
-                    <li><a href="/terms" class="hover:text-[#245F73] transition-colors">Terms of Service</a></li>
-                    <li><a href="/privacy" class="hover:text-[#245F73] transition-colors">Privacy Policy</a></li>
-                </ul>
+            <div class="p-8
+                        md:p-12
+                        flex
+                        flex-col
+                        justify-between">
+
+
+                <div>
+
+                    <div class="flex
+                                items-center
+                                gap-3
+                                text-[#245F73]
+                                text-xs
+                                font-black
+                                uppercase
+                                tracking-[0.2em]">
+
+                        <span class="w-2 h-2
+                                     bg-[#245F73]">
+                        </span>
+
+                        Event details
+
+                    </div>
+
+
+                    <div class="mt-10
+                                space-y-7">
+
+
+                        <div>
+
+                            <p class="text-xs
+                                      uppercase
+                                      tracking-wider
+                                      font-bold
+                                      text-zinc-400">
+
+                                Format
+
+                            </p>
+
+                            <p class="mt-2
+                                      font-bold">
+
+                                Student hackathon
+
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-xs
+                                      uppercase
+                                      tracking-wider
+                                      font-bold
+                                      text-zinc-400">
+
+                                Focus
+
+                            </p>
+
+                            <p class="mt-2
+                                      font-bold">
+
+                                Problem solving & development
+
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-xs
+                                      uppercase
+                                      tracking-wider
+                                      font-bold
+                                      text-zinc-400">
+
+                                Experience
+
+                            </p>
+
+                            <p class="mt-2
+                                      font-bold">
+
+                                Learn → Build → Present
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mt-12
+                            pt-6
+                            border-t border-zinc-200">
+
+
+                    <a href="#register"
+                       class="inline-flex
+                              items-center
+                              text-sm
+                              font-bold
+                              text-[#245F73]
+                              hover:underline">
+
+                        Event information
+
+                        <span class="ml-3">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
-        
-        <div class="flex items-center justify-between border-t border-zinc-300 pt-8">
-            <p class="text-xs font-medium text-zinc-600">
-                © 2026 <span class="font-bold text-black">KATCODE</span>. All rights reserved.
-            </p>
-        </div>
+
     </div>
+
+</section>
+
+
+<!-- =========================================================
+     HOW HACKATHONS WORK
+========================================================= -->
+
+<section class="bg-white
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+
+        <div class="max-w-3xl mb-16">
+
+            <p class="text-xs
+                      font-black
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#245F73]">
+
+                The experience
+
+            </p>
+
+
+            <h2 class="mt-5
+                       text-4xl
+                       md:text-5xl
+                       font-black
+                       tracking-tight">
+
+                A deadline changes
+                how you think.
+
+            </h2>
+
+
+            <p class="mt-6
+                      text-lg
+                      text-zinc-600
+                      leading-relaxed">
+
+                Hackathons compress the development process.
+                You have to decide what matters, what can wait,
+                and what you can actually build.
+
+            </p>
+
+        </div>
+
+
+        <div class="grid
+                    md:grid-cols-2
+                    lg:grid-cols-4
+                    border border-zinc-300">
+
+
+            <!-- STEP 1 -->
+
+            <article class="p-8
+                            border-b
+                            md:border-r
+                            lg:border-b-0
+                            border-zinc-300">
+
+                <span class="text-xs
+                             font-black
+                             tracking-[0.2em]
+                             text-[#245F73]">
+
+                    01
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-2xl
+                           font-black">
+
+                    Understand
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Understand the challenge before
+                    rushing into implementation.
+
+                </p>
+
+            </article>
+
+
+            <!-- STEP 2 -->
+
+            <article class="p-8
+                            border-b
+                            lg:border-b-0
+                            lg:border-r
+                            md:border-r
+                            border-zinc-300">
+
+                <span class="text-xs
+                             font-black
+                             tracking-[0.2em]
+                             text-[#245F73]">
+
+                    02
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-2xl
+                           font-black">
+
+                    Decide
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Decide what to build,
+                    what to prioritise and how to approach it.
+
+                </p>
+
+            </article>
+
+
+            <!-- STEP 3 -->
+
+            <article class="p-8
+                            border-b
+                            lg:border-b-0
+                            lg:border-r
+                            border-zinc-300">
+
+                <span class="text-xs
+                             font-black
+                             tracking-[0.2em]
+                             text-[#245F73]">
+
+                    03
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-2xl
+                           font-black">
+
+                    Build
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Turn your reasoning into a working
+                    solution before the clock runs out.
+
+                </p>
+
+            </article>
+
+
+            <!-- STEP 4 -->
+
+            <article class="p-8">
+
+                <span class="text-xs
+                             font-black
+                             tracking-[0.2em]
+                             text-[#245F73]">
+
+                    04
+
+                </span>
+
+
+                <h3 class="mt-10
+                           text-2xl
+                           font-black">
+
+                    Present
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    Explain what you built,
+                    why you built it and how it works.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY HACKATHONS
+========================================================= -->
+
+<section id="why"
+         class="bg-zinc-100
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+
+        <div class="grid
+                    lg:grid-cols-2
+                    gap-16
+                    items-start">
+
+
+            <div>
+
+                <p class="text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#245F73]">
+
+                    More than competition
+
+                </p>
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight
+                           leading-tight">
+
+                    The point isn't
+                    just to win.
+
+                </h2>
+
+
+                <p class="mt-6
+                          text-lg
+                          text-zinc-600
+                          leading-relaxed
+                          max-w-xl">
+
+                    Competition creates pressure.
+                    Pressure exposes how you actually think.
+
+                </p>
+
+            </div>
+
+
+            <div class="grid
+                        sm:grid-cols-2
+                        gap-6">
+
+
+                <!-- CARD -->
+
+                <article class="bg-white
+                                border border-zinc-300
+                                p-7
+                                hover:border-[#245F73]
+                                transition-colors">
+
+                    <span class="text-[#245F73]
+                                 font-black">
+
+                        01
+
+                    </span>
+
+
+                    <h3 class="mt-8
+                               text-xl
+                               font-black">
+
+                        Problem solving
+
+                    </h3>
+
+
+                    <p class="mt-3
+                              text-sm
+                              text-zinc-600
+                              leading-relaxed">
+
+                        Learn to break unfamiliar problems
+                        into something you can actually solve.
+
+                    </p>
+
+                </article>
+
+
+                <!-- CARD -->
+
+                <article class="bg-white
+                                border border-zinc-300
+                                p-7
+                                hover:border-[#245F73]
+                                transition-colors">
+
+                    <span class="text-[#245F73]
+                                 font-black">
+
+                        02
+
+                    </span>
+
+
+                    <h3 class="mt-8
+                               text-xl
+                               font-black">
+
+                        Collaboration
+
+                    </h3>
+
+
+                    <p class="mt-3
+                              text-sm
+                              text-zinc-600
+                              leading-relaxed">
+
+                        Software is rarely built alone.
+                        Learn how to work with other builders.
+
+                    </p>
+
+                </article>
+
+
+                <!-- CARD -->
+
+                <article class="bg-white
+                                border border-zinc-300
+                                p-7
+                                hover:border-[#245F73]
+                                transition-colors">
+
+                    <span class="text-[#245F73]
+                                 font-black">
+
+                        03
+
+                    </span>
+
+
+                    <h3 class="mt-8
+                               text-xl
+                               font-black">
+
+                        Time management
+
+                    </h3>
+
+
+                    <p class="mt-3
+                              text-sm
+                              text-zinc-600
+                              leading-relaxed">
+
+                        Learn to distinguish between
+                        what must be built and what can wait.
+
+                    </p>
+
+                </article>
+
+
+                <!-- CARD -->
+
+                <article class="bg-white
+                                border border-zinc-300
+                                p-7
+                                hover:border-[#245F73]
+                                transition-colors">
+
+                    <span class="text-[#245F73]
+                                 font-black">
+
+                        04
+
+                    </span>
+
+
+                    <h3 class="mt-8
+                               text-xl
+                               font-black">
+
+                        Communication
+
+                    </h3>
+
+
+                    <p class="mt-3
+                              text-sm
+                              text-zinc-600
+                              leading-relaxed">
+
+                        A working system means little
+                        if you cannot explain the decisions behind it.
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT YOU LEAVE WITH
+========================================================= -->
+
+<section class="bg-black
+                text-white
+                border-b border-black">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+
+        <div class="grid
+                    lg:grid-cols-2
+                    gap-16
+                    items-center">
+
+
+            <div>
+
+                <p class="text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#DCECEF]">
+
+                    After the event
+
+                </p>
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight">
+
+                    You leave with
+                    more than a score.
+
+                </h2>
+
+
+                <p class="mt-6
+                          max-w-xl
+                          text-zinc-400
+                          leading-relaxed">
+
+                    Every challenge is an opportunity to produce
+                    something tangible and learn how you perform
+                    when there isn't a step-by-step tutorial.
+
+                </p>
+
+            </div>
+
+
+            <div class="border
+                        border-zinc-800">
+
+
+                <div class="p-6
+                            border-b border-zinc-800
+                            flex items-center
+                            justify-between">
+
+                    <span class="text-xs
+                                 uppercase
+                                 tracking-[0.2em]
+                                 font-bold
+                                 text-zinc-500">
+
+                        What you build
+
+                    </span>
+
+
+                    <span class="w-2 h-2
+                                 bg-[#245F73]">
+                    </span>
+
+                </div>
+
+
+                <div class="divide-y
+                            divide-zinc-800">
+
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <span class="font-bold">
+                            Working solution
+                        </span>
+
+                        <span class="text-[#DCECEF]">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <span class="font-bold">
+                            Development experience
+                        </span>
+
+                        <span class="text-[#DCECEF]">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <span class="font-bold">
+                            Team experience
+                        </span>
+
+                        <span class="text-[#DCECEF]">
+                            03
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-6
+                                flex items-center
+                                justify-between">
+
+                        <span class="font-bold">
+                            Something to show
+                        </span>
+
+                        <span class="text-[#DCECEF]">
+                            04
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     UPCOMING EVENTS
+========================================================= -->
+
+<section id="register"
+         class="bg-white
+                border-b border-zinc-300">
+
+    <div class="max-w-7xl mx-auto px-6 py-24">
+
+
+        <div class="max-w-3xl mb-14">
+
+            <p class="text-xs
+                      font-black
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#245F73]">
+
+                Events
+
+            </p>
+
+
+            <h2 class="mt-5
+                       text-4xl
+                       md:text-5xl
+                       font-black
+                       tracking-tight">
+
+                The next challenge
+                is coming.
+
+            </h2>
+
+
+            <p class="mt-5
+                      text-lg
+                      text-zinc-600
+                      leading-relaxed">
+
+                Follow KATCODE for upcoming challenges,
+                registration announcements and event details.
+
+            </p>
+
+        </div>
+
+
+        <div class="grid
+                    md:grid-cols-2
+                    gap-6">
+
+
+            <!-- UPCOMING -->
+
+            <article class="hackathon-card
+                            border border-zinc-300
+                            bg-zinc-100
+                            p-8">
+
+
+                <div class="flex
+                            items-center
+                            justify-between">
+
+                    <span class="px-3 py-1
+                                 bg-[#DCECEF]
+                                 text-[#245F73]
+                                 text-xs
+                                 font-black
+                                 uppercase
+                                 tracking-wider">
+
+                        Upcoming
+
+                    </span>
+
+
+                    <span class="text-xs
+                                 font-bold
+                                 text-zinc-400">
+
+                        2026
+
+                    </span>
+
+                </div>
+
+
+                <h3 class="mt-10
+                           text-3xl
+                           font-black
+                           tracking-tight">
+
+                    KATCODE Hackathon
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    A new challenge focused on taking what
+                    you know and turning it into a working solution.
+
+                </p>
+
+
+                <div class="mt-8
+                            pt-6
+                            border-t border-zinc-300
+                            flex items-center
+                            justify-between">
+
+                    <span class="text-xs
+                                 font-bold
+                                 uppercase
+                                 tracking-wider
+                                 text-zinc-500">
+
+                        Details to be announced
+
+                    </span>
+
+
+                    <span class="arrow
+                                 text-[#245F73]
+                                 font-bold">
+
+                        →
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- PAST -->
+
+            <article class="hackathon-card
+                            border border-zinc-300
+                            bg-white
+                            p-8">
+
+
+                <div class="flex
+                            items-center
+                            justify-between">
+
+                    <span class="px-3 py-1
+                                 bg-black
+                                 text-white
+                                 text-xs
+                                 font-black
+                                 uppercase
+                                 tracking-wider">
+
+                        Completed
+
+                    </span>
+
+
+                    <span class="text-xs
+                                 font-bold
+                                 text-zinc-400">
+
+                        2026
+
+                    </span>
+
+                </div>
+
+
+                <h3 class="mt-10
+                           text-3xl
+                           font-black
+                           tracking-tight">
+
+                    Igotywa Isencani
+
+                </h3>
+
+
+                <p class="mt-4
+                          text-sm
+                          leading-relaxed
+                          text-zinc-600">
+
+                    KATCODE's first-year focused hackathon,
+                    giving students an opportunity to put
+                    programming knowledge into practice.
+
+                </p>
+
+
+                <div class="mt-8
+                            pt-6
+                            border-t border-zinc-200
+                            flex items-center
+                            justify-between">
+
+                    <span class="text-xs
+                                 font-bold
+                                 uppercase
+                                 tracking-wider
+                                 text-zinc-500">
+
+                        Event archive
+
+                    </span>
+
+
+                    <span class="arrow
+                                 text-[#245F73]
+                                 font-bold">
+
+                        →
+
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="bg-[#245F73]
+                text-white">
+
+    <div class="max-w-5xl
+                mx-auto
+                px-6
+                py-28
+                text-center">
+
+
+        <p class="text-xs
+                  font-black
+                  uppercase
+                  tracking-[0.25em]
+                  text-[#DCECEF]">
+
+            Ready?
+
+        </p>
+
+
+        <h2 class="mt-5
+                   text-4xl
+                   md:text-6xl
+                   font-black
+                   tracking-tight">
+
+            Stop watching.
+            Start building.
+
+        </h2>
+
+
+        <p class="mt-6
+                  max-w-2xl
+                  mx-auto
+                  text-lg
+                  leading-relaxed
+                  text-white/75">
+
+            Learn the fundamentals.
+            Build your projects.
+            Then test yourself against the clock.
+
+        </p>
+
+
+        <div class="mt-10">
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="inline-flex
+                      items-center
+                      justify-center
+                      rounded-full
+                      bg-white
+                      text-black
+                      px-8 py-4
+                      text-sm
+                      font-bold
+                      hover:bg-zinc-100
+                      hover:-translate-y-1
+                      transition-all duration-300">
+
+                Join KATCODE
+
+                <svg class="ml-3 w-5 h-5"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     viewBox="0 0 24 24">
+
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 12h14M13 6l6 6-6 6"/>
+
+                </svg>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="pt-20 pb-10 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+
+        <div class="grid
+                    lg:grid-cols-5
+                    gap-12
+                    mb-16">
+
+
+            <!-- BRAND -->
+
+            <div class="lg:col-span-2">
+
+                <div class="flex items-center
+                            gap-4
+                            mb-6">
+
+                    <img src="/images/katcode-logo.png"
+                         alt="KATCODE Logo"
+                         class="w-12 h-12 rounded-full
+                                shadow-sm
+                                bg-zinc-200
+                                p-0.5">
+
+
+                    <div>
+
+                        <h2 class="text-xl
+                                   font-black
+                                   tracking-tight">
+
+                            KATCODE
+
+                        </h2>
+
+
+                        <p class="text-[0.6rem]
+                                  uppercase
+                                  tracking-[0.2em]
+                                  font-bold
+                                  text-[#245F73]">
+
+                            Logic Precedes Code
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <p class="font-medium
+                          leading-relaxed
+                          max-w-sm
+                          text-sm">
+
+                    A programming education platform built to
+                    develop logical thinking, practical development
+                    skills, and a verifiable engineering portfolio.
+
+                </p>
+
+
+                <p class="mt-5
+                          text-xs
+                          text-zinc-500
+                          leading-relaxed
+                          max-w-sm">
+
+                    KATCODE is a product of
+                    <span class="font-bold text-zinc-700">
+                        Tovan Technologies (Pty) Ltd
+                    </span>.
+
+                </p>
+
+            </div>
+
+
+            <!-- PLATFORM -->
+
+            <div>
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
+                    Platform
+
+                </h3>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+
+                    <li>
+                        <a href="/#learning-paths"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Learning Paths
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/project"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Projects
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/hackathons"
+                           class="text-[#245F73]
+                                  font-bold">
+
+                            Hackathons
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://app.katcode.co.za/auth/register"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Get started
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- COMMUNITY -->
+
+            <div>
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
+                    Community
+
+                </h3>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+
+                    <li>
+                        <a href="/hackathons"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Hackathons
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/about"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            About Us
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="mailto:support@katcode.co.za"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Contact Support
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- LEGAL -->
+
+            <div>
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
+                    Legal
+
+                </h3>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+
+                    <li>
+                        <a href="/terms"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Terms of Service
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/privacy"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Privacy Policy
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="pt-8
+                    border-t border-zinc-300
+                    flex flex-col
+                    md:flex-row
+                    md:items-center
+                    md:justify-between
+                    gap-4">
+
+
+            <p class="text-xs
+                      font-medium
+                      text-zinc-500">
+
+                © 2026
+                <span class="font-bold text-zinc-700">
+                    KATCODE
+                </span>.
+                All rights reserved.
+
+            </p>
+
+
+            <p class="text-xs
+                      font-black
+                      tracking-[0.2em]">
+
+                LOGIC PRECEDES CODE.
+
+            </p>
+
+        </div>
+
+    </div>
+
 </footer>
 
+
+<!-- =========================================================
+     DESKTOP NAV HIGHLIGHT
+========================================================= -->
+
 <script>
-    // DESKTOP NAVBAR SLIDING HIGHLIGHT LOGIC ONLY
+
     document.addEventListener("DOMContentLoaded", () => {
-        const navContainer = document.getElementById('nav-container');
-        const navLinks = document.querySelectorAll('.nav-link');
-        const highlight = document.getElementById('nav-highlight');
 
-        if (navContainer && navLinks.length > 0 && highlight) {
-            navLinks.forEach(link => {
-                link.addEventListener('mouseenter', (e) => {
-                    const linkRect = e.target.getBoundingClientRect();
-                    const containerRect = navContainer.getBoundingClientRect();
-                    
-                    highlight.style.width = `${linkRect.width}px`;
-                    highlight.style.transform = `translateX(${linkRect.left - containerRect.left}px)`;
-                    highlight.style.opacity = '1';
-                });
-            });
+        const navContainer =
+            document.getElementById("nav-container");
 
-            navContainer.addEventListener('mouseleave', () => {
-                highlight.style.opacity = '0';
-            });
+        const navLinks =
+            document.querySelectorAll(".nav-link");
+
+        const highlight =
+            document.getElementById("nav-highlight");
+
+
+        if (!navContainer ||
+            !navLinks.length ||
+            !highlight) {
+
+            return;
+
         }
+
+
+        navLinks.forEach(link => {
+
+            link.addEventListener("mouseenter", event => {
+
+                const linkRect =
+                    event.currentTarget.getBoundingClientRect();
+
+                const containerRect =
+                    navContainer.getBoundingClientRect();
+
+
+                highlight.style.width =
+                    `${linkRect.width}px`;
+
+
+                highlight.style.transform =
+                    `translateX(${linkRect.left - containerRect.left}px)`;
+
+
+                highlight.style.opacity = "1";
+
+            });
+
+        });
+
+
+        navContainer.addEventListener("mouseleave", () => {
+
+            highlight.style.opacity = "0";
+
+        });
+
     });
+
 </script>
+
+
 <script src="/js/app.js"></script>
+
 </body>
 </html>

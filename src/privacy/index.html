@@ -1,342 +1,962 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
 
-    <title>Privacy | KATCODE</title>
-    <meta name="description" content="Learn about KatCode, our engineering philosophy, and our mission to build the next generation of developers.">
+    <title>Privacy Policy | KATCODE</title>
 
-    
-     <link rel="stylesheet" href="/main.css">
-    
-<link rel="icon" type="image/x-icon" href="/images/katcode-logo-icon.png">
+    <meta name="description"
+          content="Read the KATCODE Privacy Policy and learn how Tovan Technologies (Pty) Ltd handles personal information across the KATCODE platform.">
+
+    <meta name="author" content="Tovan Technologies (Pty) Ltd">
+    <meta name="application-name" content="KATCODE">
+    <meta name="theme-color" content="#245F73">
+
+    <meta name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <link rel="canonical" href="https://www.katcode.co.za/privacy">
+
+    <link rel="stylesheet" href="/main.css">
+
+    <link rel="icon"
+          type="image/png"
+          href="/images/katcode-logo-icon.png">
+
+    <link rel="apple-touch-icon"
+          href="/images/katcode-logo-icon.png">
 </head>
 
 
-<body class="bg-zinc-300 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-black selection:text-white">
+<body class="bg-zinc-100 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-[#245F73] selection:text-white">
 
 
+<!-- ========================================================= -->
+<!-- NAVIGATION -->
+<!-- ========================================================= -->
 
+<nav class="fixed top-5 left-1/2 -translate-x-1/2 w-[94%] max-w-7xl z-50">
 
+    <div class="h-20 px-6 lg:px-8
+                flex items-center justify-between
+                rounded-full
+                bg-white/80 backdrop-blur-xl
+                border border-zinc-300
+                shadow-lg shadow-black/5">
 
-<nav class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-zinc-100/80 border-b px-8 border-zinc-400">
-    <div class="h-20 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-4 group shrink-0">
+        <!-- Brand -->
+
+        <a href="/" class="flex items-center gap-4 group">
+
             <img src="/images/katcode-logo.jpeg"
-                 alt="KatCode Logo"
-                 class="w-14 h-14 rounded-full border border-zinc-400 group-hover:border-black transition"/>
+                 alt="KATCODE Logo"
+                 class="w-12 h-12 rounded-full
+                        border border-zinc-300
+                        group-hover:border-[#245F73]
+                        transition-colors duration-300">
+
             <div class="hidden sm:block">
-                <h1 class="text-xl font-black tracking-tight">
+
+                <h1 class="text-lg font-black tracking-tight">
                     KATCODE
                 </h1>
-                <p class="text-[0.55rem] uppercase tracking-[0.25em] text-zinc-600 font-bold">
+
+                <p class="text-[0.55rem]
+                          uppercase
+                          tracking-[0.25em]
+                          font-bold
+                          text-[#245F73]">
                     Logic Precedes Code
                 </p>
+
             </div>
+
         </a>
 
-        <div class="hidden lg:flex items-center gap-10">
-            <a href="/" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Home</a>
-            <a href="https://www.katcode.co.za/#learning-paths" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Learning Paths</a>
-            <a href="/hackathons" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Hackathons</a>
-<!--            <a href="/pricing" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Pricing</a>-->
-            <a href="https://www.katcode.co.za/#faq" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">FAQ</a>
-            <a href="/about" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">About</a>
+
+        <!-- Desktop Navigation -->
+
+        <div class="hidden lg:flex items-center gap-8">
+
+            <a href="/"
+               class="text-xs font-bold uppercase tracking-[0.18em]
+                      text-zinc-700
+                      hover:text-[#245F73]
+                      transition-colors">
+                Home
+            </a>
+
+            <a href="/#learning-paths"
+               class="text-xs font-bold uppercase tracking-[0.18em]
+                      text-zinc-700
+                      hover:text-[#245F73]
+                      transition-colors">
+                Learning Paths
+            </a>
+
+            <a href="/projects"
+               class="text-xs font-bold uppercase tracking-[0.18em]
+                      text-zinc-700
+                      hover:text-[#245F73]
+                      transition-colors">
+                Projects
+            </a>
+
+            <a href="/hackathons"
+               class="text-xs font-bold uppercase tracking-[0.18em]
+                      text-zinc-700
+                      hover:text-[#245F73]
+                      transition-colors">
+                Hackathons
+            </a>
+
+            <a href="/#faq"
+               class="text-xs font-bold uppercase tracking-[0.18em]
+                      text-zinc-700
+                      hover:text-[#245F73]
+                      transition-colors">
+                FAQ
+            </a>
+
+            <a href="/about"
+               class="text-xs font-bold uppercase tracking-[0.18em]
+                      text-zinc-700
+                      hover:text-[#245F73]
+                      transition-colors">
+                About
+            </a>
+
         </div>
+
+
+        <!-- Actions -->
 
         <div class="hidden md:flex items-center gap-4">
-            <a href="https://app.katcode.co.za/auth/login" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-black transition">Sign In</a>
-            <a href="https://app.katcode.co.za/auth/register" class="rounded-xl bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 hover:-translate-y-0.5 transition-all duration-300 shadow-lg">Join KatCode</a>
+
+            <a href="https://app.katcode.co.za/auth/login"
+               class="text-xs font-bold uppercase tracking-[0.18em]
+                      text-zinc-800
+                      hover:text-[#245F73]
+                      transition-colors
+                      px-3">
+                Sign In
+            </a>
+
+            <a href="https://app.katcode.co.za/auth/register"
+               class="rounded-full
+                      bg-[#245F73]
+                      text-white
+                      px-6 py-3
+                      text-xs font-bold uppercase tracking-[0.18em]
+                      hover:bg-[#1B4A5A]
+                      hover:-translate-y-0.5
+                      transition-all duration-300
+                      shadow-lg shadow-[#245F73]/20">
+                Join KATCODE
+            </a>
+
         </div>
 
-        <button id="mobile-menu-btn" class="lg:hidden relative w-7 h-7 focus:outline-none">
-            <span id="line1" class="absolute w-7 h-0.5 bg-black rounded top-1 transition-all duration-300"></span>
-            <span id="line2" class="absolute w-7 h-0.5 bg-black rounded top-3 transition-all duration-300"></span>
-            <span id="line3" class="absolute w-7 h-0.5 bg-black rounded top-5 transition-all duration-300"></span>
-        </button>
-    </div>
-</nav>
 
-<div id="mobile-menu" class="hidden lg:hidden bg-zinc-100 border-t border-zinc-300 shadow-xl">
-    <div class="px-6 py-8 flex flex-col gap-6">
-        <a href="/" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Home</a>
-        <a href="https://www.katcode.co.za/#learning-paths" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Learning Paths</a>
-        <a href="/hackathons" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Hackathons</a>
-<!--        <a href="/pricing" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Pricing</a>-->
-        <a href="https://www.katcode.co.za/#faq" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">FAQ</a>
-        <a href="/about" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">About</a>
-        <hr class="border-zinc-300">
-        <a href="https://app.katcode.co.za/auth/login" class="font-semibold uppercase tracking-[0.2em] text-sm text-zinc-800 hover:text-black">Sign In</a>
-        <a href="https://app.katcode.co.za/auth/register" class="rounded-xl bg-black text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] hover:bg-zinc-800 transition">Join KATCODE</a>
-    </div>
-</div>
-
-
-
-
-
-
-
-<section class="py-32 border-b border-zinc-900">
-
-    <div class="max-w-5xl mx-auto px-6 text-center">
-
-        <p class="text-sm uppercase tracking-[0.35em] text-zinc-500 mb-6">
-            Legal
-        </p>
-
-        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-8">
-            Privacy Policy
-        </h1>
-
-        <p class="text-xlleading-8 max-w-3xl mx-auto">
-            Your privacy matters. This Privacy Policy explains what information
-            KATCODE collects, how we use it, and the choices you have regarding
-            your personal information.
-        </p>
-
-        <p class="mt-8 text-sm uppercase tracking-[0.25em] text-zinc-600">
-            Last Updated: July 2026
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="py-24">
-
-    <div class="max-w-4xl mx-auto px-6 space-y-20">
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                1. Introduction
-            </h2>
-
-            <p class="leading-8">
-                KATCODE ("we", "our", or "us") is committed to protecting your
-                privacy and handling your personal information responsibly.
-                This Privacy Policy describes how we collect, use, store, and
-                protect information when you use our platform, website,
-                learning resources, and related services.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                2. Information We Collect
-            </h2>
-
-            <p class=" leading-8 mb-6">
-                Depending on how you use KATCODE, we may collect:
-            </p>
-
-            <ul class="space-y-3  leading-8 list-disc pl-6">
-
-                <li>Name and email address</li>
-                <li>Encrypted account password</li>
-                <li>GitHub username (when provided)</li>
-                <li>Learning progress</li>
-                <li>Quiz results and assessment scores</li>
-<!--                <li>XP and LXP progression</li>-->
-<!--                <li>Subscription information</li>-->
-                <li>Device and browser information</li>
-
-            </ul>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                3. How We Use Your Information
-            </h2>
-
-            <p class=" leading-8">
-                We use your information to create and manage your account,
-                deliver learning content, save your progress, personalize your
-                experience, award achievements, improve our platform,
-                provide customer support, and maintain
-                platform security.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                4. Learning Progress
-            </h2>
-
-            <p class=" leading-8">
-                KATCODE stores your learning progress, completed lessons,
-                quizzes, guided projects, XP, Learning Experience Points (LXP),
-                achievements, and related educational activity so you can
-                continue your learning journey across devices.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                5. GitHub Integration
-            </h2>
-
-            <p class=" leading-8">
-                If you choose to connect your GitHub account, KATCODE may use
-                that connection to support repository handover and portfolio
-                integration. We only access information necessary to provide
-                these features and never modify your repositories without your
-                authorization.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                6. AI Features
-            </h2>
-
-            <p class=" leading-8">
-                KATCODE may provide AI-powered learning assistance through
-                katnova. Questions submitted to AI features may be processed to
-                generate educational responses and improve the learning
-                experience.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                7. Payments
-            </h2>
-
-            <p class=" leading-8">
-                Subscription payments are securely processed through third-party
-                payment providers. KATCODE does not store your full payment card
-                details.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                8. Cookies
-            </h2>
-
-            <p class=" leading-8">
-                We use cookies and similar technologies to maintain secure
-                sessions, remember preferences, improve performance, and
-                understand how our platform is used.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                9. Data Security
-            </h2>
-
-            <p class="text-zinc-400 leading-8">
-                We use industry-standard security practices including encrypted
-                communication, secure authentication, password hashing, and
-                controlled access to protect your personal information.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                10. Third-Party Services
-            </h2>
-
-            <p class=" leading-8 mb-6">
-                KATCODE may integrate with trusted third-party services such as:
-            </p>
-
-            <ul class="space-y-3 leading-8 list-disc pl-6">
-
-                <li>GitHub</li>
-                <li>Payment providers</li>
-                <li>Cloud hosting providers</li>
-                <li>AI service providers</li>
-
-            </ul>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                11. Your Rights
-            </h2>
-
-            <p class="leading-8">
-                Subject to applicable law, you may access, update, or delete
-                your account information, request a copy of your personal data,
-                or request account deletion.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                12. Changes to This Policy
-            </h2>
-
-            <p class=" leading-8">
-                We may update this Privacy Policy from time to time. Material
-                changes will be reflected by updating the "Last Updated" date
-                shown on this page.
-            </p>
-
-        </article>
-
-        <article>
-
-            <h2 class="text-3xl font-black mb-6">
-                13. Contact Us
-            </h2>
-
-            <p class=" leading-8">
-                If you have any questions regarding this Privacy Policy or how
-                your information is handled, please contact us at:
-            </p>
-
-            <div class="mt-8 rounded-2xl border border-zinc-800 p-2">
-
-                <p class=" mt-3">
-                    support@katcode.co.za
-                </p>
+        <!-- Mobile -->
+
+        <details class="relative lg:hidden">
+
+            <summary
+                class="list-none cursor-pointer
+                       w-10 h-10
+                       flex items-center justify-center
+                       rounded-full
+                       border border-zinc-300
+                       hover:border-[#245F73]
+                       hover:text-[#245F73]
+                       transition">
+
+                <span class="text-xl">☰</span>
+
+            </summary>
+
+
+            <div class="absolute right-0 top-14
+                        w-72
+                        bg-white
+                        border border-zinc-300
+                        rounded-3xl
+                        shadow-2xl
+                        p-6">
+
+                <div class="flex flex-col gap-5">
+
+                    <a href="/"
+                       class="font-bold uppercase tracking-[0.18em] text-sm">
+                        Home
+                    </a>
+
+                    <a href="/#learning-paths"
+                       class="font-bold uppercase tracking-[0.18em] text-sm">
+                        Learning Paths
+                    </a>
+
+                    <a href="/projects"
+                       class="font-bold uppercase tracking-[0.18em] text-sm">
+                        Projects
+                    </a>
+
+                    <a href="/hackathons"
+                       class="font-bold uppercase tracking-[0.18em] text-sm">
+                        Hackathons
+                    </a>
+
+                    <a href="/#faq"
+                       class="font-bold uppercase tracking-[0.18em] text-sm">
+                        FAQ
+                    </a>
+
+                    <a href="/about"
+                       class="font-bold uppercase tracking-[0.18em] text-sm">
+                        About
+                    </a>
+
+                    <div class="h-px bg-zinc-200"></div>
+
+                    <a href="https://app.katcode.co.za/auth/login"
+                       class="font-bold uppercase tracking-[0.18em] text-sm">
+                        Sign In
+                    </a>
+
+                    <a href="https://app.katcode.co.za/auth/register"
+                       class="rounded-xl
+                              bg-[#245F73]
+                              text-white
+                              py-4
+                              text-center
+                              text-xs
+                              font-bold
+                              uppercase
+                              tracking-[0.18em]">
+                        Join KATCODE
+                    </a>
+
+                </div>
 
             </div>
 
-        </article>
+        </details>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ========================================================= -->
+<!-- HERO -->
+<!-- ========================================================= -->
+
+<section class="pt-44 pb-24
+                bg-[#DCECEF]
+                border-b border-zinc-300
+                relative overflow-hidden">
+
+    <!-- Structural grid -->
+
+    <div class="absolute inset-0 opacity-40 pointer-events-none"
+         style="
+         background-image:
+         linear-gradient(rgba(36,95,115,0.08) 1px, transparent 1px),
+         linear-gradient(90deg, rgba(36,95,115,0.08) 1px, transparent 1px);
+         background-size: 40px 40px;
+         ">
+    </div>
+
+
+    <div class="relative max-w-6xl mx-auto px-6">
+
+        <div class="max-w-4xl">
+
+            <div class="inline-flex items-center gap-3
+                        rounded-full
+                        border border-[#245F73]/20
+                        bg-white/70
+                        backdrop-blur
+                        px-4 py-2
+                        mb-8">
+
+                <span class="w-2 h-2 rounded-full bg-[#245F73]"></span>
+
+                <span class="text-xs
+                             font-bold
+                             uppercase
+                             tracking-[0.25em]
+                             text-[#1B4A5A]">
+                    Legal
+                </span>
+
+            </div>
+
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl
+                       font-black
+                       tracking-[-0.04em]
+                       leading-[0.95]
+                       mb-8">
+
+                Privacy
+                <span class="text-[#245F73]">
+                    Policy.
+                </span>
+
+            </h1>
+
+
+            <p class="text-lg md:text-xl
+                      leading-8
+                      text-zinc-700
+                      max-w-3xl">
+
+                How KATCODE collects, uses, protects, and manages
+                information when you use our platform and services.
+
+            </p>
+
+
+            <div class="mt-10 flex flex-wrap items-center gap-4">
+
+                <div class="rounded-full
+                            bg-white
+                            border border-zinc-300
+                            px-5 py-3
+                            text-xs
+                            font-bold
+                            uppercase
+                            tracking-[0.18em]">
+
+                    Last updated: July 2026
+
+                </div>
+
+                <div class="text-xs
+                            font-semibold
+                            uppercase
+                            tracking-[0.18em]
+                            text-zinc-500">
+
+                    Tovan Technologies (Pty) Ltd
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<footer class="bg-black text-zinc-400 border-t border-zinc-900">
+
+<!-- ========================================================= -->
+<!-- CONTENT -->
+<!-- ========================================================= -->
+
+<main class="flex-1">
+
+    <section class="py-24">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-[240px_1fr] gap-16">
+
+
+                <!-- Sidebar -->
+
+                <aside class="hidden lg:block">
+
+                    <div class="sticky top-32">
+
+                        <p class="text-xs
+                                  font-bold
+                                  uppercase
+                                  tracking-[0.2em]
+                                  text-[#245F73]
+                                  mb-6">
+                            On this page
+                        </p>
+
+                        <nav class="space-y-3 text-sm">
+
+                            <a href="#introduction"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Introduction
+                            </a>
+
+                            <a href="#information"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Information We Collect
+                            </a>
+
+                            <a href="#usage"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                How We Use Information
+                            </a>
+
+                            <a href="#learning"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Learning Progress
+                            </a>
+
+                            <a href="#github"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                GitHub Integration
+                            </a>
+
+                            <a href="#ai"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                AI Features
+                            </a>
+
+                            <a href="#payments"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Payments
+                            </a>
+
+                            <a href="#cookies"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Cookies
+                            </a>
+
+                            <a href="#security"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Data Security
+                            </a>
+
+                            <a href="#third-party"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Third-Party Services
+                            </a>
+
+                            <a href="#rights"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Your Rights
+                            </a>
+
+                            <a href="#contact"
+                               class="block text-zinc-600 hover:text-[#245F73] transition">
+                                Contact
+                            </a>
+
+                        </nav>
+
+                    </div>
+
+                </aside>
+
+
+
+                <!-- Policy -->
+
+                <div class="max-w-4xl space-y-20">
+
+
+                    <!-- 01 -->
+
+                    <article id="introduction"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm
+                                         font-black
+                                         text-[#245F73]">
+                                01
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Introduction
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            KATCODE ("we", "our", or "us") is a programming
+                            education platform operated by Tovan Technologies
+                            (Pty) Ltd. We are committed to handling personal
+                            information responsibly and protecting the privacy
+                            of people who use our website, platform, learning
+                            resources, and related services.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 02 -->
+
+                    <article id="information"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                02
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Information We Collect
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8 mb-8">
+                            Depending on how you interact with KATCODE,
+                            we may collect information necessary to provide
+                            and improve our services.
+                        </p>
+
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+
+                            <div class="bg-white border border-zinc-300 rounded-2xl p-6">
+                                <p class="font-bold mb-2">Account information</p>
+                                <p class="text-sm text-zinc-600 leading-6">
+                                    Name, email address, and account credentials.
+                                </p>
+                            </div>
+
+                            <div class="bg-white border border-zinc-300 rounded-2xl p-6">
+                                <p class="font-bold mb-2">Learning activity</p>
+                                <p class="text-sm text-zinc-600 leading-6">
+                                    Lessons, quizzes, projects, results,
+                                    achievements, and progression.
+                                </p>
+                            </div>
+
+                            <div class="bg-white border border-zinc-300 rounded-2xl p-6">
+                                <p class="font-bold mb-2">GitHub information</p>
+                                <p class="text-sm text-zinc-600 leading-6">
+                                    GitHub information when you voluntarily
+                                    connect your account.
+                                </p>
+                            </div>
+
+                            <div class="bg-white border border-zinc-300 rounded-2xl p-6">
+                                <p class="font-bold mb-2">Technical information</p>
+                                <p class="text-sm text-zinc-600 leading-6">
+                                    Device, browser, session, and related
+                                    technical information.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- 03 -->
+
+                    <article id="usage"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                03
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            How We Use Your Information
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            We use information to create and manage accounts,
+                            deliver learning content, save progress,
+                            personalize learning experiences, provide
+                            support, maintain platform security, improve
+                            KATCODE, and operate our services.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 04 -->
+
+                    <article id="learning"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                04
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Learning Progress
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            KATCODE stores learning activity such as completed
+                            lessons, quizzes, guided projects, assessment
+                            results, XP, Learning Experience Points (LXP),
+                            achievements, and related educational activity.
+                            This allows learners to continue their learning
+                            journey and access their progress across sessions
+                            and supported devices.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 05 -->
+
+                    <article id="github"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                05
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            GitHub Integration
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            If you choose to connect your GitHub account,
+                            KATCODE may use that connection to support
+                            repository handover and portfolio-related
+                            functionality. Access is limited to information
+                            necessary for the relevant feature and actions
+                            requiring authorization will require your consent.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 06 -->
+
+                    <article id="ai"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                06
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            AI Features
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            KATCODE may provide AI-powered educational
+                            assistance through katnova. Information submitted
+                            to AI features may be processed by the relevant
+                            AI service providers in order to generate
+                            responses and provide the requested functionality.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 07 -->
+
+                    <article id="payments"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                07
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Payments
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            Where paid services are offered, payments may be
+                            processed through third-party payment providers.
+                            KATCODE does not intend to store complete payment
+                            card details on its own systems.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 08 -->
+
+                    <article id="cookies"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                08
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Cookies
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            KATCODE may use cookies and similar technologies
+                            to maintain secure sessions, remember preferences,
+                            improve performance, and understand how the
+                            platform is used.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 09 -->
+
+                    <article id="security"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                09
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Data Security
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            We implement reasonable technical and
+                            organizational safeguards designed to protect
+                            personal information. These measures may include
+                            encrypted communication, secure authentication,
+                            password hashing, access controls, and monitoring
+                            intended to protect platform infrastructure.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 10 -->
+
+                    <article id="third-party"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                10
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Third-Party Services
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8 mb-6">
+                            KATCODE may rely on trusted third-party services
+                            to operate certain parts of the platform.
+                        </p>
+
+                        <ul class="space-y-3 text-zinc-700 leading-8 list-disc pl-6">
+
+                            <li>GitHub</li>
+                            <li>Payment providers</li>
+                            <li>Cloud hosting providers</li>
+                            <li>AI service providers</li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- 11 -->
+
+                    <article id="rights"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                11
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Your Rights
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            Subject to applicable law, you may have rights
+                            relating to access, correction, deletion, or
+                            management of your personal information. Requests
+                            may be submitted using the contact details below.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 12 -->
+
+                    <article class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                12
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Changes to This Policy
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8">
+                            We may update this Privacy Policy from time to
+                            time. Changes will be reflected by updating the
+                            "Last Updated" date displayed at the beginning
+                            of this page.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 13 -->
+
+                    <article id="contact"
+                             class="scroll-mt-32">
+
+                        <div class="flex items-center gap-4 mb-6">
+
+                            <span class="text-sm font-black text-[#245F73]">
+                                13
+                            </span>
+
+                            <div class="h-px w-12 bg-[#245F73]"></div>
+
+                        </div>
+
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-6">
+                            Contact Us
+                        </h2>
+
+                        <p class="text-zinc-700 leading-8 mb-8">
+                            If you have questions about this Privacy Policy,
+                            your personal information, or how KATCODE handles
+                            data, contact us at:
+                        </p>
+
+
+                        <a href="mailto:support@katcode.co.za"
+                           class="group block
+                                  rounded-3xl
+                                  bg-[#245F73]
+                                  text-white
+                                  p-8
+                                  hover:bg-[#1B4A5A]
+                                  transition-colors duration-300">
+
+                            <p class="text-xs
+                                      uppercase
+                                      tracking-[0.2em]
+                                      font-bold
+                                      text-[#DCECEF]
+                                      mb-3">
+                                Privacy enquiries
+                            </p>
+
+                            <p class="text-2xl md:text-3xl
+                                      font-black
+                                      tracking-tight">
+                                support@katcode.co.za
+                            </p>
+
+                            <p class="mt-4 text-sm text-white/70">
+                                Tovan Technologies (Pty) Ltd
+                                · KATCODE
+                            </p>
+
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ========================================================= -->
+<!-- FOOTER -->
+<!-- ========================================================= -->
+
+<footer class="bg-black text-zinc-400">
 
     <div class="max-w-7xl mx-auto px-6 py-20">
 
+
         <div class="grid lg:grid-cols-5 gap-16">
+
 
             <!-- Brand -->
 
@@ -345,16 +965,21 @@
                 <div class="flex items-center gap-4 mb-8">
 
                     <img src="/images/katcode-logo.jpeg"
-                         alt="KatCode Logo"
-                         class="w-14 h-14 rounded-full border border-zinc-700">
+                         alt="KATCODE Logo"
+                         class="w-14 h-14 rounded-full
+                                border border-zinc-700">
 
                     <div>
 
-                        <h2 class="text-white text-2xl font-black tracking-tight">
+                        <h2 class="text-white text-2xl font-black">
                             KATCODE
                         </h2>
 
-                        <p class="text-[0.6rem] uppercase tracking-[0.25em] font-bold text-zinc-500">
+                        <p class="text-[0.6rem]
+                                  uppercase
+                                  tracking-[0.25em]
+                                  font-bold
+                                  text-[#245F73]">
                             Logic Precedes Code
                         </p>
 
@@ -362,49 +987,61 @@
 
                 </div>
 
+
                 <p class="text-zinc-400 leading-8 max-w-md">
 
-                    KATCODE is a programming education platform built to help
-                    students develop logical thinking, practical software
-                    development skills, and a portfolio that demonstrates
-                    real ability, not just completed tutorials.
+                    KATCODE is a programming education platform built to
+                    develop logical thinking, practical software development
+                    skills, and engineering ability.
 
                 </p>
 
             </div>
 
+
             <!-- Platform -->
 
             <div>
 
-                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                <h3 class="text-white
+                           font-bold
+                           uppercase
+                           tracking-[0.2em]
+                           text-sm
+                           mb-8">
                     Platform
                 </h3>
 
-                <ul class="space-y-4">
+                <ul class="space-y-4 text-sm">
 
                     <li>
-                        <a href="#learning-paths" class="hover:text-white transition">
+                        <a href="/#learning-paths"
+                           class="hover:text-[#DCECEF] transition">
                             Learning Paths
                         </a>
                     </li>
 
-<!--                    <li>-->
-<!--                        <a href="/pricing" class="hover:text-white transition">-->
-<!--                            Pricing-->
-<!--                        </a>-->
-<!--                    </li>-->
+                    <li>
+                        <a href="/projects"
+                           class="hover:text-[#DCECEF] transition">
+                            Projects
+                        </a>
+                    </li>
 
                     <li>
-                        <a href="#faq" class="hover:text-white transition">
+                        <a href="/#faq"
+                           class="hover:text-[#DCECEF] transition">
                             FAQ
                         </a>
                     </li>
 
                     <li>
                         <a href="https://app.katcode.co.za/auth/register"
-                           class="hover:text-white transition">
-                            Join KatCode
+                           class="text-[#DCECEF]
+                                  hover:text-white
+                                  transition
+                                  font-bold">
+                            Join KATCODE
                         </a>
                     </li>
 
@@ -412,30 +1049,39 @@
 
             </div>
 
+
             <!-- Community -->
 
             <div>
 
-                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                <h3 class="text-white
+                           font-bold
+                           uppercase
+                           tracking-[0.2em]
+                           text-sm
+                           mb-8">
                     Community
                 </h3>
 
-                <ul class="space-y-4">
+                <ul class="space-y-4 text-sm">
 
                     <li>
-                        <a href="/hackathons" class="hover:text-white transition">
+                        <a href="/hackathons"
+                           class="hover:text-[#DCECEF] transition">
                             Hackathons
                         </a>
                     </li>
 
                     <li>
-                        <a href="/about" class="hover:text-white transition">
+                        <a href="/about"
+                           class="hover:text-[#DCECEF] transition">
                             About
                         </a>
                     </li>
 
                     <li>
-                        <a href="mailto:support@katcode.co.za" class="hover:text-white transition">
+                        <a href="mailto:support@katcode.co.za"
+                           class="hover:text-[#DCECEF] transition">
                             Contact
                         </a>
                     </li>
@@ -444,24 +1090,32 @@
 
             </div>
 
+
             <!-- Legal -->
 
             <div>
 
-                <h3 class="text-white font-bold uppercase tracking-[0.2em] text-sm mb-8">
+                <h3 class="text-white
+                           font-bold
+                           uppercase
+                           tracking-[0.2em]
+                           text-sm
+                           mb-8">
                     Legal
                 </h3>
 
-                <ul class="space-y-4">
+                <ul class="space-y-4 text-sm">
 
                     <li>
-                        <a href="/terms" class="hover:text-white transition">
+                        <a href="/terms"
+                           class="text-[#DCECEF] font-semibold">
                             Terms of Service
                         </a>
                     </li>
 
                     <li>
-                        <a href="/privacy" class="hover:text-white transition">
+                        <a href="/privacy"
+                           class="text-[#DCECEF] font-semibold">
                             Privacy Policy
                         </a>
                     </li>
@@ -472,26 +1126,43 @@
 
         </div>
 
+
         <!-- Divider -->
 
         <div class="border-t border-zinc-800 my-16"></div>
 
-        <!-- Bottom Footer -->
 
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- Bottom -->
 
-            <div>
+        <div class="flex flex-col md:flex-row
+                    items-center
+                    justify-between
+                    gap-6">
 
-                <p class="text-sm">
+            <p class="text-sm text-zinc-500">
 
-                    © 2026 <span class="text-white font-semibold">Tovan Technologies (Pty) Ltd T/A KATCODE</span>.
-                    All rights reserved.
+                © 2026
+                <span class="text-zinc-300 font-semibold">
+                    Tovan Technologies (Pty) Ltd T/A KATCODE
+                </span>.
+                All rights reserved.
 
-                </p>
+            </p>
+
+
+            <div class="flex items-center gap-3">
+
+                <span class="w-2 h-2 rounded-full bg-[#245F73]"></span>
+
+                <span class="text-xs
+                             uppercase
+                             tracking-[0.2em]
+                             font-bold
+                             text-zinc-600">
+                    Logic Precedes Code
+                </span>
 
             </div>
-
-       
 
         </div>
 
@@ -499,7 +1170,6 @@
 
 </footer>
 
-<script src="/js/app.js"></script>
 
 </body>
 </html>
