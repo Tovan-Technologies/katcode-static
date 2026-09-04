@@ -1,45 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-    const button = document.getElementById("mobile-menu-btn");
-    const menu = document.getElementById("mobile-menu");
-
-    const line1 = document.getElementById("line1");
-    const line2 = document.getElementById("line2");
-    const line3 = document.getElementById("line3");
-
-    button.addEventListener("click", () => {
-
-        menu.classList.toggle("hidden");
-
-        line1.classList.toggle("rotate-45");
-        line1.classList.toggle("translate-y-2");
-
-        line2.classList.toggle("opacity-0");
-
-        line3.classList.toggle("-rotate-45");
-        line3.classList.toggle("-translate-y-2");
-
-    });
-
-    menu.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            if (!menu.classList.contains("hidden")) {
-
-                menu.classList.add("hidden");
-
-                line1.classList.remove("rotate-45", "translate-y-2");
-                line2.classList.remove("opacity-0");
-                line3.classList.remove("-rotate-45", "-translate-y-2");
-
-            }
-
+    // MOBILE MENU LOGIC
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const l1 = document.getElementById('line1');
+    const l2 = document.getElementById('line2');
+    const l3 = document.getElementById('line3');
+    
+    if (btn) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            l1.classList.toggle('top-3'); l1.classList.toggle('rotate-45');
+            l2.classList.toggle('opacity-0');
+            l3.classList.toggle('top-3'); l3.classList.toggle('-rotate-45');
         });
+    }
 
+    // DESKTOP NAVBAR SLIDING HIGHLIGHT LOGIC
+    document.addEventListener("DOMContentLoaded", () => {
+        const navContainer = document.getElementById('nav-container');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const highlight = document.getElementById('nav-highlight');
+
+        if (navContainer && navLinks.length > 0 && highlight) {
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', (e) => {
+                    const linkRect = e.target.getBoundingClientRect();
+                    const containerRect = navContainer.getBoundingClientRect();
+                    
+                    highlight.style.width = `${linkRect.width}px`;
+                    highlight.style.transform = `translateX(${linkRect.left - containerRect.left}px)`;
+                    highlight.style.opacity = '1';
+                });
+            });
+
+            navContainer.addEventListener('mouseleave', () => {
+                highlight.style.opacity = '0';
+            });
+        }
     });
-
-});
 
 //__________________________________________________________________________________HAMBURGER-MOBILE__________________________________________________
 

@@ -24,7 +24,7 @@
     <meta property="og:image" content="https://www.katcode.co.za/images/katcode-logo.png">
     <meta property="og:locale" content="en_ZA">
 
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
   
     
     <link rel="icon" type="image/png" href="/images/katcode-logo-icon.png">
@@ -122,6 +122,7 @@
 <section class="relative pt-40 pb-28 overflow-hidden flex items-center">
 
     <div class="absolute inset-0 grid-pattern opacity-60"></div>
+    
     <div class="absolute -top-32 -right-32 w-[550px] h-[550px] rounded-full bg-[#245F73]/5 blur-3xl pointer-events-none"></div>
 
     <div class="relative max-w-7xl mx-auto px-6 w-full mt-16 mb-16">
@@ -443,56 +444,9 @@
     </div>
 </section>
 
-<section id="faq" class="relative py-28 overflow-hidden">
-    
-    <div class="relative z-10 max-w-4xl mx-auto px-6">
-        <div class="text-center mb-16 backdrop-blur-xl p-8 rounded-3xl shadow-sm transition-all duration-500">
-            <p class="text-sm uppercase tracking-[0.2em] text-cyan-900 mb-4 font-bold drop-shadow-sm">
-                Knowledge Base
-            </p>
-            <h2 class="text-4xl font-black tracking-tight text-black">
-                Frequently Asked Questions
-            </h2>
-        </div>
 
-        <div class="space-y-6">
-            <details class="group bg-white backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer" open="">
-                <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
-                    <span class="text-lg">Who is KATCODE built for?</span>
-                    <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
-                </summary>
-                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
-                    <div class="h-px w-full bg-zinc-200 mb-6"></div>
-                    KATCODE is designed for aspiring software developers, university students, and anyone who wants to learn programming through logic mapping, practical projects, and real-world experience rather than copy-pasting tutorials.
-                </div>
-            </details>
 
-            <details class="group bg-white backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-                <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
-                    <span class="text-lg">Do I need prior programming experience?</span>
-                    <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
-                </summary>
-                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
-                    <div class="h-px w-full bg-zinc-200 mb-6"></div>
-                    No. KATCODE fundamentally teaches you *system thinking*. We start with logic foundations and flowcharts, gradually guiding you toward building complete, syntax-heavy software projects.
-                </div>
-            </details>
-
-            <details class="group bg-white backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-                <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
-                    <span class="text-lg">What is Repository Handover?</span>
-                    <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
-                </summary>
-                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
-                    <div class="h-px w-full bg-zinc-200 mb-6"></div>
-                    During guided project development, KATCODE helps you build software step by step. Once you've completed the learning module, the codebase is handed over to your personal GitHub account so you can continue developing it independently as portfolio evidence.
-                </div>
-            </details>
-        </div>
-    </div>
-</section>
-
-<footer class="pt-20 pb-10 px-6">
+<footer class="pt-20 pb-10 px-6 bg-zinc-200 ">
 
     <div class="max-w-7xl mx-auto">
 
@@ -605,8 +559,8 @@
 
                     <li>
                         <a href="/project"
-                           class="text-[#245F73]
-                                  ">
+                            class="hover:text-[#245F73]
+                                  transition-colors">
 
                             Projects
 
@@ -631,9 +585,8 @@
                     
                      <li>
                         <a href="/faq"
-                           class="text-[#245F73]
-                                  ">
-
+                            class="hover:text-[#245F73]
+                                  transition-colors">
                             FAQ
 
                         </a>

@@ -14,7 +14,7 @@
         content="Read the Terms of Service governing your use of the KATCODE programming education platform and related services."
     >
 
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="../main.css">
 
     <link
         rel="icon"
@@ -26,273 +26,60 @@
 
 <body class="bg-zinc-100 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-[#245F73] selection:text-white">
 
+<input type="checkbox" id="mobile-menu-toggle" class="peer/menu hidden">
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
-
-<nav class="fixed top-0 inset-x-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
-
-    <div class="max-w-7xl mx-auto">
-
-        <div
-            class="h-18 sm:h-20 flex items-center justify-between
-                   rounded-2xl border border-zinc-300
-                   bg-white/90 backdrop-blur-xl
-                   shadow-sm px-4 sm:px-6"
-        >
-
-            <!-- Logo -->
-
-            <a href="/" class="flex items-center gap-3 group shrink-0">
-
-                <img
-                    src="/images/katcode-logo.jpeg"
-                    alt="KATCODE Logo"
-                    class="w-11 h-11 sm:w-12 sm:h-12 rounded-full
-                           border border-zinc-300
-                           group-hover:border-[#245F73]
-                           transition-colors duration-300"
-                >
-
-                <div class="hidden sm:block">
-
-                    <h1 class="text-lg font-black tracking-tight">
-                        KATCODE
-                    </h1>
-
-                    <p class="text-[0.5rem] uppercase tracking-[0.25em]
-                              text-zinc-500 font-bold">
-                        Logic Precedes Code
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- Desktop Navigation -->
-
-            <div class="hidden lg:flex items-center gap-8">
-
-                <a
-                    href="/"
-                    class="text-xs font-bold uppercase tracking-[0.18em]
-                           text-zinc-600 hover:text-[#245F73]
-                           transition-colors"
-                >
-                    Home
-                </a>
-
-                <a
-                    href="https://www.katcode.co.za/#learning-paths"
-                    class="text-xs font-bold uppercase tracking-[0.18em]
-                           text-zinc-600 hover:text-[#245F73]
-                           transition-colors"
-                >
-                    Learning Paths
-                </a>
-
-                <a
-                    href="/hackathons"
-                    class="text-xs font-bold uppercase tracking-[0.18em]
-                           text-zinc-600 hover:text-[#245F73]
-                           transition-colors"
-                >
-                    Hackathons
-                </a>
-
-                <a
-                    href="https://www.katcode.co.za/#faq"
-                    class="text-xs font-bold uppercase tracking-[0.18em]
-                           text-zinc-600 hover:text-[#245F73]
-                           transition-colors"
-                >
-                    FAQ
-                </a>
-
-                <a
-                    href="/about"
-                    class="text-xs font-bold uppercase tracking-[0.18em]
-                           text-zinc-600 hover:text-[#245F73]
-                           transition-colors"
-                >
-                    About
-                </a>
-
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 rounded-full bg-zinc-200/50 backdrop-blur-xl shadow-lg px-6 lg:px-8 transition-all duration-300">
+    <div class="h-20 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-4 group shrink-0 focus:outline-none">
+            <img src="/images/katcode-logo.png" alt="KatCode Logo" class="w-12 h-12 rounded-full shadow-xl transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://ui-avatars.com/api/?name=K&background=245F73&color=fff'">
+            <div class="hidden sm:block">
+                <h1 class="text-xl font-black tracking-tight text-black drop-shadow-sm">
+                    KATCODE
+                </h1>
             </div>
+        </a>
 
-
-            <!-- Desktop Actions -->
-
-            <div class="hidden md:flex items-center gap-4">
-
-                <a
-                    href="https://app.katcode.co.za/auth/login"
-                    class="text-xs font-bold uppercase tracking-[0.18em]
-                           text-zinc-600 hover:text-[#245F73]
-                           transition-colors"
-                >
-                    Sign In
-                </a>
-
-                <a
-                    href="https://app.katcode.co.za/auth/register"
-                    class="rounded-xl
-                           bg-[#245F73] text-white
-                           px-5 py-3
-                           text-xs font-bold uppercase tracking-[0.18em]
-                           hover:bg-[#1B4A5A]
-                           hover:-translate-y-0.5
-                           transition-all duration-300
-                           shadow-lg shadow-[#245F73]/20"
-                >
-                    Join KATCODE
-                </a>
-
-            </div>
-
-
-            <!-- Mobile Menu -->
-
-            <details class="md:hidden relative">
-
-                <summary
-                    class="list-none cursor-pointer
-                           w-10 h-10 rounded-xl
-                           border border-zinc-300
-                           flex items-center justify-center
-                           hover:border-[#245F73]
-                           hover:text-[#245F73]
-                           transition-colors"
-                    aria-label="Open navigation menu"
-                >
-
-                    <svg
-                        class="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-                    </svg>
-
-                </summary>
-
-
-                <div
-                    class="absolute right-0 top-14 w-72
-                           rounded-2xl
-                           border border-zinc-300
-                           bg-white shadow-2xl
-                           p-5"
-                >
-
-                    <div class="flex flex-col">
-
-                        <a
-                            href="/"
-                            class="px-4 py-3 rounded-xl
-                                   text-sm font-bold uppercase tracking-[0.15em]
-                                   text-zinc-700
-                                   hover:bg-[#DCECEF]
-                                   hover:text-[#245F73]"
-                        >
-                            Home
-                        </a>
-
-                        <a
-                            href="https://www.katcode.co.za/#learning-paths"
-                            class="px-4 py-3 rounded-xl
-                                   text-sm font-bold uppercase tracking-[0.15em]
-                                   text-zinc-700
-                                   hover:bg-[#DCECEF]
-                                   hover:text-[#245F73]"
-                        >
-                            Learning Paths
-                        </a>
-
-                        <a
-                            href="/hackathons"
-                            class="px-4 py-3 rounded-xl
-                                   text-sm font-bold uppercase tracking-[0.15em]
-                                   text-zinc-700
-                                   hover:bg-[#DCECEF]
-                                   hover:text-[#245F73]"
-                        >
-                            Hackathons
-                        </a>
-
-                        <a
-                            href="https://www.katcode.co.za/#faq"
-                            class="px-4 py-3 rounded-xl
-                                   text-sm font-bold uppercase tracking-[0.15em]
-                                   text-zinc-700
-                                   hover:bg-[#DCECEF]
-                                   hover:text-[#245F73]"
-                        >
-                            FAQ
-                        </a>
-
-                        <a
-                            href="/about"
-                            class="px-4 py-3 rounded-xl
-                                   text-sm font-bold uppercase tracking-[0.15em]
-                                   text-zinc-700
-                                   hover:bg-[#DCECEF]
-                                   hover:text-[#245F73]"
-                        >
-                            About
-                        </a>
-
-
-                        <div class="border-t border-zinc-200 my-3"></div>
-
-
-                        <a
-                            href="https://app.katcode.co.za/auth/login"
-                            class="px-4 py-3 rounded-xl
-                                   text-sm font-bold uppercase tracking-[0.15em]
-                                   text-zinc-700
-                                   hover:bg-zinc-100"
-                        >
-                            Sign In
-                        </a>
-
-                        <a
-                            href="https://app.katcode.co.za/auth/register"
-                            class="mt-2 rounded-xl
-                                   bg-[#245F73] text-white
-                                   py-4 text-center
-                                   text-xs font-bold uppercase tracking-[0.18em]
-                                   hover:bg-[#1B4A5A]
-                                   transition"
-                        >
-                            Join KATCODE
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </details>
-
+        <div class="hidden lg:flex items-center relative" id="nav-container">
+            <div id="nav-highlight" class="absolute inset-y-1 left-0 bg-white/60 backdrop-blur-md rounded-full transition-all duration-300 ease-out opacity-0 pointer-events-none shadow-sm"></div>
+            
+            <a href="/" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Home</a>
+            <a href="/#learning-paths" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Learn</a>
+            <a href="/project" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Projects</a>
+            <a href="/hackathons" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Hackathons</a>
+            <a href="/faq" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">FAQ</a>
+            <a href="/about" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">About</a>
         </div>
 
-    </div>
+        <div class="hidden md:flex items-center gap-4">
+            <a href="https://app.katcode.co.za/auth/login" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-900 hover:text-cyan-800 transition-colors px-4">Sign In</a>
+            <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-cyan-800 text-zinc-100 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-cyan-900 shadow-xl hover:-translate-y-1 transition-all duration-300">Get started</a>
+        </div>
 
+        <label for="mobile-menu-toggle" class="lg:hidden relative w-7 h-7 cursor-pointer mr-2 select-none z-50">
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-1 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:rotate-45"></span>
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-3 transition-all duration-300 origin-center peer-checked/menu:opacity-0"></span>
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-5 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:-rotate-45"></span>
+        </label>
+    </div>
 </nav>
 
+<div id="mobile-menu" class="hidden peer-checked/menu:block lg:hidden fixed top-32 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl backdrop-blur-2xl bg-white/95 rounded-3xl shadow-2xl z-40 border border-zinc-200">
+    <div class="px-8 py-8 flex flex-col gap-6">
+        <a href="/" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Home</a>
+        <a href="/#learning-paths" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Learn</a>
+        <a href="/project" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Projects</a>
+        <a href="/hackathons" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Hackathons</a>
+        <a href="/faq" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">FAQ</a>
+        <a href="/about" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">About</a>
+        <div class="h-px w-full bg-zinc-200"></div>
+        <a href="https://app.katcode.co.za/auth/login" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Sign In</a>
+        <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-[#245F73] text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] shadow-lg">Get started</a>
+    </div>
+</div>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+
+
 
 <section class="relative pt-44 pb-28 overflow-hidden border-b border-zinc-300 bg-[#DCECEF]">
 
@@ -1088,43 +875,53 @@
 
 
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
-<footer class="bg-black text-zinc-400 border-t border-zinc-900">
+<footer class="pt-20 pb-10 px-6">
 
-    <div class="max-w-7xl mx-auto px-6 py-20">
-
-        <div class="grid lg:grid-cols-5 gap-16">
+    <div class="max-w-7xl mx-auto">
 
 
-            <!-- Brand -->
+        <div class="grid
+                    lg:grid-cols-5
+                    gap-12
+                    mb-16">
+
+
+            <!-- BRAND -->
 
             <div class="lg:col-span-2">
 
-                <div class="flex items-center gap-4 mb-8">
+                <div class="flex items-center
+                            gap-4
+                            mb-6">
 
-                    <img
-                        src="/images/katcode-logo.jpeg"
-                        alt="KATCODE Logo"
-                        class="w-14 h-14 rounded-full border border-zinc-700"
-                    >
+                    <img src="/images/katcode-logo.png"
+                         alt="KATCODE Logo"
+                         class="w-12 h-12 rounded-full
+                                shadow-sm
+                                bg-zinc-200
+                                p-0.5">
+
 
                     <div>
 
-                        <h2 class="text-white text-2xl font-black tracking-tight">
+                        <h2 class="text-xl
+                                   font-black
+                                   tracking-tight">
+
                             KATCODE
+
                         </h2>
 
-                        <p
-                            class="text-[0.6rem]
-                                   uppercase
-                                   tracking-[0.25em]
-                                   font-bold
-                                   text-zinc-500"
-                        >
+
+                        <p class="text-[0.6rem]
+                                  uppercase
+                                  tracking-[0.2em]
+                                  font-bold
+                                  text-[#245F73]">
+
                             Logic Precedes Code
+
                         </p>
 
                     </div>
@@ -1132,110 +929,160 @@
                 </div>
 
 
-                <p class="text-zinc-400 leading-8 max-w-md">
+                <p class="font-medium
+                          leading-relaxed
+                          max-w-sm
+                          text-sm">
 
-                    KATCODE is a programming education platform built to
-                    help students develop logical thinking, practical
-                    software development skills, and a portfolio that
-                    demonstrates real ability, not just completed tutorials.
+                    A programming education platform built to
+                    develop logical thinking, practical development
+                    skills, and a verifiable engineering portfolio.
+
+                </p>
+
+
+                <p class="mt-5
+                          text-xs
+                          text-zinc-500
+                          leading-relaxed
+                          max-w-sm">
+
+                    KATCODE is a product of
+                    <span class="font-bold text-zinc-700">
+                        Tovan Technologies (Pty) Ltd
+                    </span>.
 
                 </p>
 
             </div>
 
 
-
-            <!-- Platform -->
+            <!-- PLATFORM -->
 
             <div>
 
-                <h3
-                    class="text-white
-                           font-bold
+                <h3 class="font-bold
                            uppercase
-                           tracking-[0.2em]
-                           text-sm
-                           mb-8"
-                >
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
                     Platform
+
                 </h3>
 
-                <ul class="space-y-4">
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
 
                     <li>
-                        <a
-                            href="https://www.katcode.co.za/#learning-paths"
-                            class="hover:text-white transition"
-                        >
+                        <a href="/#learning-paths"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
                             Learning Paths
+
                         </a>
                     </li>
 
+
                     <li>
-                        <a
-                            href="https://www.katcode.co.za/#faq"
-                            class="hover:text-white transition"
-                        >
-                            FAQ
+                        <a href="/project"
+                             class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Projects
+
                         </a>
                     </li>
 
-                    <li>
-                        <a
-                            href="https://app.katcode.co.za/auth/register"
-                            class="hover:text-white transition"
-                        >
-                            Join KATCODE
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <!-- Community -->
-
-            <div>
-
-                <h3
-                    class="text-white
-                           font-bold
-                           uppercase
-                           tracking-[0.2em]
-                           text-sm
-                           mb-8"
-                >
-                    Community
-                </h3>
-
-                <ul class="space-y-4">
 
                     <li>
-                        <a
-                            href="/hackathons"
-                            class="hover:text-white transition"
-                        >
+                        <a href="/hackathons"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
                             Hackathons
+
                         </a>
                     </li>
 
+
                     <li>
-                        <a
-                            href="/about"
-                            class="hover:text-white transition"
-                        >
-                            About
+                        <a href="https://app.katcode.co.za/auth/register"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Get started
+
+                        </a>
+                    </li>
+                    
+                     <li>
+                        <a href="/faq"
+                            class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            FAQ
+
                         </a>
                     </li>
 
+
+                </ul>
+
+            </div>
+
+
+            <!-- COMMUNITY -->
+
+            <div>
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
+                    Community
+
+                </h3>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
                     <li>
-                        <a
-                            href="mailto:support@katcode.co.za"
-                            class="hover:text-white transition"
-                        >
-                            Contact
+                        <a href="/hackathons"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Hackathons
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/about"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            About Us
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="mailto:support@katcode.co.za"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Contact Support
+
                         </a>
                     </li>
 
@@ -1244,39 +1091,43 @@
             </div>
 
 
-
-            <!-- Legal -->
+            <!-- LEGAL -->
 
             <div>
 
-                <h3
-                    class="text-white
-                           font-bold
+                <h3 class="font-bold
                            uppercase
-                           tracking-[0.2em]
-                           text-sm
-                           mb-8"
-                >
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
                     Legal
+
                 </h3>
 
-                <ul class="space-y-4">
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
 
                     <li>
-                        <a
-                            href="/terms"
-                            class="text-white font-semibold"
-                        >
+                        <a href="/terms"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
                             Terms of Service
+
                         </a>
                     </li>
 
+
                     <li>
-                        <a
-                            href="/privacy"
-                            class="hover:text-white transition"
-                        >
+                        <a href="/privacy"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
                             Privacy Policy
+
                         </a>
                     </li>
 
@@ -1287,47 +1138,36 @@
         </div>
 
 
+        <!-- COPYRIGHT -->
 
-        <!-- Divider -->
+        <div class="pt-8
+                    border-t border-zinc-300
+                    flex flex-col
+                    md:flex-row
+                    md:items-center
+                    md:justify-between
+                    gap-4">
 
-        <div class="border-t border-zinc-800 my-16"></div>
-
-
-
-        <!-- Bottom -->
-
-        <div
-            class="flex flex-col md:flex-row
-                   items-center
-                   justify-between
-                   gap-6"
-        >
-
-            <p class="text-sm text-center md:text-left">
+            <p class="text-xs
+                      font-medium
+                      text-zinc-500">
 
                 © 2026
-                <span class="text-white font-semibold">
-                    Tovan Technologies (Pty) Ltd T/A KATCODE
+                <span class="font-bold text-zinc-700">
+                    KATCODE
                 </span>.
                 All rights reserved.
 
             </p>
 
 
-            <div
-                class="flex items-center gap-2
-                       text-xs
-                       uppercase
-                       tracking-[0.2em]
-                       font-bold
-                       text-zinc-600"
-            >
+            <p class="text-xs
+                      font-black
+                      tracking-[0.2em]">
 
-                <span class="w-2 h-2 rounded-full bg-[#245F73]"></span>
+                LOGIC PRECEDES CODE.
 
-                Logic Precedes Code
-
-            </div>
+            </p>
 
         </div>
 
