@@ -6,12 +6,8 @@
 
     <title>Home | KATCODE</title>
 
-    <meta name="description"
-          content="KATCODE is a programming education platform that teaches logical thinking, software development, Java, guided projects, and hackathons. Learn why code works before learning how to write it.">
-
-    <meta name="keywords"
-          content="KATCODE, programming education, software development, learn programming, learn Java, computer science, COMP, Java, coding platform, guided projects, GitHub portfolio, programming fundamentals, software development, hackathons, South Africa, logic precedes code">
-
+    <meta name="description" content="KATCODE is a programming education platform that teaches logical thinking, software development, Java, guided projects, and hackathons. Learn why code works before learning how to write it.">
+    <meta name="keywords" content="KATCODE, programming education, software development, learn programming, learn Java, computer science, COMP, Java, coding platform, guided projects, GitHub portfolio, programming fundamentals, software development, hackathons, South Africa, logic precedes code">
     <meta name="author" content="Tovan Technologies (Pty) Ltd">
     <meta name="application-name" content="KATCODE">
     <meta name="theme-color" content="#e4e4e7"> 
@@ -24,18 +20,18 @@
     <meta property="og:site_name" content="KATCODE">
     <meta property="og:url" content="https://www.katcode.co.za/">
     <meta property="og:title" content="KATCODE | Logic Precedes Code">
-    <meta property="og:description"
-          content="Learn the logical foundations of software development through structured learning paths, guided projects, and hackathons.">
+    <meta property="og:description" content="Learn the logical foundations of software development through structured learning paths, guided projects, and hackathons.">
     <meta property="og:image" content="https://www.katcode.co.za/images/katcode-logo.png">
     <meta property="og:locale" content="en_ZA">
 
-    <link href="./main.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+  
     
     <link rel="icon" type="image/png" href="/images/katcode-logo-icon.png">
     <link rel="apple-touch-icon" href="/images/katcode-logo-icon.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
@@ -66,21 +62,18 @@
                     rgba(0,0,0,0.045) 1px,
                     transparent 1px
                 );
-
             background-size: 40px 40px;
         }
     </style>
 </head>
 
-<body class="bg-zinc-100 text-black font-sans antialiased  flex flex-col selection:bg-cyan-600 selection:text-black">
-<input type="checkbox" id="mobile-menu-toggle" class="peer/menu hidden" />
+<body class="bg-zinc-100 text-black font-sans antialiased flex flex-col selection:bg-cyan-600 selection:text-black">
+<input type="checkbox" id="mobile-menu-toggle" class="peer/menu hidden">
 
 <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 rounded-full bg-zinc-200/50 backdrop-blur-xl shadow-lg px-6 lg:px-8 transition-all duration-300">
     <div class="h-20 flex items-center justify-between">
         <a href="/" class="flex items-center gap-4 group shrink-0 focus:outline-none">
-            <img src="/images/katcode-logo.png"
-                 alt="KatCode Logo"
-                 class="w-12 h-12 rounded-full shadow-xl transition-transform duration-300 group-hover:scale-105"/>
+            <img src="/images/katcode-logo.png" alt="KatCode Logo" class="w-12 h-12 rounded-full shadow-xl transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://ui-avatars.com/api/?name=K&background=245F73&color=fff'">
             <div class="hidden sm:block">
                 <h1 class="text-xl font-black tracking-tight text-black drop-shadow-sm">
                     KATCODE
@@ -92,10 +85,10 @@
             <div id="nav-highlight" class="absolute inset-y-1 left-0 bg-white/60 backdrop-blur-md rounded-full transition-all duration-300 ease-out opacity-0 pointer-events-none shadow-sm"></div>
             
             <a href="/" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Home</a>
-            <a href="#learning-paths" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Learn</a>
-              <a href="/project" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Projects</a>
+            <a href="/#learning-paths" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Learn</a>
+            <a href="/project" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Projects</a>
             <a href="/hackathons" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">Hackathons</a>
-            <a href="#faq" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">FAQ</a>
+            <a href="/faq" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">FAQ</a>
             <a href="/about" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-cyan-900 transition-colors">About</a>
         </div>
 
@@ -105,20 +98,20 @@
         </div>
 
         <label for="mobile-menu-toggle" class="lg:hidden relative w-7 h-7 cursor-pointer mr-2 select-none z-50">
-    <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-1 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:rotate-45"></span>
-    <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-3 transition-all duration-300 origin-center peer-checked/menu:opacity-0"></span>
-    <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-5 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:-rotate-45"></span>
-</label>
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-1 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:rotate-45"></span>
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-3 transition-all duration-300 origin-center peer-checked/menu:opacity-0"></span>
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-5 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:-rotate-45"></span>
+        </label>
     </div>
 </nav>
 
-<div id="mobile-menu" class="hidden peer-checked/menu:block lg:hidden fixed top-32 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl  backdrop-blur-2xl rounded-3xl shadow-2xl z-40 ">
+<div id="mobile-menu" class="hidden peer-checked/menu:block lg:hidden fixed top-32 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl backdrop-blur-2xl bg-white/95 rounded-3xl shadow-2xl z-40 border border-zinc-200">
     <div class="px-8 py-8 flex flex-col gap-6">
         <a href="/" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Home</a>
-        <a href="#learning-paths" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Learn</a>
-        <a href="/projects" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Projects</a>
+        <a href="/#learning-paths" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Learn</a>
+        <a href="/project" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Projects</a>
         <a href="/hackathons" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Hackathons</a>
-        <a href="#faq" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">FAQ</a>
+        <a href="/faq" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">FAQ</a>
         <a href="/about" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">About</a>
         <div class="h-px w-full bg-zinc-200"></div>
         <a href="https://app.katcode.co.za/auth/login" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Sign In</a>
@@ -126,9 +119,7 @@
     </div>
 </div>
 
-
-
-<section class="relative pt-40 pb-28 overflow-hidden  flex items-center">
+<section class="relative pt-40 pb-28 overflow-hidden flex items-center">
 
     <div class="absolute inset-0 grid-pattern opacity-60"></div>
     <div class="absolute -top-32 -right-32 w-[550px] h-[550px] rounded-full bg-[#245F73]/5 blur-3xl pointer-events-none"></div>
@@ -161,11 +152,11 @@
                     <a href="https://app.katcode.co.za/auth/register" class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full bg-[#245F73] text-white font-bold hover:bg-[#1B4A5A] hover:-translate-y-1 transition-all shadow-lg">
                         Start learning
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"></path>
                         </svg>
                     </a>
 
-                    <a href="#projects" class="inline-flex items-center justify-center px-7 py-4 rounded-full border border-zinc-400 bg-white/60 backdrop-blur-sm font-bold hover:bg-white hover:-translate-y-1 transition-all">
+                    <a href="/#projects" class="inline-flex items-center justify-center px-7 py-4 rounded-full border border-zinc-400 bg-white/60 backdrop-blur-sm font-bold hover:bg-white hover:-translate-y-1 transition-all">
                         Explore projects
                     </a>
                 </div>
@@ -175,30 +166,26 @@
             <div class="relative w-full h-[550px] hidden lg:flex items-center justify-center">
                 
                 <svg class="absolute inset-0 w-full h-full z-0" pointer-events="none">
-                    <line x1="10%" y1="25%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 4" class="opacity-30" />
-                    <line x1="85%" y1="35%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 12" class="opacity-30" />
-                    <line x1="25%" y1="75%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 4" class="opacity-30" />
-                    <line x1="80%" y1="70%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 8" class="opacity-30" />
+                    <line x1="10%" y1="25%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 4" class="opacity-30"></line>
+                    <line x1="85%" y1="35%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 12" class="opacity-30"></line>
+                    <line x1="25%" y1="75%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 4" class="opacity-30"></line>
+                    <line x1="80%" y1="70%" x2="50%" y2="50%" stroke="#245F73" stroke-width="2" stroke-dasharray="6 8" class="opacity-30"></line>
                 </svg>
 
-               
-
-                <div class="absolute top-[15%] bg-zinc-100/70 left-0 z-20  backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-4 animate-[bounce_4s_ease-in-out_infinite]">
-                    <div class="w-10 h-10 rounded-full  flex items-center justify-center text-[#245F73]">
-                         <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+                <div class="absolute top-[15%] bg-zinc-100/70 left-0 z-20 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-4 animate-[bounce_4s_ease-in-out_infinite]">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-[#245F73]">
+                         <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path></svg>
                     </div>
                     <div>
-                       
-                        <p class="text-sm  font-bold ">Map Logic</p>
+                        <p class="text-sm font-bold">Map Logic</p>
                     </div>
                 </div>
 
-                <div class="absolute top-[25%] -right-4 z-20 backdrop-blur-md px-5 py-3.5 rounded-2xl shadow-xl  flex items-center gap-4 animate-[bounce_5s_ease-in-out_infinite_0.5s]">
+                <div class="absolute top-[25%] -right-4 z-20 backdrop-blur-md bg-white/70 px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-4 animate-[bounce_5s_ease-in-out_infinite_0.5s]">
                     <div class="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-800">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                     </div>
                     <div>
-                      
                         <p class="text-sm font-black text-black">Develop Code</p>
                     </div>
                 </div>
@@ -206,22 +193,21 @@
                 <div class="absolute bottom-[20%] left-[5%] z-20 bg-[#245F73] px-5 py-3.5 rounded-2xl shadow-xl border border-[#1B4A5A] flex items-center gap-4 animate-[bounce_4.5s_ease-in-out_infinite_1s]">
                     <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<path d="2 1 1 2 0 20 1 12 2 0 0 1 2 2 4"/>
-<polyline points="1 8 12 5 67 89"/><polyline points="10 8 12 50 67 8"/>
-<polyline x1="12" y1="3" x2="12" y2="15"/></svg>
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
                     </div>
                     <div>
-                       
                         <p class="text-sm font-black text-white">Architecture</p>
                     </div>
                 </div>
 
                 <div class="absolute bottom-[18%] right-0 z-20 bg-black px-5 py-3.5 rounded-2xl shadow-2xl border border-zinc-800 flex items-center gap-4 animate-[bounce_5.5s_ease-in-out_infinite_1.5s]">
                     <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-white">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
                     </div>
                     <div>
-                        
                         <p class="text-sm font-black text-white">Deploy Repo</p>
                     </div>
                 </div>
@@ -230,16 +216,13 @@
 
         </div> 
         
-        </div>
+    </div>
 </section>
 
-<section id="learning-paths" class="relative py-28 mt-16 overflow-hidden border border-white">
-    
-   
-
+<section id="learning-paths" class="relative py-28 mt-16 overflow-hidden border border-transparent">
     <div class="relative z-20 max-w-7xl mx-auto px-6">
         
-        <div class="text-center max-w-3xl mx-auto mb-20 ">
+        <div class="text-center max-w-3xl mx-auto mb-20">
             <p class="text-sm uppercase tracking-[0.2em] text-cyan-900 mb-4 font-bold drop-shadow-sm">
                 Curriculum
             </p>
@@ -251,17 +234,15 @@
             </p>
         </div>
 
-  <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
-            <!-- Java Foundations (Blurred Background + Java Logo) -->
-            <article class="shadow-sm rounded-3xl flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <!-- Java Foundations -->
+            <article class="bg-white shadow-sm rounded-3xl flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-zinc-200">
                 <div class="h-64 overflow-hidden rounded-t-3xl border-b border-zinc-300 relative">
-                    <!-- Blurred Student Background -->
-                    <img src="/images/students.jpg" alt="Students Background" class="absolute inset-0 w-full h-full object-cover filter blur-sm opacity-50 mix-blend-multiply" />
-                    <!-- Centered Java Logo overlay -->
+                    <img src="/images/students.jpg" alt="Students Background" class="absolute inset-0 w-full h-full object-cover filter blur-sm opacity-50 mix-blend-multiply" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800'">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class=" backdrop-blur-md px-8 py-4 rounded-full shadow-xl ">
-                            <img src="/images/java-logo.png" alt="Java Logo" class="h-20 w-0 object-contain" />
+                        <div class="bg-white/80 backdrop-blur-md px-8 py-4 rounded-full shadow-xl flex items-center justify-center h-24 w-24">
+                            <img src="/images/java-logo.png" alt="Java Logo" class="h-16 w-16 object-contain" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg'">
                         </div>
                     </div>
                 </div>
@@ -295,9 +276,9 @@
             </article>
 
             <!-- Java Architecture -->
-           <article class="shadow-sm rounded-3xl flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <article class="bg-white shadow-sm rounded-3xl flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-zinc-200">
                 <div class="h-64 overflow-hidden rounded-t-3xl border-b border-zinc-300 relative">
-                    <img src="/images/logic-whiteboard.jpg" alt="Teaching Java Architecture on a whiteboard" class="w-full h-full object-cover filter blur-sm opacity-30 mix-blend-multiply" />
+                    <img src="/images/logic-whiteboard.jpg" alt="Teaching Java Architecture on a whiteboard" class="absolute inset-0 w-full h-full object-cover filter blur-sm opacity-30 mix-blend-multiply" onerror="this.src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800'">
                     <div class="absolute inset-0 flex items-center justify-center bg-zinc-200/40 backdrop-blur-sm">
                         <span class="bg-zinc-100 text-black font-black px-6 py-2 rounded-full shadow-md border border-zinc-300 text-xs tracking-[0.2em] uppercase">Coming Soon</span>
                     </div>
@@ -325,7 +306,7 @@
                         <span>✓ Desktop GUIs</span>
                     </div>
                     
-                    <button disabled class="mt-auto inline-flex justify-center rounded-full bg-zinc-300 text-zinc-500 px-8 py-3.5 text-sm font-bold tracking-[0.1em] cursor-not-allowed border border-zinc-200">
+                    <button disabled="" class="mt-auto inline-flex justify-center rounded-full bg-zinc-300 text-zinc-500 px-8 py-3.5 text-sm font-bold tracking-[0.1em] cursor-not-allowed border border-zinc-200">
                         Unavailable
                     </button>
                 </div>
@@ -337,16 +318,13 @@
 <section id="methodology" class="relative pt-24 pb-32 mt-16 overflow-hidden">
     
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920" 
-             alt="Professional software engineering team" 
-             class="w-full h-full object-cover blur" />
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1920" alt="Professional software engineering team" class="w-full h-full object-cover blur">
         <div class="absolute inset-0 bg-zinc-900/75"></div>
     </div>
 
     <div class="relative z-20 max-w-7xl mx-auto px-6">
         
-        <div class="max-w-2xl mx-auto text-center mb-20  hover:-translate-y-2 transition-all duration-500">
-          
+        <div class="max-w-2xl mx-auto text-center mb-20 hover:-translate-y-2 transition-all duration-500">
             <h2 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-6">
                 Learn Beyond the Syntax.
             </h2>
@@ -361,7 +339,7 @@
 
             <article class="relative z-10 p-8 rounded-3xl bg-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-4 hover:scale-105 hover:bg-white/20 transition-all duration-500 group text-left flex flex-col cursor-pointer">
                 <div class="w-14 h-14 bg-cyan-900 text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path></svg>
                 </div>
                 <h3 class="text-2xl font-black mb-3 text-white">Map the Architecture</h3>
                 <p class="text-sm font-medium text-zinc-300 leading-relaxed">
@@ -371,7 +349,7 @@
 
             <article class="relative z-10 p-8 rounded-3xl bg-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-4 hover:scale-105 hover:bg-white/20 transition-all duration-500 group text-left flex flex-col cursor-pointer">
                 <div class="w-14 h-14 bg-cyan-900 text-white rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                 </div>
                 <h3 class="text-2xl font-black mb-3 text-white">Develop the System</h3>
                 <p class="text-sm font-medium text-zinc-300 leading-relaxed">
@@ -381,7 +359,7 @@
 
             <article class="relative z-10 p-8 rounded-3xl bg-white/10 backdrop-blur-xl shadow-2xl hover:-translate-y-4 hover:scale-105 hover:bg-white/20 transition-all duration-500 group text-left flex flex-col cursor-pointer">
                 <div class="w-14 h-14 bg-white text-black rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
                 </div>
                 <h3 class="text-2xl font-black mb-3 text-white">Deploy to GitHub</h3>
                 <p class="text-sm font-medium text-zinc-300 leading-relaxed">
@@ -391,17 +369,12 @@
 
         </div>
     </div>
-    
-    
-    
-    
 </section>
+
 <section id="hackathons" class="relative py-32 overflow-hidden bg-cyan-900">
     
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1920" 
-             alt="Hackathon coding event" 
-             class="w-full h-full object-cover opacity-20 mix-blend-multiply" />
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1920" alt="Hackathon coding event" class="w-full h-full object-cover opacity-20 mix-blend-multiply">
     </div>
     
     <div class="absolute inset-0 z-0 bg-gradient-to-t from-cyan-900 via-transparent to-cyan-900/80"></div>
@@ -429,7 +402,7 @@
             <a href="/hackathons" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-cyan-900 font-bold tracking-[0.1em] hover:bg-cyan-50 hover:-translate-y-1 shadow-xl transition-all duration-300 w-full sm:w-auto">
                 View hackathons
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
             </a>
             
@@ -444,7 +417,7 @@
             </div>
 
             <div class="flex justify-center mb-10 relative">
-                <img src="/images/hackathon/hackathon-runners.jpg" alt="Hackathon launch energy" class="h-56 object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 relative z-10" />
+                <img src="/images/hackathon-runners.jpg" alt="Hackathon launch energy" class="h-56 object-cover rounded-xl drop-shadow-2xl group-hover:scale-105 transition-transform duration-500 relative z-10 w-full" onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'">
             </div>
 
             <div class="grid grid-cols-3 gap-4 border-t border-white/20 pt-6">
@@ -470,12 +443,10 @@
     </div>
 </section>
 
-
 <section id="faq" class="relative py-28 overflow-hidden">
     
-
     <div class="relative z-10 max-w-4xl mx-auto px-6">
-        <div class="text-center mb-16 backdrop-blur-xl p-8 rounded-3xl shadow-sm  transition-all duration-500">
+        <div class="text-center mb-16 backdrop-blur-xl p-8 rounded-3xl shadow-sm transition-all duration-500">
             <p class="text-sm uppercase tracking-[0.2em] text-cyan-900 mb-4 font-bold drop-shadow-sm">
                 Knowledge Base
             </p>
@@ -485,35 +456,35 @@
         </div>
 
         <div class="space-y-6">
-            <details class="group  backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2  transition-all duration-300 cursor-pointer" open>
+            <details class="group bg-white backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer" open="">
                 <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
                     <span class="text-lg">Who is KATCODE built for?</span>
                     <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
                 </summary>
-                <div class="p-8 pt-0 text-zinc-900 font-semibold leading-relaxed">
-                    <div class="h-px w-full bg-zinc-400/20 mb-6"></div>
+                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
+                    <div class="h-px w-full bg-zinc-200 mb-6"></div>
                     KATCODE is designed for aspiring software developers, university students, and anyone who wants to learn programming through logic mapping, practical projects, and real-world experience rather than copy-pasting tutorials.
                 </div>
             </details>
 
-            <details class="group  backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2   transition-all duration-300 cursor-pointer">
+            <details class="group bg-white backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                 <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
                     <span class="text-lg">Do I need prior programming experience?</span>
                     <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
                 </summary>
-                <div class="p-8 pt-0 text-zinc-900 font-semibold leading-relaxed">
-                    <div class="h-px w-full bg-zinc-400/20 mb-6"></div>
+                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
+                    <div class="h-px w-full bg-zinc-200 mb-6"></div>
                     No. KATCODE fundamentally teaches you *system thinking*. We start with logic foundations and flowcharts, gradually guiding you toward building complete, syntax-heavy software projects.
                 </div>
             </details>
 
-            <details class="group  backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2  transition-all duration-300 cursor-pointer">
+            <details class="group bg-white backdrop-blur-xl rounded-3xl shadow-sm overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer">
                 <summary class="flex justify-between items-center font-black list-none p-8 text-black outline-none">
                     <span class="text-lg">What is Repository Handover?</span>
                     <span class="transition group-open:rotate-180 text-2xl text-cyan-800 font-light">+</span>
                 </summary>
-                <div class="p-8 pt-0 text-zinc-900 font-semibold leading-relaxed">
-                    <div class="h-px w-full bg-zinc-400/20 mb-6"></div>
+                <div class="p-8 pt-0 text-zinc-600 font-medium leading-relaxed">
+                    <div class="h-px w-full bg-zinc-200 mb-6"></div>
                     During guided project development, KATCODE helps you build software step by step. Once you've completed the learning module, the codebase is handed over to your personal GitHub account so you can continue developing it independently as portfolio evidence.
                 </div>
             </details>
@@ -521,69 +492,296 @@
     </div>
 </section>
 
-<footer class=" pt-20 pb-10 px-6 my-16">
+<footer class="pt-20 pb-10 px-6">
+
     <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-5 gap-12 mb-16">
-            
+
+
+        <div class="grid
+                    lg:grid-cols-5
+                    gap-12
+                    mb-16">
+
+
+            <!-- BRAND -->
+
             <div class="lg:col-span-2">
-                <div class="flex items-center gap-4 mb-6">
-                    <img src="/images/katcode-logo.png" alt="KATCODE Logo" class="w-12 h-12 rounded-full shadow-sm bg-zinc-200 p-0.5">
+
+                <div class="flex items-center
+                            gap-4
+                            mb-6">
+
+                    <img src="/images/katcode-logo.png"
+                         alt="KATCODE Logo"
+                         class="w-12 h-12 rounded-full
+                                shadow-sm
+                                bg-zinc-200
+                                p-0.5">
+
+
                     <div>
-                        <h2 class=" text-xl font-black tracking-tight">
+
+                        <h2 class="text-xl
+                                   font-black
+                                   tracking-tight">
+
                             KATCODE
+
                         </h2>
-                        <p class="text-[0.6rem] uppercase tracking-[0.2em] font-bold text-cyan-500">
+
+
+                        <p class="text-[0.6rem]
+                                  uppercase
+                                  tracking-[0.2em]
+                                  font-bold
+                                  text-[#245F73]">
+
                             Logic Precedes Code
+
                         </p>
+
                     </div>
+
                 </div>
-                <p class="font-medium leading-relaxed max-w-sm text-sm">
-                    A programming education platform built to help you develop logical thinking, practical development skills, and a verifiable engineering portfolio.
+
+
+                <p class="font-medium
+                          leading-relaxed
+                          max-w-sm
+                          text-sm">
+
+                    A programming education platform built to
+                    develop logical thinking, practical development
+                    skills, and a verifiable engineering portfolio.
+
                 </p>
+
+
+                <p class="mt-5
+                          text-xs
+                          text-zinc-500
+                          leading-relaxed
+                          max-w-sm">
+
+                    KATCODE is a product of
+                    <span class="font-bold text-zinc-700">
+                        Tovan Technologies (Pty) Ltd
+                    </span>.
+
+                </p>
+
             </div>
 
+
+            <!-- PLATFORM -->
+
             <div>
-                <h3 class=" font-bold uppercase tracking-[0.1em] text-xs mb-6">
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
                     Platform
+
                 </h3>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li><a href="#learning-paths" class="hover:text-cyan-400 transition-colors">Learning Paths</a></li>
-                    <li><a href="#faq" class="hover:text-cyan-400 transition-colors">FAQ</a></li>
-                    <li><a href="https://app.katcode.co.za/auth/register" class="text-cyan-500 hover:text-white transition-colors font-bold">Get started</a></li>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+                    <li>
+                        <a href="/#learning-paths"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Learning Paths
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/project"
+                           class="text-[#245F73]
+                                  ">
+
+                            Projects
+
+                        </a>
+                    </li>
+                    
+
+
+                    
+
+
+                    <li>
+                        <a href="https://app.katcode.co.za/auth/register"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Get started
+
+                        </a>
+                    </li>
+                    
+                    
+                     <li>
+                        <a href="/faq"
+                           class="text-[#245F73]
+                                  ">
+
+                            FAQ
+
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
 
+
+            <!-- COMMUNITY -->
+
             <div>
-                <h3 class=" font-bold uppercase tracking-[0.1em] text-xs mb-6">
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
                     Community
+
                 </h3>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li><a href="/hackathons" class="hover:text-cyan-400 transition-colors">Hackathons</a></li>
-                    <li><a href="/about" class="hover:text-cyan-400 transition-colors">About Us</a></li>
-                    <li><a href="mailto:support@katcode.co.za" class="hover:text-cyan-400 transition-colors">Contact Support</a></li>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+                    <li>
+                        <a href="/hackathons"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Hackathons
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/about"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            About Us
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="mailto:support@katcode.co.za"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Contact Support
+
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
+
+            <!-- LEGAL -->
 
             <div>
-                <h3 class=" font-bold uppercase tracking-[0.1em] text-xs mb-6">
+
+                <h3 class="font-bold
+                           uppercase
+                           tracking-[0.1em]
+                           text-xs
+                           mb-6">
+
                     Legal
+
                 </h3>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li><a href="/terms" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
-                    <li><a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+
+
+                <ul class="space-y-4
+                           text-sm
+                           font-medium">
+
+                    <li>
+                        <a href="/terms"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Terms of Service
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/privacy"
+                           class="hover:text-[#245F73]
+                                  transition-colors">
+
+                            Privacy Policy
+
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
 
         </div>
 
-        
 
-        <div class="flex items-center justify-between">
-            <p class="text-xs font-medium">
-                © 2026 <span class=" font-bold">KATCODE</span>. All rights reserved.
+        <!-- COPYRIGHT -->
+
+        <div class="pt-8
+                    border-t border-zinc-300
+                    flex flex-col
+                    md:flex-row
+                    md:items-center
+                    md:justify-between
+                    gap-4">
+
+            <p class="text-xs
+                      font-medium
+                      text-zinc-500">
+
+                © 2026
+                <span class="font-bold text-zinc-700">
+                    KATCODE
+                </span>.
+                All rights reserved.
+
             </p>
+
+
+            <p class="text-xs
+                      font-black
+                      tracking-[0.2em]">
+
+                LOGIC PRECEDES CODE.
+
+            </p>
+
         </div>
+
     </div>
+
 </footer>
 
 <script>
@@ -594,12 +792,14 @@
     const l2 = document.getElementById('line2');
     const l3 = document.getElementById('line3');
     
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        l1.classList.toggle('top-3'); l1.classList.toggle('rotate-45');
-        l2.classList.toggle('opacity-0');
-        l3.classList.toggle('top-3'); l3.classList.toggle('-rotate-45');
-    });
+    if (btn) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            l1.classList.toggle('top-3'); l1.classList.toggle('rotate-45');
+            l2.classList.toggle('opacity-0');
+            l3.classList.toggle('top-3'); l3.classList.toggle('-rotate-45');
+        });
+    }
 
     // DESKTOP NAVBAR SLIDING HIGHLIGHT LOGIC
     document.addEventListener("DOMContentLoaded", () => {
@@ -626,5 +826,6 @@
     });
 </script>
 <script src="/js/app.js"></script>
+
 </body>
 </html>

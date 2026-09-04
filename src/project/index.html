@@ -51,9 +51,7 @@
 
     <style>
 
-        /* =====================================================
-           KATCODE PROJECT PAGE
-        ===================================================== */
+    
 
         @keyframes fadeInUp {
             from {
@@ -189,9 +187,7 @@
        class="peer/menu hidden">
 
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+
 
 <nav class="fixed top-6 left-1/2 -translate-x-1/2
            w-[95%] max-w-7xl
@@ -413,10 +409,6 @@
 </nav>
 
 
-<!-- =========================================================
-     MOBILE MENU
-========================================================= -->
-
 <div id="mobile-menu"
      class="hidden
             peer-checked/menu:block
@@ -531,9 +523,7 @@
 <main>
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+
 
 <section class="relative
                 overflow-hidden
@@ -719,9 +709,7 @@
 </section>
 
 
-<!-- =========================================================
-     PROBLEM / PHILOSOPHY
-========================================================= -->
+
 
 <section class="bg-white
                 border-b border-zinc-300">
@@ -794,49 +782,24 @@
 </section>
 
 
-<!-- =========================================================
-     WORKFLOW
-========================================================= -->
-
-<section id="workflow"
-         class="bg-zinc-100
-                border-b border-zinc-300">
+<section id="workflow" class="bg-zinc-100 border-b border-zinc-300">
 
     <div class="max-w-7xl mx-auto px-6 py-24">
 
         <div class="max-w-3xl mb-16">
 
-            <p class="text-xs
-                      font-black
-                      uppercase
-                      tracking-[0.25em]
-                      text-[#245F73]">
-
+            <p class="text-xs font-black uppercase tracking-[0.25em] text-[#245F73]">
                 The workflow
-
             </p>
 
-
-            <h2 class="mt-5
-                       text-4xl
-                       md:text-5xl
-                       font-black
-                       tracking-tight">
-
+            <h2 class="mt-5 text-4xl md:text-5xl font-black tracking-tight">
                 Think first.
                 Build incrementally.
-
             </h2>
 
-
-            <p class="mt-6
-                      text-lg
-                      text-zinc-600
-                      leading-relaxed">
-
+            <p class="mt-6 text-lg text-zinc-600 leading-relaxed">
                 A large project becomes manageable when you stop
                 treating it as one large problem.
-
             </p>
 
         </div>
@@ -844,247 +807,209 @@
 
         <!-- WORKFLOW -->
 
-        <div class="grid
-                    md:grid-cols-2
-                    lg:grid-cols-5
-                    border border-zinc-300
-                    bg-white">
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
 
 
             <!-- DEFINE -->
+            <article class="group 
+                            flex flex-col
+                            bg-white 
+                            rounded-2xl 
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300 
+                            cursor-pointer
+                            overflow-hidden">
 
-            <article class="relative
-                            p-7
-                            border-b
-                            md:border-r
-                            lg:border-b-0
-                            border-zinc-300">
-
-                <div class="flex items-center
-                            justify-between">
-
-                    <span class="text-xs
-                                 font-black
-                                 tracking-[0.2em]
-                                 text-[#245F73]">
-
-                        01
-
-                    </span>
-
-                    <span class="text-zinc-300">
-                        →
-                    </span>
-
+                <!-- Image Header -->
+                <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-800">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=500" 
+                         alt="Team defining requirements at a whiteboard" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
 
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-black tracking-[0.2em] text-[#245F73]">
+                            01
+                        </span>
+                        <span class="text-zinc-300 font-bold group-hover:text-[#245F73] transition-colors duration-300">
+                            →
+                        </span>
+                    </div>
 
-                <h3 class="mt-10
-                           text-xl
-                           font-black">
+                    <h3 class="text-xl font-black text-zinc-900 group-hover:text-[#245F73] transition-colors duration-300">
+                        Define
+                    </h3>
 
-                    Define
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          leading-relaxed
-                          text-zinc-600">
-
-                    Understand the problem,
-                    requirements and expected behaviour.
-
-                </p>
+                    <p class="mt-3 text-sm leading-relaxed text-zinc-600 flex-grow">
+                        Understand the problem, requirements and expected behaviour.
+                    </p>
+                </div>
 
             </article>
 
 
             <!-- PLAN -->
+           <article class="group 
+                            flex flex-col
+                            bg-white 
+                            rounded-2xl 
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300 
+                            cursor-pointer
+                            overflow-hidden">
 
-            <article class="relative
-                            p-7
-                            border-b
-                            lg:border-b-0
-                            md:border-r
-                            border-zinc-300">
-
-                <div class="flex items-center
-                            justify-between">
-
-                    <span class="text-xs
-                                 font-black
-                                 tracking-[0.2em]
-                                 text-[#245F73]">
-
-                        02
-
-                    </span>
-
-                    <span class="text-zinc-300">
-                        →
-                    </span>
-
+                <!-- Image Header -->
+                <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-800">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=500" 
+                         alt="Planning architecture and milestones" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
 
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-black tracking-[0.2em] text-[#245F73]">
+                            02
+                        </span>
+                        <span class="text-zinc-300 font-bold group-hover:text-[#245F73] transition-colors duration-300">
+                            →
+                        </span>
+                    </div>
 
-                <h3 class="mt-10
-                           text-xl
-                           font-black">
+                    <h3 class="text-xl font-black text-zinc-900 group-hover:text-[#245F73] transition-colors duration-300">
+                        Plan
+                    </h3>
 
-                    Plan
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          leading-relaxed
-                          text-zinc-600">
-
-                    Map the system,
-                    break down the requirements
-                    and establish milestones.
-
-                </p>
+                    <p class="mt-3 text-sm leading-relaxed text-zinc-600 flex-grow">
+                        Map the system, break down the requirements and establish milestones.
+                    </p>
+                </div>
 
             </article>
 
-
             <!-- BUILD -->
+            <article class="group 
+                            flex flex-col
+                            bg-white 
+                            rounded-2xl 
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300 
+                            cursor-pointer
+                            overflow-hidden">
 
-            <article class="relative
-                            p-7
-                            border-b
-                            lg:border-b-0
-                            lg:border-r
-                            border-zinc-300">
-
-                <div class="flex items-center
-                            justify-between">
-
-                    <span class="text-xs
-                                 font-black
-                                 tracking-[0.2em]
-                                 text-[#245F73]">
-
-                        03
-
-                    </span>
-
-                    <span class="text-zinc-300">
-                        →
-                    </span>
-
+                <!-- Image Header -->
+                <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-800">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=500" 
+                         alt="Coding and building the application" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
 
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-black tracking-[0.2em] text-[#245F73]">
+                            03
+                        </span>
+                        <span class="text-zinc-300 font-bold group-hover:text-[#245F73] transition-colors duration-300">
+                            →
+                        </span>
+                    </div>
 
-                <h3 class="mt-10
-                           text-xl
-                           font-black">
+                    <h3 class="text-xl font-black text-zinc-900 group-hover:text-[#245F73] transition-colors duration-300">
+                        Build
+                    </h3>
 
-                    Build
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          leading-relaxed
-                          text-zinc-600">
-
-                    Implement one milestone at a time
-                    while solving real engineering problems.
-
-                </p>
+                    <p class="mt-3 text-sm leading-relaxed text-zinc-600 flex-grow">
+                        Implement one milestone at a time while solving real engineering problems.
+                    </p>
+                </div>
 
             </article>
 
 
             <!-- VERSION -->
+            <article class="group 
+                            flex flex-col
+                            bg-white 
+                            rounded-2xl 
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300 
+                            cursor-pointer
+                            overflow-hidden">
 
-            <article class="relative
-                            p-7
-                            border-b
-                            lg:border-b-0
-                            lg:border-r
-                            border-zinc-300">
-
-                <div class="flex items-center
-                            justify-between">
-
-                    <span class="text-xs
-                                 font-black
-                                 tracking-[0.2em]
-                                 text-[#245F73]">
-
-                        04
-
-                    </span>
-
-                    <span class="text-zinc-300">
-                        →
-                    </span>
-
+                <!-- Image Header -->
+                <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-800">
+                    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=500" 
+                         alt="GitHub version control" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
 
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-black tracking-[0.2em] text-[#245F73]">
+                            04
+                        </span>
+                        <span class="text-zinc-300 font-bold group-hover:text-[#245F73] transition-colors duration-300">
+                            →
+                        </span>
+                    </div>
 
-                <h3 class="mt-10
-                           text-xl
-                           font-black">
+                    <h3 class="text-xl font-black text-zinc-900 group-hover:text-[#245F73] transition-colors duration-300">
+                        Version
+                    </h3>
 
-                    Version
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          leading-relaxed
-                          text-zinc-600">
-
-                    Use Git and GitHub to track
-                    your development and decisions.
-
-                </p>
+                    <p class="mt-3 text-sm leading-relaxed text-zinc-600 flex-grow">
+                        Use Git and GitHub to track your development and decisions.
+                    </p>
+                </div>
 
             </article>
 
 
             <!-- SHIP -->
+            <article class="group 
+                            flex flex-col
+                            bg-white 
+                            rounded-2xl 
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300 
+                            cursor-pointer
+                            overflow-hidden">
+                            
+                <!-- Image Header -->
+                <div class="relative aspect-[4/3] w-full overflow-hidden bg-zinc-800">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=500" 
+                         alt="Servers and deployment" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                </div>
+                            
+                <div class="p-6 flex flex-col flex-grow">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-black tracking-[0.2em] text-[#245F73]">
+                            05
+                        </span>
+                        <span class="text-green-500 font-bold group-hover:scale-125 transition-transform duration-300">
+                            ✓
+                        </span>
+                    </div>
 
-            <article class="relative
-                            p-7">
+                    <h3 class="text-xl font-black text-zinc-900 group-hover:text-[#245F73] transition-colors duration-300">
+                        Ship
+                    </h3>
 
-                <span class="text-xs
-                             font-black
-                             tracking-[0.2em]
-                             text-[#245F73]">
-
-                    05
-
-                </span>
-
-
-                <h3 class="mt-10
-                           text-xl
-                           font-black">
-
-                    Ship
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          leading-relaxed
-                          text-zinc-600">
-
-                    Finish with software you understand
-                    and can confidently present.
-
-                </p>
+                    <p class="mt-3 text-sm leading-relaxed text-zinc-600 flex-grow">
+                        Finish with software you understand and can confidently present.
+                    </p>
+                </div>
 
             </article>
 
@@ -1098,63 +1023,31 @@
 <!-- =========================================================
      PROJECT CATALOGUE
 ========================================================= -->
-
-<section id="project-catalogue"
-         class="bg-white
-                border-b border-zinc-300">
+<section id="project-catalogue" class="bg-white border-b border-zinc-300">
 
     <div class="max-w-7xl mx-auto px-6 py-24">
 
-        <div class="flex flex-col
-                    lg:flex-row
-                    lg:items-end
-                    lg:justify-between
-                    gap-8
-                    mb-14">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
 
             <div class="max-w-3xl">
 
-                <p class="text-xs
-                          font-black
-                          uppercase
-                          tracking-[0.25em]
-                          text-[#245F73]">
-
+                <p class="text-xs font-black uppercase tracking-[0.25em] text-[#245F73]">
                     Project catalogue
-
                 </p>
 
-
-                <h2 class="mt-5
-                           text-4xl
-                           md:text-5xl
-                           font-black
-                           tracking-tight">
-
+                <h2 class="mt-5 text-4xl md:text-5xl font-black tracking-tight">
                     Projects with a purpose.
-
                 </h2>
 
-
-                <p class="mt-5
-                          text-lg
-                          text-zinc-600
-                          leading-relaxed">
-
+                <p class="mt-5 text-lg text-zinc-600 leading-relaxed">
                     Choose a project based on what you want
                     to learn, then build it through structured milestones.
-
                 </p>
 
             </div>
 
-
-            <div class="text-sm
-                        font-semibold
-                        text-zinc-500">
-
+            <div class="text-sm font-semibold text-zinc-500">
                 More projects are being developed.
-
             </div>
 
         </div>
@@ -1162,77 +1055,63 @@
 
         <!-- PROJECT GRID -->
 
-        <div class="grid
-                    md:grid-cols-2
-                    lg:grid-cols-3
-                    gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
             <!-- PROJECT 01 -->
-
-            <article class="project-card
-                            group
-                            border
-                            border-zinc-300
-                            bg-white">
+          <a href= "https://app.katcode.co.za/auth/register">
+            <article class="group
+                            bg-white
+                            rounded-2xl
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300
+                            cursor-pointer
+                            flex flex-col">
 
                 <div class="relative
                             aspect-[16/10]
-                            bg-[#DCECEF]
-                            border-b border-zinc-300
-                            overflow-hidden">
+                            rounded-t-2xl
+                            overflow-hidden
+                            bg-zinc-800">
 
-                    <div class="absolute inset-0 grid-pattern"></div>
+                    <!-- Web Image: Java/Console Coding -->
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" 
+                         alt="Coding on screen" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/30"></div>
 
 
                     <div class="relative
                                 h-full
                                 flex flex-col
                                 justify-between
-                                p-7">
+                                p-7
+                                z-10
+                                text-white">
 
-                        <div class="flex items-center
-                                    justify-between">
+                        <div class="flex items-center justify-between">
 
-                            <span class="text-xs
-                                         font-black
-                                         uppercase
-                                         tracking-[0.2em]
-                                         text-[#245F73]">
-
+                            <span class="text-xs font-black uppercase tracking-[0.2em] text-blue-300">
                                 JAVA
-
                             </span>
 
-
-                            <span class="text-xs
-                                         font-bold
-                                         text-zinc-500">
-
+                            <span class="text-xs font-bold text-white/70">
                                 BEGINNER
-
                             </span>
 
                         </div>
 
-
                         <div>
 
-                            <div class="text-4xl
-                                        font-black
-                                        tracking-tight">
-
+                            <div class="text-4xl font-black tracking-tight text-white">
                                 01
-
                             </div>
 
-                            <div class="mt-1
-                                        text-sm
-                                        font-semibold
-                                        text-zinc-600">
-
+                            <div class="mt-1 text-sm font-semibold text-white/80">
                                 Foundations
-
                             </div>
 
                         </div>
@@ -1241,127 +1120,87 @@
 
                 </div>
 
+                <div class="p-7 flex flex-col flex-grow">
 
-                <div class="p-7">
-
-                    <h3 class="text-2xl
-                               font-black
-                               tracking-tight">
-
+                    <h3 class="text-2xl font-black tracking-tight">
                         Build your first system
-
                     </h3>
 
-
-                    <p class="mt-4
-                              text-sm
-                              leading-relaxed
-                              text-zinc-600">
-
+                    <p class="mt-4 text-sm leading-relaxed text-zinc-600 flex-grow">
                         Apply programming fundamentals to build
                         a complete console application instead
                         of solving disconnected exercises.
-
                     </p>
 
-
-                    <div class="mt-7
-                                flex items-center
-                                justify-between
-                                border-t border-zinc-200
-                                pt-5">
-
-                        <span class="text-xs
-                                     font-bold
-                                     uppercase
-                                     tracking-wider
-                                     text-zinc-500">
-
+                    <div class="mt-7 flex items-center justify-between border-t border-zinc-200 pt-5">
+                        <span class="text-xs font-bold uppercase tracking-wider text-zinc-500">
                             Java Foundations
-
                         </span>
 
-
-                        <span class="project-arrow
-                                     text-[#245F73]
-                                     font-bold">
-
+                        <span class="project-arrow text-[#245F73] font-bold">
                             →
-
                         </span>
-
                     </div>
 
                 </div>
 
             </article>
+            </a>
 
 
             <!-- PROJECT 02 -->
 
-            <article class="project-card
-                            group
-                            border
-                            border-zinc-300
-                            bg-white">
+            <article class="group
+                            bg-white
+                            rounded-2xl
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300
+                            cursor-pointer
+                            flex flex-col">
 
                 <div class="relative
                             aspect-[16/10]
-                            bg-zinc-100
-                            border-b border-zinc-300
-                            overflow-hidden">
+                            rounded-t-2xl
+                            overflow-hidden
+                            bg-zinc-800">
 
-                    <div class="absolute inset-0 grid-pattern"></div>
-
+                    <!-- Web Image: System Architecture / Design Planning -->
+                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80&w=800" 
+                         alt="System design and architecture planning" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/30"></div>
 
                     <div class="relative
                                 h-full
                                 flex flex-col
                                 justify-between
-                                p-7">
+                                p-7
+                                z-10
+                                text-white">
 
-                        <div class="flex items-center
-                                    justify-between">
+                        <div class="flex items-center justify-between">
 
-                            <span class="text-xs
-                                         font-black
-                                         uppercase
-                                         tracking-[0.2em]
-                                         text-[#245F73]">
-
+                            <span class="text-xs font-black uppercase tracking-[0.2em] text-blue-300">
                                 JAVA
-
                             </span>
 
-
-                            <span class="text-xs
-                                         font-bold
-                                         text-zinc-500">
-
+                            <span class="text-xs font-bold text-white/70">
                                 INTERMEDIATE
-
                             </span>
 
                         </div>
 
-
                         <div>
 
-                            <div class="text-4xl
-                                        font-black
-                                        tracking-tight">
-
+                            <div class="text-4xl font-black tracking-tight text-white">
                                 02
-
                             </div>
 
-                            <div class="mt-1
-                                        text-sm
-                                        font-semibold
-                                        text-zinc-600">
-
+                            <div class="mt-1 text-sm font-semibold text-white/80">
                                 Architecture
-
                             </div>
 
                         </div>
@@ -1370,54 +1209,26 @@
 
                 </div>
 
+                <div class="p-7 flex flex-col flex-grow">
 
-                <div class="p-7">
-
-                    <h3 class="text-2xl
-                               font-black
-                               tracking-tight">
-
+                    <h3 class="text-2xl font-black tracking-tight">
                         Design before implementation
-
                     </h3>
 
-
-                    <p class="mt-4
-                              text-sm
-                              leading-relaxed
-                              text-zinc-600">
-
+                    <p class="mt-4 text-sm leading-relaxed text-zinc-600 flex-grow">
                         Move beyond isolated programming concepts
                         and start thinking about components,
                         responsibilities and system flow.
-
                     </p>
 
-
-                    <div class="mt-7
-                                flex items-center
-                                justify-between
-                                border-t border-zinc-200
-                                pt-5">
-
-                        <span class="text-xs
-                                     font-bold
-                                     uppercase
-                                     tracking-wider
-                                     text-zinc-500">
-
+                    <div class="mt-7 flex items-center justify-between border-t border-zinc-200 pt-5">
+                        <span class="text-xs font-bold uppercase tracking-wider text-zinc-400">
                             Coming soon
-
                         </span>
 
-
-                        <span class="text-zinc-300
-                                     font-bold">
-
+                        <span class="project-arrow text-zinc-300 font-bold">
                             →
-
                         </span>
-
                     </div>
 
                 </div>
@@ -1427,73 +1238,57 @@
 
             <!-- PROJECT 03 -->
 
-            <article class="project-card
-                            group
-                            border
-                            border-zinc-300
-                            bg-white">
+            <article class="group
+                            bg-white
+                            rounded-2xl
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300
+                            cursor-pointer
+                            flex flex-col">
 
                 <div class="relative
                             aspect-[16/10]
-                            bg-black
-                            border-b border-black
-                            overflow-hidden">
+                            rounded-t-2xl
+                            overflow-hidden
+                            bg-zinc-800">
 
-                    <div class="absolute inset-0
-                                opacity-20
-                                grid-pattern">
-                    </div>
-
+                    <!-- Web Image: Polished App / Capstone Portfolio -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" 
+                         alt="Completed software project showing data" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                         
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/40"></div>
 
                     <div class="relative
                                 h-full
                                 flex flex-col
                                 justify-between
                                 p-7
+                                z-10
                                 text-white">
 
-                        <div class="flex items-center
-                                    justify-between">
+                        <div class="flex items-center justify-between">
 
-                            <span class="text-xs
-                                         font-black
-                                         uppercase
-                                         tracking-[0.2em]
-                                         text-[#DCECEF]">
-
+                            <span class="text-xs font-black uppercase tracking-[0.2em] text-[#DCECEF]">
                                 PORTFOLIO
-
                             </span>
 
-
-                            <span class="text-xs
-                                         font-bold
-                                         text-zinc-400">
-
+                            <span class="text-xs font-bold text-white/60">
                                 ADVANCED
-
                             </span>
 
                         </div>
 
-
                         <div>
 
-                            <div class="text-4xl
-                                        font-black
-                                        tracking-tight">
-
+                            <div class="text-4xl font-black tracking-tight text-white">
                                 03
-
                             </div>
 
-                            <div class="mt-1
-                                        text-sm
-                                        font-semibold
-                                        text-zinc-400">
-
+                            <div class="mt-1 text-sm font-semibold text-white/70">
                                 Capstone
-
                             </div>
 
                         </div>
@@ -1502,54 +1297,26 @@
 
                 </div>
 
+                <div class="p-7 flex flex-col flex-grow">
 
-                <div class="p-7">
-
-                    <h3 class="text-2xl
-                               font-black
-                               tracking-tight">
-
+                    <h3 class="text-2xl font-black tracking-tight">
                         Build something worth showing
-
                     </h3>
 
-
-                    <p class="mt-4
-                              text-sm
-                              leading-relaxed
-                              text-zinc-600">
-
+                    <p class="mt-4 text-sm leading-relaxed text-zinc-600 flex-grow">
                         Take an idea from requirements through
                         architecture, implementation, version
                         control and final presentation.
-
                     </p>
 
-
-                    <div class="mt-7
-                                flex items-center
-                                justify-between
-                                border-t border-zinc-200
-                                pt-5">
-
-                        <span class="text-xs
-                                     font-bold
-                                     uppercase
-                                     tracking-wider
-                                     text-zinc-500">
-
+                    <div class="mt-7 flex items-center justify-between border-t border-zinc-200 pt-5">
+                        <span class="text-xs font-bold uppercase tracking-wider text-zinc-400">
                             Coming soon
-
                         </span>
 
-
-                        <span class="text-zinc-300
-                                     font-bold">
-
+                        <span class="project-arrow text-zinc-300 font-bold">
                             →
-
                         </span>
-
                     </div>
 
                 </div>
@@ -1562,10 +1329,6 @@
 
 </section>
 
-
-<!-- =========================================================
-     PORTFOLIO
-========================================================= -->
 
 <section class="bg-[#245F73]
                 text-white
@@ -1623,12 +1386,12 @@
 
             <!-- PORTFOLIO EVIDENCE -->
 
-            <div class="border border-white/20
-                        bg-white/10
+            <div class=" bg-zinc-200/10   shadow-white
+                        rounded-2xl hover:shadow-2xl  transition-all
                         backdrop-blur-sm">
 
                 <div class="p-6
-                            border-b border-white/20">
+                            ">
 
                     <p class="text-xs
                               uppercase
@@ -1643,7 +1406,7 @@
                 </div>
 
 
-                <div class="divide-y divide-white/20">
+                <div class="">
 
                     <div class="p-6
                                 flex items-center
@@ -1770,71 +1533,14 @@
                     items-center">
 
 
-            <div>
+                       <!-- REPOSITORY VISUAL -->
 
-                <div class="w-14 h-14
-                            bg-black
-                            text-white
-                            flex items-center
-                            justify-center">
-
-                    <svg class="w-7 h-7"
-                         fill="currentColor"
-                         viewBox="0 0 24 24">
-
-                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.35-3.86-1.35-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.04.78 2.1v3.11c0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
-
-                    </svg>
-
-                </div>
-
-
-                <p class="mt-8
-                          text-xs
-                          font-black
-                          uppercase
-                          tracking-[0.25em]
-                          text-[#245F73]">
-
-                    GitHub is part of building
-
-                </p>
-
-
-                <h2 class="mt-5
-                           text-4xl
-                           md:text-5xl
-                           font-black
-                           tracking-tight">
-
-                    Your repository
-                    is part of the project.
-
-                </h2>
-
-
-                <p class="mt-6
-                          max-w-xl
-                          text-zinc-600
-                          leading-relaxed">
-
-                    KATCODE treats version control as part of
-                    software development rather than a final
-                    step before submission.
-
-                </p>
-
-            </div>
-
-
-            <!-- REPOSITORY VISUAL -->
-
-            <div class="bg-white
-                        border border-zinc-300
-                        shadow-sm">
+            <div class="
+                        
+                        ">
 
                 <div class="px-6 py-5
-                            border-b border-zinc-200
+                            border-b-2 border-zinc-50
                             flex items-center
                             justify-between">
 
@@ -2039,20 +1745,75 @@
                 </div>
 
             </div>
+            
+            
+            
+             <div>
+
+                <div class="w-14 h-14
+                            bg-black
+                            text-white
+                            rounded-full
+                            flex items-center
+                            justify-center">
+
+                    <svg class="w-7 h-7"
+                         fill="currentColor"
+                         viewBox="0 0 24 24">
+
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.85 10.9.57.1.78-.25.78-.55v-2.15c-3.19.69-3.86-1.35-3.86-1.35-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.35.78 1.04.78 2.1v3.11c0 .3.21.66.79.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+
+                    </svg>
+
+                </div>
+
+
+                <p class="mt-8
+                          text-xs
+                          font-black
+                          uppercase
+                          tracking-[0.25em]
+                          text-[#245F73]">
+
+                    GitHub is part of building
+
+                </p>
+
+
+                <h2 class="mt-5
+                           text-4xl
+                           md:text-5xl
+                           font-black
+                           tracking-tight">
+
+                    Your repository
+                    is part of the project.
+
+                </h2>
+
+
+                <p class="mt-6
+                          max-w-xl
+                          text-zinc-600
+                          leading-relaxed">
+
+                    KATCODE treats version control as part of
+                    software development rather than a final
+                    step before submission.
+
+                </p>
+
+            </div>
+
+
+
 
         </div>
 
     </div>
 
 </section>
-
-
-<!-- =========================================================
-     FOR WHO
-========================================================= -->
-
-<section class="bg-white
-                border-b border-zinc-300">
+<section class="bg-zinc-50 border-b border-zinc-300">
 
     <div class="max-w-7xl mx-auto px-6 py-24">
 
@@ -2085,127 +1846,209 @@
 
         <div class="grid
                     md:grid-cols-3
-                    gap-6">
+                    gap-8">
 
 
             <!-- STUDENT -->
+            <article class="group
+                            flex flex-col
+                            bg-white
+                            rounded-2xl
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300
+                            cursor-pointer
+                            overflow-hidden">
 
-            <article class="border
-                            border-zinc-300
-                            p-8
-                            hover:border-[#245F73]
-                            transition-colors">
+                <!-- Image Header -->
+                <div class="relative aspect-video w-full overflow-hidden bg-zinc-800">
+                    <!-- Web Image: University students collaborating casually on campus -->
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=600" 
+                         alt="Young university students collaborating and studying together on campus" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                    
+                    <!-- Number Badge Overlay -->
+                    <span class="absolute top-4 right-4
+                                 text-xs font-black text-white tracking-[0.2em]
+                                 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full
+                                 border border-white/20">
+                        01
+                    </span>
+                </div>
 
-                <span class="text-xs
-                             font-black
-                             text-[#245F73]
-                             tracking-[0.2em]">
+                <div class="px-8 pb-8 flex flex-col flex-grow relative">
+                    
+                    <!-- FLOATING EYE-CATCHING SVG CONTAINER -->
+                    <div class="-mt-8 mb-6 w-16 h-16 
+                                rounded-2xl 
+                                bg-white shadow-lg
+                                text-[#245F73] 
+                                flex items-center justify-center relative z-10
+                                group-hover:bg-[#245F73] 
+                                group-hover:text-white
+                                group-hover:-translate-y-1
+                                transition-all duration-300">
+                        
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                        </svg>
+                    </div>
 
-                    01
+                    <h3 class="text-2xl
+                               font-black
+                               group-hover:text-[#245F73]
+                               transition-colors duration-300">
+                        Students
+                    </h3>
 
-                </span>
+                    <p class="mt-4
+                              text-sm
+                              text-zinc-600
+                              leading-relaxed">
+                        Turn concepts from your coursework
+                        into projects that demonstrate
+                        practical development ability.
+                    </p>
 
-
-                <h3 class="mt-10
-                           text-2xl
-                           font-black">
-
-                    Students
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          text-zinc-600
-                          leading-relaxed">
-
-                    Turn concepts from your coursework
-                    into projects that demonstrate
-                    practical development ability.
-
-                </p>
+                </div>
 
             </article>
 
 
             <!-- FINAL YEAR -->
+            <article class="group
+                            flex flex-col
+                            bg-white
+                            rounded-2xl
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300
+                            cursor-pointer
+                            overflow-hidden">
 
-            <article class="border
-                            border-zinc-300
-                            p-8
-                            hover:border-[#245F73]
-                            transition-colors">
+                <!-- Image Header -->
+                <div class="relative aspect-video w-full overflow-hidden bg-zinc-800">
+                    <!-- Web Image: Mature, senior student focused deeply in a university library setting -->
+                    <img src="https://images.unsplash.com/photo-1513258496099-481620202951?auto=format&fit=crop&q=80&w=600" 
+                         alt="Senior university student showing intense focus while working on a major project on a laptop" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                    
+                    <!-- Number Badge Overlay -->
+                    <span class="absolute top-4 right-4
+                                 text-xs font-black text-white tracking-[0.2em]
+                                 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full
+                                 border border-white/20">
+                        02
+                    </span>
+                </div>
 
-                <span class="text-xs
-                             font-black
-                             text-[#245F73]
-                             tracking-[0.2em]">
+                <div class="px-8 pb-8 flex flex-col flex-grow relative">
+                    
+                    <!-- FLOATING EYE-CATCHING SVG CONTAINER -->
+                    <div class="-mt-8 mb-6 w-16 h-16 
+                                rounded-2xl 
+                                bg-white shadow-lg
+                                text-[#245F73] 
+                                flex items-center justify-center relative z-10
+                                group-hover:bg-[#245F73] 
+                                group-hover:text-white
+                                group-hover:-translate-y-1
+                                transition-all duration-300">
+                        
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                        </svg>
+                    </div>
 
-                    02
+                    <h3 class="text-2xl
+                               font-black
+                               group-hover:text-[#245F73]
+                               transition-colors duration-300">
+                        Final-year developers
+                    </h3>
 
-                </span>
+                    <p class="mt-4
+                              text-sm
+                              text-zinc-600
+                              leading-relaxed">
+                        Build substantial software while developing
+                        the engineering habits needed beyond university.
+                    </p>
 
-
-                <h3 class="mt-10
-                           text-2xl
-                           font-black">
-
-                    Final-year developers
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          text-zinc-600
-                          leading-relaxed">
-
-                    Build substantial software while developing
-                    the engineering habits needed beyond university.
-
-                </p>
+                </div>
 
             </article>
 
 
             <!-- PORTFOLIO -->
+            <article class="group
+                            flex flex-col
+                            bg-white
+                            rounded-2xl
+                            shadow-sm hover:shadow-2xl
+                            hover:-translate-y-2
+                            transition-all duration-300
+                            cursor-pointer
+                            overflow-hidden">
 
-            <article class="border
-                            border-zinc-300
-                            p-8
-                            hover:border-[#245F73]
-                            transition-colors">
+                <!-- Image Header -->
+                <div class="relative aspect-video w-full overflow-hidden bg-zinc-800">
+                    <!-- Web Image: Professional presenting/showing their laptop screen to another person -->
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600" 
+                         alt="Developer confidently presenting their portfolio project to a recruiter or colleague" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                    
+                    <!-- Number Badge Overlay -->
+                    <span class="absolute top-4 right-4
+                                 text-xs font-black text-white tracking-[0.2em]
+                                 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full
+                                 border border-white/20">
+                        03
+                    </span>
+                </div>
 
-                <span class="text-xs
-                             font-black
-                             text-[#245F73]
-                             tracking-[0.2em]">
+                <div class="px-8 pb-8 flex flex-col flex-grow relative">
+                    
+                    <!-- FLOATING EYE-CATCHING SVG CONTAINER -->
+                    <div class="-mt-8 mb-6 w-16 h-16 
+                                rounded-2xl 
+                                bg-white shadow-lg
+                                text-[#245F73] 
+                                flex items-center justify-center relative z-10
+                                group-hover:bg-[#245F73] 
+                                group-hover:text-white
+                                group-hover:-translate-y-1
+                                transition-all duration-300">
+                        
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
 
-                    03
+                    <h3 class="text-2xl
+                               font-black
+                               group-hover:text-[#245F73]
+                               transition-colors duration-300">
+                        Portfolio builders
+                    </h3>
 
-                </span>
+                    <p class="mt-4
+                              text-sm
+                              text-zinc-600
+                              leading-relaxed">
+                        Create projects that give recruiters,
+                        collaborators and employers something
+                        meaningful to evaluate.
+                    </p>
 
-
-                <h3 class="mt-10
-                           text-2xl
-                           font-black">
-
-                    Portfolio builders
-
-                </h3>
-
-
-                <p class="mt-4
-                          text-sm
-                          text-zinc-600
-                          leading-relaxed">
-
-                    Create projects that give recruiters,
-                    collaborators and employers something
-                    meaningful to evaluate.
-
-                </p>
+                </div>
 
             </article>
 
@@ -2214,8 +2057,6 @@
     </div>
 
 </section>
-
-
 <!-- =========================================================
      GITHUB BASICS
 ========================================================= -->
