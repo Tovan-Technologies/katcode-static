@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tovan Technologies (Pty) Ltd">
+
+    <title>for Loop | KATCODE</title>
+
+    <meta name="description" content="Learn how to use the for loop in Java. Master iteration, ranges, finding values, and skipping iterations in this KATCODE lesson.">
+    <meta name="theme-color" content="#245F73">
+
+    <link rel="stylesheet" href="../../main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/images/katcode-logo-icon.png">
+
+    <style>
+        /* Ensures smooth opening animation for the CSS-only accordions */
+        details > summary { list-style: none; outline: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-5px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-50 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-[#245F73] selection:text-white">
+
+<!-- ========================================================= -->
+<!-- PUBLIC PILL NAVBAR -->
+<!-- ========================================================= -->
+<input type="checkbox" id="mobile-menu-toggle" class="peer/menu hidden">
+
+<nav id="main-nav" class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 rounded-full bg-zinc-200/50 backdrop-blur-xl shadow-lg px-6 lg:px-8 transition-all duration-300">
+    <div class="h-20 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-4 group shrink-0 focus:outline-none">
+            <img src="/images/katcode-logo.png" alt="KATCODE Logo" class="w-12 h-12 rounded-full shadow-xl transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://ui-avatars.com/api/?name=K&background=245F73&color=fff'">
+            <div class="hidden sm:block">
+                <h1 class="text-xl font-black tracking-tight text-black drop-shadow-sm">
+                    KATCODE
+                </h1>
+            </div>
+        </a>
+
+        <div class="hidden lg:flex items-center relative" id="nav-container">
+            <div id="nav-highlight" class="absolute inset-y-1 left-0 bg-white/60 backdrop-blur-md rounded-full transition-all duration-300 ease-out opacity-0 pointer-events-none shadow-sm"></div>
+            
+            <a href="/" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-[#245F73] transition-colors">Home</a>
+            <a href="/#learning-paths" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-[#245F73] transition-colors">Learn</a>
+            <a href="/project" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-[#245F73] transition-colors">Projects</a>
+            <a href="/hackathons" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-[#245F73] transition-colors">Hackathons</a>
+            <a href="/faq" class="nav-link relative z-10 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-zinc-800 hover:text-[#245F73] transition-colors">FAQ</a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+            <a href="https://app.katcode.co.za/auth/login" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-900 hover:text-[#245F73] transition-colors px-4">Sign In</a>
+            <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-[#245F73] text-zinc-100 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#1B4A5A] shadow-xl hover:-translate-y-1 transition-all duration-300">Get started</a>
+        </div>
+
+        <!-- Main Mobile Hamburger -->
+        <label for="mobile-menu-toggle" class="lg:hidden relative w-7 h-7 cursor-pointer mr-2 select-none z-50">
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-1 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:rotate-45"></span>
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-3 transition-all duration-300 origin-center peer-checked/menu:opacity-0"></span>
+            <span class="absolute left-0.5 w-6 h-0.5 bg-black rounded top-5 transition-all duration-300 origin-center peer-checked/menu:top-3 peer-checked/menu:-rotate-45"></span>
+        </label>
+    </div>
+</nav>
+
+<!-- Main Mobile Menu Dropdown -->
+<div id="mobile-menu" class="hidden peer-checked/menu:block lg:hidden fixed top-32 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl backdrop-blur-2xl bg-white/95 rounded-3xl shadow-2xl z-40 border border-zinc-200">
+    <div class="px-8 py-8 flex flex-col gap-6">
+        <a href="/" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Home</a>
+        <a href="/#learning-paths" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Learn</a>
+        <a href="/project" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Projects</a>
+        <a href="/hackathons" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Hackathons</a>
+        <a href="/faq" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">FAQ</a>
+        <div class="h-px w-full bg-zinc-200"></div>
+        <a href="https://app.katcode.co.za/auth/login" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Sign In</a>
+        <a href="https://app.katcode.co.za/auth/register" class="rounded-full bg-[#245F73] text-white py-4 text-center text-xs font-bold uppercase tracking-[0.2em] shadow-lg">Get started</a>
+    </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- MAIN LAYOUT WRAPPER -->
+<!-- ========================================================= -->
+<div class="flex-1 w-full flex flex-col lg:flex-row relative">
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-zinc-900/40 backdrop-blur-sm z-30 hidden opacity-0 transition-opacity duration-300 lg:hidden"></div>
+
+<aside id="sidebar-menu" class="fixed inset-y-0 left-0 z-40 w-72 pt-36 pb-8 bg-zinc-50/80 backdrop-blur-xl border-r border-zinc-200 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col lg:sticky lg:top-[104px] lg:h-[calc(100vh-104px)] lg:pt-6 lg:shrink-0 overflow-y-auto">
+        
+        <div class="flex items-center justify-between px-6 mb-4 lg:hidden">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#245F73]">Course Menu</span>
+            <button id="close-sidebar-btn" class="p-2 text-zinc-500 hover:text-black focus:outline-none bg-zinc-200 rounded-full transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+
+        <!-- TOP BAR: LANGUAGE & MODULE SELECTORS -->
+        <div class="px-4 mb-6 border-b border-zinc-200 pb-6 space-y-4 relative z-50">
+            
+            <!-- Language Selector -->  <p class="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-2 flex items-center gap-1.5">
+                    Select COURSE
+                </p>
+            <details class="relative group cursor-pointer">
+                <summary class="w-full flex items-center justify-between bg-white border border-zinc-300 rounded-xl px-4 py-3 hover:border-[#245F73] transition-colors focus:outline-none">
+                    <div class="flex items-center gap-3">
+                        <span class="font-black text-[0.95rem] text-black">Java</span>
+                    </div>
+                    <svg class="w-4 h-4 text-zinc-500 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="absolute top-full mt-2 left-0 right-0 bg-white border border-zinc-200 rounded-xl shadow-xl p-2 z-50">
+                    <a href="#" class="block px-3 py-2 text-sm font-bold text-[#245F73] bg-[#DCECEF]/50 rounded-lg">Java</a>
+                    <a href="#" class="block px-3 py-2 text-sm font-semibold text-zinc-500 hover:bg-zinc-100 hover:text-black rounded-lg transition-colors mt-1">Python (Coming Soon)</a>
+                </div>
+            </details>
+
+            <!-- Module Selector -->
+             <p class="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-2 flex items-center gap-1.5">
+                    Select MODULE
+                </p>
+            <details class="relative group cursor-pointer">
+                <summary class="w-full flex items-center justify-between bg-white border border-zinc-300 rounded-xl px-4 py-3 hover:border-[#245F73] transition-colors focus:outline-none">
+                    <div class="flex items-center gap-3">
+                        <span class="font-black text-[0.85rem] text-black text-left">Module 1: Fundamentals I</span>
+                    </div>
+                    <svg class="w-4 h-4 text-zinc-500 transition-transform duration-200 shrink-0 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="absolute top-full mt-2 left-0 right-0 bg-white border border-zinc-200 rounded-xl shadow-xl p-2 z-50">
+                    <a href="#" class="block px-3 py-2 text-sm font-bold text-[#245F73] bg-[#DCECEF]/50 rounded-lg">Module 1: Fundamentals I</a>
+                    <a href="#" class="block px-3 py-2 text-sm font-semibold text-zinc-500 hover:bg-zinc-100 hover:text-black rounded-lg transition-colors mt-1">Module 2: Advanced (Soon)</a>
+                </div>
+            </details>
+        </div>
+
+        <!-- NESTED CURRICULUM ACCORDION -->
+        <nav class="flex-1 px-4 space-y-1">
+            <details class="w-full group/module" open>
+                <summary class="w-full flex items-center justify-between px-3 py-2 text-black rounded-lg text-sm font-bold cursor-pointer hover:bg-zinc-200/50 transition-colors">
+                    <span>Java Fundamentals I</span>
+                    <svg class="w-4 h-4 text-zinc-500 transition-transform duration-200 group-open/module:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+
+                <div class="flex flex-col mt-2 space-y-0.5">
+                    
+                    <!-- Topic: Overview -->
+                    <details class="w-full group/topic">
+                        <summary class="flex items-stretch justify-between w-full hover:bg-zinc-200/50 rounded-lg transition-colors cursor-pointer px-3 py-2">
+                            <span class="flex-1 text-sm font-semibold text-zinc-600 group-hover/topic:text-black">Overview</span>
+                            <svg class="w-4 h-4 text-zinc-400 transition-transform duration-200 group-open/topic:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="flex flex-col ml-5 pl-2 mt-1 mb-2 border-l-2 border-zinc-200 space-y-1">
+                            <a href="/curriculum/101" class="block px-3 py-1.5 text-[0.85rem] font-medium text-zinc-500 hover:text-black hover:bg-zinc-200/50 rounded-md transition-colors">Java Overview</a>
+                            <a href="/curriculum/102" class="block px-3 py-1.5 text-[0.85rem] font-medium text-zinc-500 hover:text-black hover:bg-zinc-200/50 rounded-md transition-colors">Scope and Roadmap</a>
+                        </div>
+                    </details>
+
+                    <!-- Topic: Variables & Data -->
+                    <details class="w-full group/topic">
+                        <summary class="flex items-stretch justify-between w-full hover:bg-zinc-200/50 rounded-lg transition-colors cursor-pointer px-3 py-2">
+                            <span class="flex-1 text-sm font-semibold text-zinc-600 group-hover/topic:text-black">Variables & Data</span>
+                            <svg class="w-4 h-4 text-zinc-400 transition-transform duration-200 group-open/topic:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="flex flex-col ml-5 pl-2 mt-1 mb-2 border-l-2 border-zinc-200 space-y-1">
+                            <a href="/curriculum/111" class="block px-3 py-1.5 text-[0.85rem] font-medium text-zinc-500 hover:text-black hover:bg-zinc-200/50 rounded-md transition-colors">Variables and Memory</a>
+                            <a href="/curriculum/112" class="block px-3 py-1.5 text-[0.85rem] font-medium text-zinc-500 hover:text-black hover:bg-zinc-200/50 rounded-md transition-colors">Data Types</a>
+                        </div>
+                    </details>
+
+                    <!-- Topic: Loops (Active) -->
+                    <details class="w-full mt-2 group/topic" open>
+                        <summary class="flex items-stretch justify-between w-full bg-white border border-zinc-200 rounded-lg shadow-sm px-3 py-2.5 cursor-pointer transition-colors">
+                            <span class="flex-1 text-sm font-bold text-[#245F73]">Loops</span>
+                            <svg class="w-4 h-4 text-[#245F73] transition-transform duration-200 group-open/topic:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        
+                        <div class="flex-col ml-5 pl-4 mt-2 mb-4 border-l-2 border-zinc-200 space-y-1">
+                            <a href="/curriculum/141" class="block px-3 py-1.5 font-medium text-zinc-500 hover:text-black rounded-md text-[0.85rem] transition-colors">Intro to Loops</a>
+                            <a href="/curriculum/142" class="block px-3 py-1.5 font-medium text-zinc-500 hover:text-black rounded-md text-[0.85rem] transition-colors">while Loop</a>
+                            <a href="/curriculum/143" class="block px-3 py-1.5 font-medium text-zinc-500 hover:text-black rounded-md text-[0.85rem] transition-colors">do-while Loop</a>
+                            
+                            <!-- Subtopic: for Loop (Active w/ Nested Page Notes) -->
+                            <details class="w-full group/subtopic" open>
+                                <summary class="block w-full px-3 py-1.5 font-bold text-[#245F73] bg-[#DCECEF]/60 rounded-md text-[0.85rem] transition-colors relative cursor-pointer list-none outline-none">
+                                    <span class="absolute -left-[19px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#245F73]"></span>
+                                    <div class="flex justify-between items-center">
+                                        <span>for Loop</span>
+                                        <svg class="w-3.5 h-3.5 text-[#245F73] transition-transform duration-200 group-open/subtopic:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                                    </div>
+                                </summary>
+                                
+                                <!-- The Internal Page Notes (TOC) -->
+                                <div class="flex flex-col ml-4 pl-3 mt-1.5 mb-2.5 border-l border-zinc-300 space-y-2">
+                                    <a href="#concept" class="block px-2 text-[0.8rem] font-semibold text-zinc-500 hover:text-black transition-colors">The Anatomy</a>
+                                    <a href="#example-1" class="block px-2 text-[0.8rem] font-semibold text-zinc-500 hover:text-black transition-colors">Example 1: Range</a>
+                                    <a href="#example-2" class="block px-2 text-[0.8rem] font-semibold text-zinc-500 hover:text-black transition-colors">Example 2: Finding a Value</a>
+                                    <a href="#example-3" class="block px-2 text-[0.8rem] font-semibold text-zinc-500 hover:text-black transition-colors">Example 3: Skipping</a>
+                                </div>
+                            </details>
+                            
+                            <a href="/curriculum/145" class="block px-3 py-1.5 font-medium text-zinc-500 hover:text-black rounded-md text-[0.85rem] transition-colors">Topic Reflection</a>
+                        </div>
+                    </details>
+
+                    <!-- Topic: Arrays -->
+                    <details class="w-full group/topic">
+                        <summary class="flex items-stretch justify-between w-full hover:bg-zinc-200/50 rounded-lg transition-colors cursor-pointer px-3 py-2">
+                            <span class="flex-1 text-sm font-semibold text-zinc-600 group-hover/topic:text-black">Arrays</span>
+                            <svg class="w-4 h-4 text-zinc-400 transition-transform duration-200 group-open/topic:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="flex flex-col ml-5 pl-2 mt-1 mb-2 border-l-2 border-zinc-200 space-y-1">
+                            <a href="/curriculum/151" class="block px-3 py-1.5 text-[0.85rem] font-medium text-zinc-500 hover:text-black hover:bg-zinc-200/50 rounded-md transition-colors">Intro to Arrays</a>
+                        </div>
+                    </details>
+                </div>
+            </details>
+
+            <!-- PRACTICE & BUILD -->
+            <div class="w-full mt-6 pt-4 border-t border-zinc-200">
+                <p class="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-2 flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg> BUILD
+                </p>
+                <div class="flex flex-col space-y-0.5">
+                    <a href="/project" class="block px-3 py-2 text-sm font-semibold text-zinc-600 hover:bg-zinc-200/50 hover:text-black rounded-lg transition-colors">
+                        Project Space
+                    </a>
+                </div>
+            </div>
+            
+            <div class="w-full mt-4 pt-4 border-t border-zinc-200">
+                <p class="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-2 flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg> PRACTICE
+                </p>
+                <div class="flex flex-col space-y-0.5">
+                    <a href="/quizzes" class="block px-3 py-2 text-sm font-semibold text-zinc-600 hover:bg-zinc-200/50 hover:text-black rounded-lg transition-colors">
+                        Module Quizzes
+                    </a>
+                    <a href="/tests" class="block px-3 py-2 text-sm font-semibold text-zinc-600 hover:bg-zinc-200/50 hover:text-black rounded-lg transition-colors">
+                        Tests
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- LESSON AREA -->
+    <main class="flex-1 min-w-0 px-6 pt-32 pb-16 lg:pt-36 lg:px-12 xl:px-16 flex flex-col">
+        
+        <!-- Mobile Sidebar Toggle -->
+        <div class="lg:hidden mb-8">
+            <button id="open-sidebar-btn" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-zinc-300 rounded-full text-xs font-bold uppercase tracking-[0.15em] text-zinc-700 hover:bg-zinc-50 transition-colors focus:outline-none">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                Course Menu
+            </button>
+        </div>
+
+        <!-- Documentation Style Header -->
+        <header class="mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-8 lg:gap-12">
+            
+            <!-- Left: Title & Description -->
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#245F73] mb-4 bg-[#DCECEF] px-3 py-1 rounded-full border border-[#245F73]/20">
+                    <span>Module 1</span>
+                    <span class="text-[#245F73]/50">/</span>
+                    <span>Loops</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-black tracking-tight mb-6">
+                    for Loop
+                </h1>
+                <p class="text-lg text-zinc-600 font-medium leading-relaxed">
+                    When you know exactly where a loop starts, where it stops, and how it updates, the <code>for</code> loop is the cleanest tool for the job.
+                </p>
+            </div>
+
+            <!-- Right: Share Actions -->
+            <div class="shrink-0 flex flex-col items-start lg:items-end">
+                <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-zinc-500 mb-3">
+                    Share with others, it's free
+                </p>
+                <div class="flex items-center gap-2.5">
+                    <!-- WhatsApp -->
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20free%20Java%20lesson%20on%20For%20Loops%20from%20KATCODE!%20https%3A%2F%2Fwww.katcode.co.za%2Fcurriculum%2F144" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-zinc-200 text-zinc-600 transition-colors hover:border-green-500 hover:text-green-500" aria-label="Share on WhatsApp">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </a>
+                    
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.katcode.co.za/curriculum/144" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-zinc-200 text-zinc-600 transition-colors hover:border-[#245F73] hover:text-[#245F73]" aria-label="Share on Facebook">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.katcode.co.za/curriculum/144" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-zinc-200 text-zinc-600 transition-colors hover:border-[#245F73] hover:text-[#245F73]" aria-label="Share on LinkedIn">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+
+                    <!-- Twitter / X -->
+                    <a href="https://twitter.com/intent/tweet?url=https://www.katcode.co.za/curriculum/144&text=Check%20out%20this%20free%20Java%20lesson%20on%20For%20Loops%20from%20KATCODE!" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-zinc-200 text-zinc-600 transition-colors hover:border-black hover:text-black" aria-label="Share on X">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+
+                    <div class="w-px h-6 bg-zinc-300 mx-1"></div>
+
+                    <!-- Copy Link -->
+                    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-zinc-200 text-zinc-600 transition-colors hover:border-[#245F73] hover:text-[#245F73]" aria-label="Copy Link" onclick="navigator.clipboard.writeText(window.location.href); const icon = this.querySelector('svg'); const original = icon.innerHTML; icon.innerHTML = '<path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2.5\' d=\'M5 13l4 4L19 7\'></path>'; setTimeout(() => icon.innerHTML = original, 2000);">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONCEPT -->
+        <article id="concept" class="scroll-mt-32 mt-12">
+            <h2 class="text-2xl md:text-3xl font-black text-black mb-8 pb-4 border-b border-zinc-200">
+                Anatomy of a For Loop
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                <!-- Left: Logic -->
+                <div class="prose prose-zinc max-w-none prose-p:text-[1.05rem] prose-li:text-[1.05rem] prose-p:leading-relaxed">
+                    <div class="inline-flex items-center gap-2 mb-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#245F73]"></span>
+                        <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-[#245F73] !mt-0 !mb-0">Logic Mapping</h3>
+                    </div>
+                    <p>Suppose we already know exactly:</p>
+                    <ul>
+                        <li>where the repetition <strong>starts</strong>,</li>
+                        <li>where it should <strong>stop</strong>,</li>
+                        <li>and how the value <strong>changes</strong>.</li>
+                    </ul>
+                    
+                    <div class="mermaid">
+                    flowchart LR
+                        A["Initialization"] --> B{"Condition"}
+                        B -->|True| C["Execute Code"]
+                        C --> D["Update"]
+                        D --> B
+                        B -->|False| E["Stop"]
+                        style B fill:#DCECEF,stroke:#245F73,stroke-width:2px,color:#1B4A5A
+                        style E fill:#f1f5f9,stroke:#94a3b8
+                    </div>
+                </div>
+
+                <!-- Right: Code (Sticky) -->
+                <div class="lg:sticky lg:top-36">
+                    
+                    <!-- Code Block Premium Header -->
+                    <div class="rounded-2xl border border-zinc-700/50 bg-[#0d1117] overflow-hidden my-4 flex flex-col">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-zinc-700/50 bg-[#161b22]">
+                            <div class="flex items-center gap-2">
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                </div>
+                                <span class="ml-2 text-xs font-mono text-zinc-400">Syntax</span>
+                            </div>
+                        </div>
+                        <div class="p-0 relative">
+                            <pre class="!m-0 !bg-transparent !p-5"><code class="language-java">for (initialization; condition; update) {
+    // code to repeat
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <p class="text-[0.95rem] text-zinc-600 ">
+                        These three pieces are so common when working with counting loops that Java provides a loop structure that places them together. That loop is the <strong>for loop</strong>.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- SIDE-BY-SIDE: EXAMPLE 1                    -->
+        <!-- ========================================== -->
+        <article id="example-1" class="scroll-mt-32 mt-24">
+            <h2 class="text-2xl md:text-3xl font-black text-black mb-8 pb-4 border-b border-zinc-200">
+                Example 1: Repeating Through a Range
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                
+                <!-- Left: Logic -->
+                <div class="prose prose-zinc max-w-none prose-p:text-[1.05rem] prose-li:text-[1.05rem] prose-p:leading-relaxed">
+                    <div class="inline-flex items-center gap-2 mb-2 mt-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#245F73]"></span>
+                        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#245F73] !mt-0 !mb-0">Logic Mapping</h3>
+                    </div>
+                    <p>Suppose a program needs to calculate the total of the numbers from <code>1</code> to <code>5</code>.</p>
+                    <p>We need a variable that keeps track of the total. Each time the loop runs, the current number is added to that total.</p>
+                    
+                    <div class="mermaid">
+                    flowchart TD
+                        A["total = 0"] --> B["number = 1"]
+                        B --> C{"number <= 5"}
+                        C -->|Yes| D["total = total + number"]
+                        D --> E["number++"]
+                        E --> C
+                        C -->|No| F["Display total"]
+                        style C fill:#DCECEF,stroke:#245F73
+                        style F fill:#f1f5f9,stroke:#94a3b8
+                    </div>
+                    
+                    <p>Let's follow the values.</p>
+                    <div class="bg-zinc-100 border border-zinc-200 rounded-xl p-5 font-mono text-sm leading-relaxed text-zinc-700 mt-4">
+                        At the beginning: total = 0<br>
+                        total = 0 + 1 → total = 1<br>
+                        total = 1 + 2 → total = 3<br>
+                        total = 3 + 3 → total = 6<br>
+                        total = 6 + 4 → total = 10<br>
+                        total = 10 + 5 → total = 15
+                    </div>
+                </div>
+
+                <!-- Right: Code (Sticky) -->
+                <div class="lg:sticky lg:top-36">
+                    <div class="inline-flex items-center gap-2 mb-2 mt-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>
+                        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 !mt-0 !mb-0">Java Implementation</h3>
+                    </div>
+
+                    <!-- Premium Code Container -->
+                    <div class="rounded-2xl border border-zinc-700/50 bg-[#0d1117] overflow-hidden mt-4 mb-4 flex flex-col">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-zinc-700/50 bg-[#161b22]">
+                            <div class="flex items-center gap-2">
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
+                                </div>
+                                <span class="ml-2 text-xs font-mono text-zinc-400">Main.java</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="hidden sm:inline-block text-[10px] font-mono text-zinc-500 italic">Copy the code, paste it in your IDE, run it, break it, learn from it.</span>
+                                <button onclick="copyCode(this)" class="text-xs font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5 focus:outline-none">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-0 relative">
+                            <pre class="!m-0 !bg-transparent !p-5"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        int total = 0;
+        
+        for (int number = 1; number <= 5; number++) {
+            total = total + number;
+        }
+        
+        System.out.println("Total: " + total);
+    }
+}</code></pre>
+                        </div>
+                        <!-- Terminal Output -->
+                        <div class="bg-black p-4 border-t border-zinc-700/50 font-mono text-xs text-zinc-300">
+                            <div class="text-zinc-500 mb-1">$ java Main</div>
+                            <div class="text-white">Total: 15</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 ">
+                        <p class="text-[0.95rem] text-zinc-600 m-0 leading-relaxed">
+                            <strong class="text-black">Technical Note:</strong> Notice there are two important variables. <code>number</code> controls the loop iterations, while <code>total</code> remembers the accumulated result outside the loop scope.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- SIDE-BY-SIDE: EXAMPLE 2                    -->
+        <!-- ========================================== -->
+        <article id="example-2" class="scroll-mt-32 mt-24">
+            <h2 class="text-2xl md:text-3xl font-black text-black mb-8 pb-4 border-b border-zinc-200">
+                Example 2: Finding a Value
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                
+                <!-- Left: Logic -->
+                <div class="prose prose-zinc max-w-none prose-p:text-[1.05rem] prose-li:text-[1.05rem] prose-p:leading-relaxed">
+                    <div class="inline-flex items-center gap-2 mb-2 mt-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#245F73]"></span>
+                        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#245F73] !mt-0 !mb-0">Logic Mapping</h3>
+                    </div>
+                    <p>So far, the <code>for</code> loop has been used to process every number in a range. But sometimes the goal is different. Suppose we want to check whether a particular number exists between <code>1</code> and <code>10</code>.</p>
+                    <p>Let's say we are looking for: <code class="bg-zinc-200 font-bold text-[#245F73] px-1.5 py-0.5 rounded-md">targetNumber = 7</code></p>
+                    
+                    <div class="mermaid">
+                    flowchart TD
+                        A["targetNumber = 7"] --> B["number = 1"]
+                        B --> C{"number <= 10"}
+                        C -->|Yes| D{"number == targetNumber"}
+                        D -->|Yes| E["Display 'Found'"]
+                        D -->|No| F["number++"]
+                        F --> C
+                        E --> G["Continue Program"]
+                        C -->|No| H["Display 'Not Found'"]
+                        style C fill:#DCECEF,stroke:#245F73
+                        style D fill:#DCECEF,stroke:#245F73
+                        style E fill:#bbf7d0
+                        style H fill:#fecaca
+                    </div>
+                    
+                    <p>The logic is straightforward: Start at <code>1</code>. Check each number. If the answer is <code>yes</code>, the value has been found. If the answer is <code>no</code>, move to the next number.</p>
+                </div>
+
+                <!-- Right: Code (Sticky) -->
+                <div class="lg:sticky lg:top-36">
+                    <div class="inline-flex items-center gap-2 mb-2 mt-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>
+                        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 !mt-0 !mb-0">Java Implementation</h3>
+                    </div>
+
+                    <!-- Premium Code Container -->
+                    <div class="rounded-2xl border border-zinc-700/50 bg-[#0d1117] overflow-hidden mt-4 mb-4 flex flex-col">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-zinc-700/50 bg-[#161b22]">
+                            <div class="flex items-center gap-2">
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
+                                </div>
+                                <span class="ml-2 text-xs font-mono text-zinc-400">Main.java</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="hidden sm:inline-block text-[10px] font-mono text-zinc-500 italic">Copy the code, paste it in your IDE,run it, break it, learn from it.</span>
+                                <button onclick="copyCode(this)" class="text-xs font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5 focus:outline-none">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-0 relative">
+                            <pre class="!m-0 !bg-transparent !p-5"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        int targetNumber = 7;
+        boolean found = false;
+        
+        for (int number = 1; number <= 10; number++) {
+            if (number == targetNumber) {
+                found = true;
+                break; // Stop immediately
+            }
+        }
+        
+        if (found) {
+            System.out.println("Number found.");
+        } else {
+            System.out.println("Number not found.");
+        }
+    }
+}</code></pre>
+                        </div>
+                        <!-- Terminal Output -->
+                        <div class="bg-black p-4 border-t border-zinc-700/50 font-mono text-xs text-zinc-300">
+                            <div class="text-zinc-500 mb-1">$ java Main</div>
+                            <div class="text-white">Number found.</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="bg-white p-5 ">
+                            <p class="text-[0.95rem] text-zinc-600 m-0 leading-relaxed">
+                                <strong class="text-black">What does <code>break</code> mean?</strong><br>
+                                <code>break</code> tells Java to stop the loop <em>immediately</em>. There is no reason to continue checking numbers once the target is found.
+                            </p>
+                        </div>
+                        <div class="bg-white p-5 ">
+                            <p class="text-[0.95rem] text-zinc-600 m-0 leading-relaxed">
+                                <strong class="text-black">Why use <code>found</code>?</strong><br>
+                                The variable <code>boolean found = false;</code> acts as a memory flag that remembers the <em>state</em> of a decision made inside the loop so we can evaluate it afterward.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- SIDE-BY-SIDE: EXAMPLE 3                    -->
+        <!-- ========================================== -->
+        <article id="example-3" class="scroll-mt-32 mt-24">
+            <h2 class="text-2xl md:text-3xl font-black text-black mb-8 pb-4 border-b border-zinc-200">
+                Example 3: Skipping an Iteration
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                
+                <!-- Left: Logic -->
+                <div class="prose prose-zinc max-w-none prose-p:text-[1.05rem] prose-li:text-[1.05rem] prose-p:leading-relaxed">
+                    <div class="inline-flex items-center gap-2 mb-2 mt-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#245F73]"></span>
+                        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-[#245F73] !mt-0 !mb-0">Logic Mapping</h3>
+                    </div>
+                    <p>Sometimes a loop should not stop completely when a particular situation occurs. Instead, the program may simply want to <strong>skip the current iteration</strong> and continue with the next one.</p>
+                    <p>Suppose we want to display the numbers from <code>1</code> to <code>10</code>, but we do not want to display <code>5</code>.</p>
+                    
+                    <div class="mermaid">
+                    flowchart TD
+                        A["number = 1"] --> B{"number <= 10"}
+                        B -->|Yes| C{"number == 5"}
+                        C -->|Yes| D["Skip current iteration"]
+                        D --> E["number++"]
+                        E --> B
+                        C -->|No| F["Display number"]
+                        F --> E
+                        B -->|No| G["Stop"]
+                        style B fill:#DCECEF,stroke:#245F73
+                        style C fill:#DCECEF,stroke:#245F73
+                        style D fill:#fca5a5
+                        style G fill:#bbf7d0
+                    </div>
+                    
+                    <p>Notice the difference from <code>break</code>. When <code>number</code> becomes <code>5</code>, the program does <strong>not</strong> leave the loop. It simply skips the current iteration and continues normally.</p>
+                </div>
+
+                <!-- Right: Code (Sticky) -->
+                <div class="lg:sticky lg:top-36">
+                    <div class="inline-flex items-center gap-2 mb-2 mt-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-zinc-400"></span>
+                        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-600 !mt-0 !mb-0">Java Implementation</h3>
+                    </div>
+
+                    <!-- Premium Code Container -->
+                    <div class="rounded-2xl border border-zinc-700/50 bg-[#0d1117] overflow-hidden mt-4 mb-4 flex flex-col">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-zinc-700/50 bg-[#161b22]">
+                            <div class="flex items-center gap-2">
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-[#ff5f56]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
+                                    <span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
+                                </div>
+                                <span class="ml-2 text-xs font-mono text-zinc-400">Main.java</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="hidden sm:inline-block text-[10px] font-mono text-zinc-500 italic">Copy the code, paste it in your IDE,run it , break it, learn from it.</span>
+                                <button onclick="copyCode(this)" class="text-xs font-bold text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5 focus:outline-none">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-0 relative">
+                            <pre class="!m-0 !bg-transparent !p-5"><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        for (int number = 1; number <= 10; number++) {
+            if (number == 5) {
+                continue; // Skip current iteration
+            }
+            System.out.println(number);
+        }
+    }
+}</code></pre>
+                        </div>
+                        <!-- Terminal Output -->
+                        <div class="bg-black p-4 border-t border-zinc-700/50 font-mono text-xs text-zinc-300">
+                            <div class="text-zinc-500 mb-1">$ java Main</div>
+                            <div class="text-white leading-snug">
+                                1<br>2<br>3<br>4<br>6<br>7<br>8<br>9<br>10
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-5 ">
+                        <h4 class="text-sm font-black text-black !mt-0 !mb-2"><code>break</code> vs <code>continue</code></h4>
+                        <ul class="text-[0.95rem] text-zinc-600 space-y-2 m-0 pl-4 leading-relaxed list-disc">
+                            <li><code>break</code> means: <strong>Stop the loop completely.</strong></li>
+                            <li><code>continue</code> means: <strong>Skip this iteration and keep the loop going.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- KNOWLEDGE CHECK (JS QUIZ) & UPSELL         -->
+        <!-- ========================================== -->
+        <div id = "quiz" class="mt-24 grid lg:grid-cols-[1fr_340px] gap-12 lg:gap-16 items-start">
+            
+            <!-- Left: Quiz Container -->
+            <div class="w-full max-w-3xl">
+                <h2 class="text-2xl md:text-3xl font-black text-black mb-6">Knowledge Check</h2>
+                <div id="quiz-container" class="bg-white rounded-3xl p-6 sm:p-8 border border-zinc-200">
+                    <!-- Dynamic Content -->
+                    <div id="quiz-header" class="flex justify-between items-center mb-6 border-b border-zinc-100 pb-4">
+                        <span class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] text-[#245F73]">Question <span id="current-q-num">1</span> of <span id="total-q-num">3</span></span>
+                        <span class="text-[10px] sm:text-xs font-bold text-zinc-400 uppercase tracking-[0.1em]" id="quiz-score">Score: 0</span>
+                    </div>
+                    
+                    <h3 id="question-text" class="text-[1.1rem] sm:text-xl font-bold text-zinc-900 mb-6 leading-relaxed">
+                        Loading question...
+                    </h3>
+                    
+                    <div id="options-container" class="space-y-3 mb-8">
+                        <!-- Buttons injected here by JS -->
+                    </div>
+                    
+                    <div id="feedback-container" class="hidden p-5 rounded-xl mb-6 text-sm font-medium leading-relaxed"></div>
+                    
+                    <button id="quiz-action-btn" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-bold text-xs uppercase tracking-[0.15em] rounded-full hover:bg-zinc-800 transition-colors focus:outline-none">
+                        Check Answer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Marketing / Motivation CTA (Sticky) -->
+            <div class="lg:sticky lg:top-36 flex flex-col gap-6">
+                
+                <!-- Primary CTA Card -->
+                <div class="bg-[#DCECEF]/60 rounded-3xl p-6 border border-[#245F73]/20 relative overflow-hidden group">
+                    <!-- Decorative background element -->
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-[#245F73]/10 rounded-full blur-xl group-hover:bg-[#245F73]/20 transition-colors duration-500"></div>
+                    
+                    <div class="w-10 h-10 bg-[#245F73] rounded-2xl flex items-center justify-center text-white mb-5 relative z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="text-xl font-black text-[#1B4A5A] mb-3 tracking-tight relative z-10">Up for more practice?</h3>
+                    <p class="text-[0.95rem] text-zinc-700 font-medium leading-relaxed mb-6 relative z-10">
+                        Testing your knowledge is the fastest way to master logic. Unlock full module quizzes, timed tests, and earn <strong class="text-[#245F73]">LXP points</strong> to prove your skills.
+                    </p>
+                    
+                    <a href="https://app.katcode.co.za/auth/register" class="block w-full px-6 py-3.5 bg-[#245F73] text-white font-bold text-xs uppercase tracking-[0.15em] rounded-xl hover:bg-[#1B4A5A] transition-colors text-center relative z-10">
+                        Unlock Full Quizzes
+                    </a>
+                </div>
+
+                <!-- Secondary Benefits Card -->
+                <div class="bg-white rounded-3xl p-6 border border-zinc-200">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-4">Why test yourself?</h4>
+                    <ul class="space-y-4 text-[0.9rem] font-medium text-zinc-600">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="leading-snug">Retain Java syntax faster</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="leading-snug">Identify hidden logic gaps</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 text-green-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="leading-snug">Prepare for guided projects</span>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- PORTFOLIO CTA -->
+        <div class="mt-24 bg-zinc-100 rounded-3xl p-8 md:p-10 border border-zinc-200 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+                <h3 class="text-2xl font-black text-black mb-3 tracking-tight"> Want to Build your Portfolio?</h3>
+                <p class="text-zinc-600 font-medium leading-relaxed max-w-md text-[1.05rem]">
+                    Don't just learn, build. Join KATCODE to access guided projects, solve real problems, and build your GitHub portfolio.
+                </p>
+            </div>
+            <a href="https://app.katcode.co.za/auth/register" class="shrink-0 bg-[#245F73] text-white px-8 py-4 rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-[#1B4A5A] transition-colors text-center">
+                        Create Account   </a>
+        </div>
+
+        <!-- NEXT / PREV NAVIGATION -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-12 pt-8 border-t border-zinc-200">
+            <a href="/curriculum/143" class="w-full sm:w-auto px-6 py-3.5 bg-white text-zinc-600 font-bold text-xs uppercase tracking-[0.15em] rounded-full hover:bg-zinc-100 hover:text-black transition-colors border border-zinc-300 text-center flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                Previous
+            </a>
+            <a href="/curriculum/145" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-bold text-xs uppercase tracking-[0.15em] rounded-full hover:bg-zinc-800 transition-colors text-center flex items-center justify-center gap-2">
+                Next Lesson
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+
+    </main>
+</div> <!-- End Main Flex Wrapper -->
+
+<!-- ========================================================= -->
+<!-- FULL WIDTH FOOTER -->
+<!-- ========================================================= -->
+<footer class="w-full pt-20 pb-10 px-6 bg-zinc-200 border-t border-zinc-300 mt-auto">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-5 gap-12 mb-16">
+            <!-- BRAND -->
+            <div class="lg:col-span-2">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="/images/katcode-logo.png" alt="KATCODE Logo" class="w-12 h-12 rounded-full shadow-sm bg-zinc-200 p-0.5">
+                    <div>
+                        <h2 class="text-xl font-black tracking-tight text-black">KATCODE</h2>
+                        
+                    </div>
+                </div>
+                <p class="font-medium leading-relaxed max-w-sm text-sm text-zinc-600">
+                    A programming education platform built to develop logical thinking, practical development skills, and a verifiable engineering portfolio.
+                </p>
+                <p class="mt-5 text-xs text-zinc-500 leading-relaxed max-w-sm">
+                    KATCODE is a product of <span class="font-bold text-zinc-700">Tovan Technologies (Pty) Ltd</span>.
+                </p>
+            </div>
+
+            <!-- PLATFORM -->
+            <div>
+                <h3 class="font-bold uppercase tracking-[0.1em] text-xs mb-6 text-black">Platform</h3>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="/#learning-paths" class="text-zinc-600 hover:text-[#245F73] transition-colors">Learning Paths</a></li>
+                    <li><a href="/project" class="text-zinc-600 hover:text-[#245F73] transition-colors">Projects</a></li>
+                    <li><a href="https://app.katcode.co.za/auth/register" class="text-zinc-600 hover:text-[#245F73] transition-colors">Get started</a></li>
+                    <li><a href="/faq" class="text-zinc-600 hover:text-[#245F73] transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- COMMUNITY -->
+            <div>
+                <h3 class="font-bold uppercase tracking-[0.1em] text-xs mb-6 text-black">Community</h3>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="/hackathons" class="text-zinc-600 hover:text-[#245F73] transition-colors">Hackathons</a></li>
+                    <li><a href="/about" class="text-zinc-600 hover:text-[#245F73] transition-colors">About Us</a></li>
+                    <li><a href="mailto:support@katcode.co.za" class="text-zinc-600 hover:text-[#245F73] transition-colors">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <!-- LEGAL -->
+            <div>
+                <h3 class="font-bold uppercase tracking-[0.1em] text-xs mb-6 text-black">Legal</h3>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="/terms" class="text-zinc-600 hover:text-[#245F73] transition-colors">Terms of Service</a></li>
+                    <li><a href="/privacy" class="text-zinc-600 hover:text-[#245F73] transition-colors">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="pt-8 border-t border-zinc-300 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <p class="text-xs font-medium text-zinc-500">
+                © 2026 <span class="font-bold text-zinc-700">KATCODE</span>. All rights reserved.
+            </p>
+           
+        </div>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+
+<script>
+    // ==========================================
+    // UI INITIALIZATION
+    // ==========================================
+    
+    // Syntax Highlighting & Block Rendering
+    document.querySelectorAll("pre code").forEach(block => {
+        // ONLY apply formatting if we haven't already customized the HTML structure
+        if (!block.parentElement.className.includes("!m-0")) {
+            if (!block.className.includes("language-")) { block.classList.add("language-java"); }
+        }
+        hljs.highlightElement(block);
+    });
+
+    // Copy Function for Premium Code Blocks
+    function copyCode(btn) {
+        const container = btn.closest('.rounded-2xl');
+        const codeElement = container.querySelector('code');
+        if (codeElement) {
+            navigator.clipboard.writeText(codeElement.innerText).then(() => {
+                const originalHtml = btn.innerHTML;
+                btn.innerHTML = `<svg class="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg><span class="text-green-400">Copied!</span>`;
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                }, 2000);
+            });
+        }
+    }
+
+    // Inline Code
+    document.querySelectorAll("code").forEach(inlineCode => {
+        if (inlineCode.parentElement.tagName !== "PRE") {
+            if (inlineCode.textContent.trim().startsWith("text ")) {
+                inlineCode.textContent = inlineCode.textContent.trim().substring(5);
+            }
+            inlineCode.classList.add("inline-block", "bg-zinc-200", "font-bold", "text-[#245F73]", "px-1.5", "py-0.5", "rounded-md", "text-[0.9em]");
+        }
+    });
+
+    // Mermaid
+    mermaid.initialize({ startOnLoad: false, theme: "default" });
+    mermaid.run({ querySelector: ".mermaid" });
+
+    // Desktop Navbar Sliding Highlight Logic
+    document.addEventListener("DOMContentLoaded", () => {
+        const navContainer = document.getElementById('nav-container');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const highlight = document.getElementById('nav-highlight');
+
+        if (navContainer && navLinks.length > 0 && highlight) {
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', (e) => {
+                    const linkRect = e.target.getBoundingClientRect();
+                    const containerRect = navContainer.getBoundingClientRect();
+                    highlight.style.width = `${linkRect.width}px`;
+                    highlight.style.transform = `translateX(${linkRect.left - containerRect.left}px)`;
+                    highlight.style.opacity = '1';
+                });
+            });
+            navContainer.addEventListener('mouseleave', () => {
+                highlight.style.opacity = '0';
+            });
+        }
+        
+        // Init Quiz on load
+        loadQuestion();
+    });
+
+    // Mobile Sidebar & Navbar Mutual Exclusion Logic
+    const mainNav = document.getElementById('main-nav');
+    const openSidebarBtn = document.getElementById('open-sidebar-btn');
+    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const sidebar = document.getElementById('sidebar-menu');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    if(mobileMenuToggle && openSidebarBtn) {
+        mobileMenuToggle.addEventListener('change', (e) => {
+            if(e.target.checked) {
+                openSidebarBtn.classList.add('-translate-x-full');
+            } else {
+                openSidebarBtn.classList.remove('-translate-x-full');
+            }
+        });
+
+        // Hide hamburger menu on scroll
+        window.addEventListener('scroll', () => {
+            if(mobileMenuToggle.checked) {
+                mobileMenuToggle.checked = false;
+                openSidebarBtn.classList.remove('-translate-x-full');
+            }
+        }, { passive: true });
+    }
+
+    function openSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        sidebarOverlay.classList.remove('hidden');
+        setTimeout(() => sidebarOverlay.classList.remove('opacity-0'), 10);
+        
+        // Hide Main Nav & Self
+        if(mainNav) {
+            mainNav.classList.add('-translate-y-[150%]', 'opacity-0');
+            mainNav.classList.remove('top-6');
+        }
+        if(openSidebarBtn) openSidebarBtn.classList.add('-translate-x-full');
+    }
+
+    function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.add('opacity-0');
+        setTimeout(() => sidebarOverlay.classList.add('hidden'), 300);
+        
+        // Show Main Nav & Self
+        if(mainNav) {
+            mainNav.classList.remove('-translate-y-[150%]', 'opacity-0');
+            mainNav.classList.add('top-6');
+        }
+        if(openSidebarBtn) openSidebarBtn.classList.remove('-translate-x-full');
+    }
+
+    if (openSidebarBtn) openSidebarBtn.addEventListener('click', openSidebar);
+    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // ==========================================
+    // QUIZ LOGIC
+    // ==========================================
+    const quizData = [
+        {
+            question: "Which part of the 'for' loop executes exactly once at the very beginning?",
+            options: ["Initialization", "Condition", "Update", "The loop body"],
+            correct: 0,
+            explanation: "The initialization step sets up the starting variable and runs exactly once before the loop begins checking the condition."
+        },
+        {
+            question: "What does the 'continue' statement do inside a loop?",
+            options: ["Stops the loop completely", "Skips the rest of the current iteration and moves to the next one", "Restarts the loop from the beginning", "Exits the entire program"],
+            correct: 1,
+            explanation: "The 'continue' statement tells Java to skip the remaining code in the current iteration and proceed directly to the update step."
+        },
+        {
+            question: "If a 'for' loop's condition evaluates to false at the start, how many times will the loop body execute?",
+            options: ["Once", "Twice", "Infinitely", "Zero times"],
+            correct: 3,
+            explanation: "Because a for loop checks its condition before running the body, if the condition is false initially, the body executes zero times."
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let selectedOptionIndex = null;
+    let hasAnswered = false;
+
+    const questionTextEl = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const feedbackContainer = document.getElementById('feedback-container');
+    const actionBtn = document.getElementById('quiz-action-btn');
+    const currentQNumEl = document.getElementById('current-q-num');
+    const totalQNumEl = document.getElementById('total-q-num');
+    const scoreEl = document.getElementById('quiz-score');
+
+    totalQNumEl.textContent = quizData.length;
+
+    function loadQuestion() {
+        const currentQ = quizData[currentQuestionIndex];
+        currentQNumEl.textContent = currentQuestionIndex + 1;
+        questionTextEl.textContent = currentQ.question;
+        optionsContainer.innerHTML = '';
+        feedbackContainer.classList.add('hidden');
+        feedbackContainer.innerHTML = '';
+        selectedOptionIndex = null;
+        hasAnswered = false;
+        actionBtn.textContent = 'Check Answer';
+        actionBtn.classList.remove('bg-[#245F73]', 'hover:bg-[#1B4A5A]');
+        actionBtn.classList.add('bg-black', 'hover:bg-zinc-800');
+
+        currentQ.options.forEach((option, index) => {
+            const btn = document.createElement('button');
+            btn.className = 'w-full text-left px-5 py-4 rounded-xl border-2 border-zinc-200 text-zinc-700 font-medium text-[0.95rem] hover:border-[#245F73] transition-all focus:outline-none';
+            btn.textContent = option;
+            btn.onclick = () => selectOption(index, btn);
+            optionsContainer.appendChild(btn);
+        });
+    }
+
+    function selectOption(index, btnNode) {
+        if (hasAnswered) return;
+        selectedOptionIndex = index;
+        
+        // Reset
+        Array.from(optionsContainer.children).forEach(btn => {
+            btn.classList.remove('border-[#245F73]', 'bg-[#DCECEF]/30', 'ring-1', 'ring-[#245F73]');
+            btn.classList.add('border-zinc-200', 'bg-transparent');
+        });
+        
+        // Highlight
+        btnNode.classList.remove('border-zinc-200', 'bg-transparent');
+        btnNode.classList.add('border-[#245F73]', 'bg-[#DCECEF]/30', 'ring-1', 'ring-[#245F73]');
+    }
+
+    function checkAnswer() {
+        if (selectedOptionIndex === null) {
+            alert("Please select an option first!");
+            return;
+        }
+
+        const currentQ = quizData[currentQuestionIndex];
+        const buttons = optionsContainer.children;
+        const isCorrect = (selectedOptionIndex === currentQ.correct);
+        hasAnswered = true;
+
+        for(let i=0; i<buttons.length; i++) {
+            buttons[i].classList.remove('hover:border-[#245F73]');
+            buttons[i].style.cursor = 'default';
+            
+            if(i === currentQ.correct) {
+                buttons[i].classList.remove('border-zinc-200', 'border-[#245F73]', 'bg-[#DCECEF]/30', 'ring-1', 'ring-[#245F73]');
+                buttons[i].classList.add('border-green-500', 'bg-green-50', 'text-green-900');
+            } else if (i === selectedOptionIndex && !isCorrect) {
+                buttons[i].classList.remove('border-zinc-200', 'border-[#245F73]', 'bg-[#DCECEF]/30', 'ring-1', 'ring-[#245F73]');
+                buttons[i].classList.add('border-red-400', 'bg-red-50', 'text-red-900');
+            } else {
+                buttons[i].classList.add('opacity-50');
+            }
+        }
+
+        feedbackContainer.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+        if (isCorrect) {
+            score++;
+            scoreEl.textContent = `Score: ${score}`;
+            feedbackContainer.classList.add('bg-green-100', 'text-green-900');
+            feedbackContainer.innerHTML = `<strong>Correct!</strong> ${currentQ.explanation}`;
+        } else {
+            feedbackContainer.classList.add('bg-red-100', 'text-red-900');
+            feedbackContainer.innerHTML = `<strong>Not quite.</strong> ${currentQ.explanation}`;
+        }
+
+        if (currentQuestionIndex < quizData.length - 1) {
+            actionBtn.textContent = 'Next Question';
+            actionBtn.classList.remove('bg-black', 'hover:bg-zinc-800');
+            actionBtn.classList.add('bg-[#245F73]', 'hover:bg-[#1B4A5A]');
+        } else {
+            actionBtn.textContent = 'Finish Quiz';
+            actionBtn.classList.remove('bg-black', 'hover:bg-zinc-800');
+            actionBtn.classList.add('bg-[#245F73]', 'hover:bg-[#1B4A5A]');
+        }
+    }
+
+    function showFinalResults() {
+        questionTextEl.innerHTML = `Quiz Complete! You scored <strong>${score} out of ${quizData.length}</strong>.`;
+        optionsContainer.innerHTML = '';
+        feedbackContainer.classList.add('hidden');
+        
+        actionBtn.textContent = 'Retake Quiz';
+        actionBtn.classList.remove('bg-[#245F73]', 'hover:bg-[#1B4A5A]');
+        actionBtn.classList.add('bg-black', 'hover:bg-zinc-800');
+    }
+
+    actionBtn.addEventListener('click', () => {
+        if (actionBtn.textContent === 'Retake Quiz') {
+            currentQuestionIndex = 0;
+            score = 0;
+            scoreEl.textContent = `Score: 0`;
+            loadQuestion();
+        } else if (!hasAnswered) {
+            checkAnswer();
+        } else {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+            } else {
+                showFinalResults();
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
