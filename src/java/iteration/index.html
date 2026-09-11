@@ -19,7 +19,6 @@
     <link rel="icon" type="image/png" href="/images/katcode-logo-icon.png">
 
     <style>
-        /* Ensures smooth opening animation for the CSS-only accordions */
         details > summary { list-style: none; outline: none; }
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary ~ * { animation: sweep .3s ease-in-out; }
@@ -32,9 +31,7 @@
 
 <body class="bg-zinc-50 text-black font-sans antialiased min-h-screen flex flex-col selection:bg-[#245F73] selection:text-white">
 
-<!-- ========================================================= -->
-<!-- PUBLIC PILL NAVBAR -->
-<!-- ========================================================= -->
+
 <input type="checkbox" id="mobile-menu-toggle" class="peer/menu hidden">
 
 <nav id="main-nav" class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 rounded-full bg-zinc-200/50 backdrop-blur-xl shadow-lg px-6 lg:px-8 transition-all duration-300">
@@ -72,7 +69,7 @@
     </div>
 </nav>
 
-<!-- Main Mobile Menu Dropdown -->
+
 <div id="mobile-menu" class="hidden peer-checked/menu:block lg:hidden fixed top-32 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl backdrop-blur-2xl bg-white/95 rounded-3xl shadow-2xl z-40 border border-zinc-200">
     <div class="px-8 py-8 flex flex-col gap-6">
         <a href="/" class="font-bold uppercase tracking-[0.2em] text-sm text-zinc-800">Home</a>
@@ -86,9 +83,7 @@
     </div>
 </div>
 
-<!-- ========================================================= -->
-<!-- MAIN LAYOUT WRAPPER -->
-<!-- ========================================================= -->
+
 <div class="flex-1 w-full flex flex-col lg:flex-row relative">
 
     <!-- Sidebar Overlay for Mobile -->
@@ -103,10 +98,10 @@
             </button>
         </div>
 
-        <!-- TOP BAR: LANGUAGE & MODULE SELECTORS -->
+  
         <div class="px-4 mb-6 border-b border-zinc-200 pb-6 space-y-4 relative z-50">
             
-            <!-- Language Selector -->  <p class="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-2 flex items-center gap-1.5">
+     <p class="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-2 flex items-center gap-1.5">
                     Select COURSE
                 </p>
             <details class="relative group cursor-pointer">
@@ -122,7 +117,7 @@
                 </div>
             </details>
 
-            <!-- Module Selector -->
+            
              <p class="px-3 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-2 flex items-center gap-1.5">
                     Select MODULE
                 </p>
@@ -140,7 +135,6 @@
             </details>
         </div>
 
-        <!-- NESTED CURRICULUM ACCORDION -->
         <nav class="flex-1 px-4 space-y-1">
             <details class="w-full group/module" open>
                 <summary class="w-full flex items-center justify-between px-3 py-2 text-black rounded-lg text-sm font-bold cursor-pointer hover:bg-zinc-200/50 transition-colors">
@@ -378,9 +372,7 @@
             </div>
         </article>
 
-        <!-- ========================================== -->
-        <!-- SIDE-BY-SIDE: EXAMPLE 1                    -->
-        <!-- ========================================== -->
+  
         <article id="example-1" class="scroll-mt-32 mt-24">
             <h2 class="text-2xl md:text-3xl font-black text-black mb-8 pb-4 border-b border-zinc-200">
                 Example 1: Repeating Through a Range
@@ -585,9 +577,7 @@
             </div>
         </article>
 
-        <!-- ========================================== -->
-        <!-- SIDE-BY-SIDE: EXAMPLE 3                    -->
-        <!-- ========================================== -->
+    
         <article id="example-3" class="scroll-mt-32 mt-24">
             <h2 class="text-2xl md:text-3xl font-black text-black mb-8 pb-4 border-b border-zinc-200">
                 Example 3: Skipping an Iteration
@@ -681,9 +671,7 @@
             </div>
         </article>
 
-        <!-- ========================================== -->
-        <!-- KNOWLEDGE CHECK (JS QUIZ) & UPSELL         -->
-        <!-- ========================================== -->
+      
         <div id = "quiz" class="mt-24 grid lg:grid-cols-[1fr_340px] gap-12 lg:gap-16 items-start">
             
             <!-- Left: Quiz Container -->
@@ -783,11 +771,9 @@
         </div>
 
     </main>
-</div> <!-- End Main Flex Wrapper -->
+</div> 
 
-<!-- ========================================================= -->
-<!-- FULL WIDTH FOOTER -->
-<!-- ========================================================= -->
+
 <footer class="w-full pt-20 pb-10 px-6 bg-zinc-200 border-t border-zinc-300 mt-auto">
     <div class="max-w-7xl mx-auto">
         <div class="grid lg:grid-cols-5 gap-12 mb-16">
@@ -855,9 +841,7 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 
 <script>
-    // ==========================================
-    // UI INITIALIZATION
-    // ==========================================
+ 
     
     // Syntax Highlighting & Block Rendering
     document.querySelectorAll("pre code").forEach(block => {
@@ -978,9 +962,7 @@
     if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
     if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
 
-    // ==========================================
-    // QUIZ LOGIC
-    // ==========================================
+
     const quizData = [
         {
             question: "Which part of the 'for' loop executes exactly once at the very beginning?",
